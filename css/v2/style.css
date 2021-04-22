@@ -301,8 +301,14 @@ a {
     line-height: 42px;
     text-align: center;
     color: #262626;
-    max-width: 650px;
+    width: 530px;
     margin-bottom: 30px;
+}
+.section-testimonials .reviewer-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .zoe-logo {
@@ -693,9 +699,11 @@ a {
     font-size: 48px;
 }
 .section-writing .logo-list__li {
-    width: 110px;
+    /* width: 110px; */
     height: 160px;
-    margin: auto 43px;
+    margin: auto 30px;
+    display: flex;
+    justify-content: center;
 }
 .section-writing .wrapper-image-with-caption {
     width: max-content;
