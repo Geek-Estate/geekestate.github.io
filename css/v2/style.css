@@ -612,6 +612,7 @@ a {
 .section-testimonials .testimonials-content .member-logo img {
     width: 92px;
     height: 92px;
+    margin-right: 10px;
 }
 .section-testimonials .testimonials-content .member-logo {
     color: #262626;
@@ -874,8 +875,8 @@ a {
         width: 47px;
         height: 47px;
     }
-    .block .testimonials-content .member-logo span {
-        font-size: 18px;
+    .wrapper-reviewer-label {
+        line-height: 0;
     }
     .section-subfooter {
         padding-top: 0;
@@ -900,6 +901,11 @@ a {
     }
     .section-subfooter .contact-btn, .section-subfooter .sign-up-btn {
         width: 100%;
+    }
+
+    .section-testimonials .reviewer-name, .section-testimonials .reviewer-title {
+        font-size: 14px;
+        line-height: 12px;
     }
 }
 
