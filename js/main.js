@@ -29,4 +29,10 @@ $(document).ready(function(){
   //     },
   //   ]
   // });
+  $('.company-link').on('click', function() {
+    $('.company-link').removeClass('company-link-active');
+    $(this).addClass('company-link-active');
+    // $('.company-label')[$('.company-link').index(this)].focus();
+    $('html, body').animate({scrollTop: $($('.company-label')[$('.company-link').index(this)]).offset().top }, 500)
+  });
 });
