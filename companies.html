@@ -67,19 +67,8 @@
 
     <div class="section-hero">
       <div class="wrapper">
-        <img class="ge-logo" src="assets/v2/theGEM_Logo.png" alt="Geek Estate Labs">
+        <img class="ge-logo-desktop" src="assets/v2/theGEM_Logo.png" alt="Geek Estate Labs">
         <h1 class="welcome">Connecting the boldest proptech entrepreneurs across every sector</h1>
-        <div class="wrapper-sub-header">
-          A PRIVATE COMMUNITY FREE FROM SPONSORED MESSAGES AND NOISE BUILT FOR INDEPENDENT CREATIVES, DOERS,  AND PIONEERS.
-        </div>
-        <h3 class="header-small">
-          Smaller is better: Limited to 1,500
-        </h3>
-        <a href="https://community.geekestate.com/landing" id="drop-line-HP-button" class="contact-btn">Apply Now</a>
-  
-        <svg  class="arrow" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292969 1.70718L1.70718 0.292969L13.0001 11.5859L24.293 0.292969L25.7072 1.70718L13.0001 14.4143L0.292969 1.70718Z" fill="white"/>
-        </svg>
       </div>
     </div>
 
@@ -177,11 +166,6 @@
           <li class="logo-list__li"><img src="assets/v2/Partner Logos/square-logo.jpg" /></li>
   
         </ul>
-
-
-        <a href="https://docs.google.com/presentation/d/1nbymRRUS5YhQJWe8tLwlD4EqH_suTxCBDQjDC45uXhQ/edit?usp=sharing" id="drop-line-HP-button" class="contact-btn">More</a>
-  
-        <h3><a href="https://geekestateblog.com/state-of-the-gem-2021/">See a breakdown by geography, role and sector</a></h3>
       </div>
     </div>
 
@@ -242,6 +226,10 @@
     }
 
     includeHTML();
+
+    $('.header-hamburger').on('click', function() {
+      $('.header-menu-collapsed').toggleClass('show');
+    });
 </script> 
   <script type="text/javascript" src="js/main.js"></script>
 </body>
