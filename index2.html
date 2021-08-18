@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-  <link rel="stylesheet" href="css/v2/style.css">
+  <link rel="stylesheet" href="css/v3/style.css">
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
 </head>
 
@@ -33,25 +33,39 @@
   <![endif]-->
   <div class="container">
     <div class="wrapper-header-btn">
-      <a href="https://community.geekestate.com/sign_in" button class="members-only-btn">MEMBERS ONLY</a button>
-    </div>
-    <div class="section-hero">
-      <div class="wrapper">
-        <img class="ge-logo" src="assets/v2/theGEM_Logo.png" alt="Geek Estate Labs">
-        <h1 class="welcome">Connecting the boldest proptech entrepreneurs across every sector</h1>
-        <div class="wrapper-sub-header">
-          A PRIVATE COMMUNITY FREE FROM SPONSORED MESSAGES AND NOISE BUILT FOR INDEPENDENT CREATIVES, DOERS,  AND PIONEERS.
+      <div class="row">
+        <div class="column">
+          <img class="ge-logo" src="assets/v2/theGEM_Logo.png" alt="Geek Estate Labs">
         </div>
-        <h3 class="header-small">
-          Smaller is better: Limited to 1,500
-        </h3>
-        <a href="https://community.geekestate.com/landing" id="drop-line-HP-button" class="contact-btn">Apply Now</a>
-  
-        <svg  class="arrow" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292969 1.70718L1.70718 0.292969L13.0001 11.5859L24.293 0.292969L25.7072 1.70718L13.0001 14.4143L0.292969 1.70718Z" fill="white"/>
-        </svg>
+        <div class="header-menu" style="float: right;">
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn">ABOUT</a button>
+          </div>
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn">APPLY</a button>
+          </div>
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn header-btn-member-only">MEMBER-ONLY</a button>
+          </div>
+        </div>
+        <div class="header-hamburger">
+            <a href="#"><img src="img/menu.png" style="width:56px;height: 56px;" /></a>
+        </div>
+        <div class="column header-menu-collapsed" style="display: none;">
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn">ABOUT</a button>
+          </div>
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn">APPLY</a button>
+          </div>
+          <div class="column">
+            <a href="https://community.geekestate.com/sign_in" button class="header-btn header-btn-member-only">MEMBER-ONLY</a button>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div w3-include-html="landing.html"></div>
   
     <div class="section-writing">
       <div class="wrapper">
@@ -294,34 +308,16 @@
         </div>
       </div>
     </div>
-    <div class="section-footer">
-      <div class="wrapper">
-          <img class="ge-logo" src="assets/geb_logo_full.png" alt="Geek Estate Labs">
-          <ul class="footer-nav">
-            <li><a class="footer-nav__item" href="https://www.geekestate.com/">Mastermind</a></li>
-            <li><a class="footer-nav__item" href="https://geekestateblog.com/">Blog</a></li>
-            <li><a class="footer-nav__item" href="https://geekestateblog.com/about-geek-estate-labs/">About</a></li>
-            <li><a class="footer-nav__item" href="mailto:drew@geekestatelabs.com">Contact</a></li>
-          </ul>
-          <ul class="social-nav">
-            <li><a class="social-nav__item" href="https://twitter.com/geekestate"><img src="assets/twitter-icon.png" alt="Twitter"></a></li>
-            <li><a class="social-nav__item" href="https://www.facebook.com/geekestate/"><img src="assets/fb-icon.png" alt="Facebook"></a></li>
-          </ul>
-          <p class="copyright">
-            Copyright Geek Estate Labs, LLC 2016-2021
-            <br/>
-            401 Bendigo Blvd N, NORTH BEND, WA 98045
-          </p>
-      </div>
-    </div>
-  </div>
+
+    <div w3-include-html="footer.html"></div>
   
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
+
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/includes.js"></script>
 </body>
 
 </html>
