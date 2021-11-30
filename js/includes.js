@@ -26,13 +26,18 @@ function includeHTML() {
         }
     }
     
+    if(window.location.href.includes('approved.html') ||
+        window.location.href.includes('join-now.html')) {
+        $('.contact-btn').remove();
+    }
+
     if(
         window.location.href.includes('approved.html')||
         window.location.href.includes('companies.html') ||
         window.location.href.includes('join-now.html')
 
     ) {
-        $('.wrapper-sub-header, .header-small, .contact-btn, .arrow').remove();
+        $('.wrapper-sub-header, .header-small, .arrow').remove();
         
     } else if(window.location.href.includes('thanks-you.html') ||
         window.location.href.includes('welcome.html')
