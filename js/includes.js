@@ -27,15 +27,19 @@ function includeHTML() {
     }
     
     if(window.location.href.includes('approved.html') ||
-        window.location.href.includes('join-now.html')) {
+        window.location.href.includes('join-now.html') ||
+        window.location.href.includes('thank-you-newsletter.html') ||
+        window.location.href.includes('FAQ.html')
+    ) {
         $('.contact-btn').remove();
     }
 
     if(
         window.location.href.includes('approved.html')||
         window.location.href.includes('companies.html') ||
-        window.location.href.includes('join-now.html')
-
+        window.location.href.includes('join-now.html') ||
+        window.location.href.includes('thank-you-newsletter.html') ||
+        window.location.href.includes('FAQ.html')
     ) {
         $('.wrapper-sub-header, .header-small, .arrow').remove();
         
