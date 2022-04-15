@@ -190,25 +190,6 @@
   
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/includes.js"></script>
-        
-    <script>
-        var acc = document.getElementsByClassName("accordion-header");
-        var i;
-        
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                console.log("DDD");
-                var accordionBody = this.nextElementSibling;
-                if (accordionBody.style.maxHeight) {
-                    accordionBody.style.maxHeight = null;
-                } else {
-                    accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
-                }
-            });
-        }
-    </script>
-
 </body>
 
 </html>
