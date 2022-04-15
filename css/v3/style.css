@@ -343,6 +343,10 @@ a {
   .welcome {
     font-size: 80px;
   }
+
+  .faq-page .header-menu {
+    display: none !important;
+  }
 }
 .section__title {
   color: #262626;
@@ -918,6 +922,62 @@ a {
   color: #262626;
 }
 
+/**
+ * Accordion
+ */
+.accordion {
+  margin: 40px 200px 40px 200px;
+}
+
+.accordion-body {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion .accordion-item:first-child,
+.accordion .accordion-item:first-child .accordion-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.accordion .accordion-item:last-child,
+.accordion .accordion-item:last-child .accordion-header {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.accordion-item .accordion-header {
+  background-color: rgb(250, 250, 250);
+  border-collapse: collapse;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-item .accordion-header h2 {
+  display: inline-block;
+}
+
+.accordion-item .accordion-header:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-item .accordion-header.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
 @media only screen and (min-width: 1200px) {
   .ge-logo {
     display: none !important;
@@ -959,6 +1019,7 @@ a {
     line-height: 43px;
     text-align: center;
     color: #85ab37;
+    margin: 40px 10px 40px 10px !important;
   }
   .section-body-approved-label-small {
     font-family: Lato;
@@ -968,6 +1029,9 @@ a {
     line-height: 29px;
     text-align: center;
     color: #262626 !important;
+  }
+  .section-body-approved .section-body-approved-label + h1 {
+    margin: 40px 10px 40px 10px !important;
   }
   .ge-logo {
     display: block;
@@ -1165,6 +1229,14 @@ a {
     font-size: 14px;
     line-height: 12px;
   }
+
+  .accordion {
+    margin: 40px 10px 40px 10px;
+  }
+
+  .faq-page {
+    padding-top: 90px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
@@ -1352,57 +1424,4 @@ a {
     top: 20px;
     right: 3px;
   }
-}
-
-/**
- * Accordion
- */
-.accordion {
-  margin: 40px 200px 40px 200px;
-}
-
-.accordion-body {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-
-.accordion-item {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.accordion .accordion-item:first-child,
-.accordion .accordion-item:first-child .accordion-header {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.accordion .accordion-item:last-child,
-.accordion .accordion-item:last-child .accordion-header {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.accordion-item .accordion-header {
-  background-color: rgb(250, 250, 250);
-  border-collapse: collapse;
-  padding: 20px;
-}
-
-.accordion-item .accordion-header h2 {
-  display: inline-block;
-}
-
-.accordion-item .accordion-header:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  margin-left: 5px;
-}
-
-.accordion-item .accordion-header.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
