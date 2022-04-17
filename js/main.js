@@ -35,4 +35,19 @@ $(document).ready(function(){
     // $('.company-label')[$('.company-link').index(this)].focus();
     $('html, body').animate({scrollTop: $($('.company-label')[$('.company-link').index(this)]).offset().top }, 500)
   });
+
+  var acc = document.getElementsByClassName("accordion-header");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var accordionBody = this.nextElementSibling;
+          if (accordionBody.style.maxHeight) {
+              accordionBody.style.maxHeight = null;
+          } else {
+              accordionBody.style.maxHeight = accordionBody.scrollHeight + "px";
+          }
+      });
+  }
 });
