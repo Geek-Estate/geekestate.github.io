@@ -36,6 +36,21 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop: $($('.company-label')[$('.company-link').index(this)]).offset().top }, 500)
   });
 
+  /**
+   * Add Padding Before Body Content
+   */
+
+  var wrapperHeader = document.querySelector("body.no-hero .wrapper-header-btn");
+  if(wrapperHeader)
+  {
+    var wrapperHeaderHeight = wrapperHeader.clientHeight;
+    wrapperHeader.nextElementSibling.style.paddingTop = wrapperHeaderHeight + 'px';
+  }
+
+
+  /**
+   * Accordion
+   */
   var acc = document.getElementsByClassName("accordion-header");
   var i;
   

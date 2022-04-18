@@ -343,10 +343,6 @@ a {
   .welcome {
     font-size: 80px;
   }
-
-  .faq-page .header-menu {
-    display: none !important;
-  }
 }
 .section__title {
   color: #262626;
@@ -926,7 +922,7 @@ a {
  * Accordion
  */
 .accordion {
-  margin: 40px 200px 40px 200px;
+  margin: 40px 10px 40px 10px;
 }
 
 .accordion-body {
@@ -978,6 +974,10 @@ a {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+.no-hero .wrapper-header-btn {
+  top: 0;
+}
+
 @media only screen and (min-width: 1200px) {
   .ge-logo {
     display: none !important;
@@ -990,6 +990,10 @@ a {
   }
   .header-menu {
     display: block !important;
+  }
+
+  .no-hero .wrapper-header-btn a {
+    color: #000000;
   }
 }
 
@@ -1232,10 +1236,6 @@ a {
 
   .accordion {
     margin: 40px 10px 40px 10px;
-  }
-
-  .faq-page {
-    padding-top: 90px;
   }
 }
 
