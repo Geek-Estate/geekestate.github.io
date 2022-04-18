@@ -1241,6 +1241,14 @@ a {
   .accordion {
     margin: 40px 10px 40px 10px;
   }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .wrapper-header-btn .row {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {

@@ -37,18 +37,6 @@ $(document).ready(function(){
   });
 
   /**
-   * Add Padding Before Body Content
-   */
-
-  var wrapperHeader = document.querySelector("body.no-hero .wrapper-header-btn");
-  if(wrapperHeader)
-  {
-    var wrapperHeaderHeight = wrapperHeader.clientHeight;
-    wrapperHeader.nextElementSibling.style.paddingTop = wrapperHeaderHeight + 'px';
-  }
-
-
-  /**
    * Accordion
    */
   var acc = document.getElementsByClassName("accordion-header");

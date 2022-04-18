@@ -8,21 +8,22 @@ function includeHTML() {
         /*search for elements with a certain atrribute:*/
         file = elmnt.getAttribute("w3-include-html");
         if (file) {
-        /* Make an HTTP request using the attribute value as the file name: */
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            /* Remove the attribute, and call this function once more: */
-            elmnt.removeAttribute("w3-include-html");
-            includeHTML();
+            /* Make an HTTP request using the attribute value as the file name: */
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    /* Remove the attribute, and call this function once more: */
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                    initHeaderHamburger();
+                }
             }
-        }
-        xhttp.open("GET", file, true);
-        xhttp.send();
-        /* Exit the function: */
-        return;
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /* Exit the function: */
+            return;
         }
     }
     
@@ -58,6 +59,45 @@ function includeHTML() {
 }
 includeHTML();
 
-$('.header-hamburger').on('click', function() {
-    $('.header-menu-collapsed').toggleClass('show');
-});
+/**
+ * Header
+ */
+
+var headerHamburgerHasEvent = false;
+
+
+function initHeaderHamburger() {
+    let headerHamburger = $('.header-hamburger');
+    if(headerHamburger.length && !headerHamburgerHasEvent)
+    {
+        headerHamburgerEvent();
+    }
+}
+
+function headerHamburgerEvent() {
+    $('.header-hamburger').on('click', function() {
+        $('.header-menu-collapsed').toggleClass('show');
+    });
+     /**
+   * Add Padding Before Body Content
+   */
+
+    var wrapperHeader = document.querySelector("body.no-hero .wrapper-header-btn");
+
+    if(window.outerWidth <= 600)
+    {
+        wrapperHeader = document.querySelector(".wrapper-header-btn");
+        let wrapperHeaderHeight = wrapperHeader.clientHeight;
+        let nextElement = wrapperHeader.parentElement.nextElementSibling;
+
+        nextElement.style.paddingTop = wrapperHeaderHeight + 'px';
+    }else if(wrapperHeader)
+    {
+        let wrapperHeaderHeight = wrapperHeader.clientHeight;
+        wrapperHeader.parentElement.nextElementSibling.style.paddingTop = wrapperHeaderHeight + 'px';
+    }
+    
+    headerHamburgerHasEvent = true;
+}
+
+initHeaderHamburger();
