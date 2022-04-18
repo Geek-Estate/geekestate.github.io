@@ -978,6 +978,10 @@ a {
   top: 0;
 }
 
+.wrapper h4 a {
+  word-break: break-word;
+}
+
 @media only screen and (min-width: 1200px) {
   .ge-logo {
     display: none !important;
