@@ -509,6 +509,7 @@ a {
   width: 370px;
   height: 275px;
   margin: 20px;
+  overflow: hidden;
 }
 .section-team .logo-list__li img {
   width: 370px;
@@ -1435,5 +1436,23 @@ a {
     position: absolute;
     top: 20px;
     right: 3px;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .section__title {
+      font-size: 48px;
+  }
+  
+  .logo-list__li {
+    width: 150px;
+    margin: 0 50px;
+  }
+
+  .team-list {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
   }
 }
