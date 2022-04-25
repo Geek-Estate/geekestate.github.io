@@ -82,7 +82,7 @@ function headerHamburgerEvent() {
    * Add Padding Before Body Content
    */
 
-    var wrapperHeader = document.querySelector("body.no-hero .wrapper-header-btn");
+    var wrapperHeader = document.querySelector(".wrapper-header-btn.no-hero");
 
     if(window.outerWidth <= 600)
     {
