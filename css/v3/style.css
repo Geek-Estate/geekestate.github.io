@@ -402,7 +402,7 @@ a {
   line-height: 42px;
   text-align: center;
   color: #262626;
-  width: 530px;
+  /* width: 530px; */
   margin-bottom: 30px;
 }
 .section-testimonials .reviewer-title {
@@ -811,9 +811,9 @@ a {
 .section-writing .wrapper-image-with-caption {
   width: max-content;
 }
-.section-writing .wrapper-image-with-caption img {
+/* .section-writing .wrapper-image-with-caption img {
   height: 110px;
-}
+} */
 .section-design .logo-list__li {
   margin-bottom: 58px;
 }
@@ -984,12 +984,12 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-  .ge-logo {
+  /* .ge-logo {
     display: none !important;
   }
   .ge-logo-desktop {
     display: block !important;
-  }
+  } */
   .header-hamburger {
     display: none !important;
   }

@@ -26,9 +26,11 @@ function includeHTML() {
             return;
         }
     }
+
+    var includeJoinNowPage = window.location.href.includes('join-now.html');
     
     if(window.location.href.includes('approved.html') ||
-        window.location.href.includes('join-now.html') ||
+        includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
         window.location.href.includes('FAQ.html')
     ) {
@@ -42,7 +44,7 @@ function includeHTML() {
     if(
         window.location.href.includes('approved.html')||
         window.location.href.includes('companies.html') ||
-        window.location.href.includes('join-now.html') ||
+        includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
         window.location.href.includes('FAQ.html') ||
         window.location.href.includes('members.html')
@@ -55,6 +57,12 @@ function includeHTML() {
         $('.all').remove();
         $('.wrapper-welcome').html('<h1 class="welcome" style="color: #85AB37;font-weight:500;">Welcome to GEM!</h1>' +
             '<h2 style="color: #fff;text-align:center;">Thank you so much for joining</h2>');
+    }
+
+    if(includeJoinNowPage)
+    {
+        $('.all').remove();
+        $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">Ready to Apply?</h2></div>   <div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label-small" style="color: #ffffff;">We require payment upfront to apply for membership. You’ll be redirected immediately to the GEM membership form after you setup your subscription. We’ll provide a full refund within three days if we decline your application. Still have questions? <a href="/FAQ.html">Check our FAQ</a>.</h2></div></div>');
     }
 }
 includeHTML();
