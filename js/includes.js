@@ -28,11 +28,12 @@ function includeHTML() {
     }
 
     var includeJoinNowPage = window.location.href.includes('join-now.html');
+    var includeFAQPage = window.location.href.includes('FAQ.html');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
-        window.location.href.includes('FAQ.html')
+        includeFAQPage
     ) {
         $('.contact-btn').remove();
     }
@@ -46,7 +47,7 @@ function includeHTML() {
         window.location.href.includes('companies.html') ||
         includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
-        window.location.href.includes('FAQ.html') ||
+        includeFAQPage ||
         window.location.href.includes('members.html')
     ) {
         $('.wrapper-sub-header, .header-small, .arrow').remove();
@@ -63,6 +64,12 @@ function includeHTML() {
     {
         $('.all').remove();
         $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">Ready to Apply?</h2></div>   <div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label-small" style="color: #ffffff;">We require payment upfront to apply for membership. You’ll be redirected immediately to the GEM membership form after you setup your subscription. We’ll provide a full refund within three days if we decline your application. Still have questions? <a href="/FAQ.html">Check our FAQ</a>.</h2></div></div>');
+    }
+
+    if(includeFAQPage)
+    {
+        $('.all').remove();
+        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Frequently Asked Questions</h2></div>');
     }
 }
 includeHTML();

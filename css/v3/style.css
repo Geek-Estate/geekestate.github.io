@@ -846,7 +846,8 @@ a {
   color: #85ab37;
 }
 
-.ge-logo {
+.ge-logo,
+.mobile-only {
   display: none;
 }
 .ge-logo-desktop {
@@ -984,12 +985,12 @@ a {
 }
 
 @media only screen and (min-width: 1200px) {
-  /* .ge-logo {
+  .ge-logo {
     display: none !important;
   }
   .ge-logo-desktop {
     display: block !important;
-  } */
+  }
   .header-hamburger {
     display: none !important;
   }
@@ -1061,7 +1062,7 @@ a {
     display: flex;
     align-items: center;
     height: 92px;
-    float: right;
+    justify-content: center;
   }
   .header-menu-collapsed {
     width: 100%;
@@ -1249,6 +1250,18 @@ a {
 
   .wrapper-header-btn .row {
     margin-bottom: 0;
+  }
+
+  .wrapper-header-btn .row:after {
+    margin-bottom: 0; 
+  }
+
+  .wrapper-header-btn {
+    background-color: #303030;
+  }
+
+  .mobile-only {
+    display: block;
   }
 }
 
