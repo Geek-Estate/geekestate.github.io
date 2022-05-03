@@ -29,6 +29,7 @@ function includeHTML() {
 
     var includeJoinNowPage = window.location.href.includes('join-now.html');
     var includeFAQPage = window.location.href.includes('FAQ.html');
+    var includeCompanyPage = window.location.href.includes('companies.html') || window.location.href.includes('companies');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -44,7 +45,7 @@ function includeHTML() {
 
     if(
         window.location.href.includes('approved.html')||
-        window.location.href.includes('companies.html') ||
+        includeCompanyPage ||
         includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
         includeFAQPage ||
@@ -70,6 +71,12 @@ function includeHTML() {
     {
         $('.all').remove();
         $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Frequently Asked Questions</h2></div>');
+    }
+
+    if(includeCompanyPage)
+    {
+        $('.all').remove();
+        $('.wrapper-welcome').html('<h2 class="welcome">Representing companies such as...</h2>');
     }
 }
 includeHTML();
