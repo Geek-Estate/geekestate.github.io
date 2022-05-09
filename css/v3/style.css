@@ -965,15 +965,16 @@ a {
 }
 
 .accordion-item .accordion-header:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
+  content: '+'; /* Unicode character for "plus" sign (+) */
+  font-size: 25px;
+  font-weight: bold;
+  color: #85ab37;
   float: right;
   margin-left: 5px;
 }
 
 .accordion-item .accordion-header.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
 }
 
 .no-hero .wrapper-header-btn {
