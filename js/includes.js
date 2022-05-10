@@ -27,9 +27,10 @@ function includeHTML() {
         }
     }
 
-    var includeJoinNowPage = window.location.href.includes('join-now.html');
-    var includeFAQPage = window.location.href.includes('FAQ.html');
+    var includeJoinNowPage = window.location.href.includes('join-now.html') || window.location.href.includes('join-now');
+    var includeFAQPage = window.location.href.includes('FAQ.html') || window.location.href.includes('FAQ');
     var includeCompanyPage = window.location.href.includes('companies.html') || window.location.href.includes('companies');
+    var includeMembersPage = window.location.href.includes('members.html') || window.location.href.includes('members');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -39,17 +40,13 @@ function includeHTML() {
         $('.contact-btn').remove();
     }
 
-    if(window.location.href.includes('members.html')) {
-        $('.section-hero .contact-btn').remove();
-    }
-
     if(
         window.location.href.includes('approved.html')||
         includeCompanyPage ||
         includeJoinNowPage ||
         window.location.href.includes('thank-you-newsletter.html') ||
         includeFAQPage ||
-        window.location.href.includes('members.html')
+        includeMembersPage
     ) {
         $('.wrapper-sub-header, .header-small, .arrow').remove();
         
@@ -77,6 +74,12 @@ function includeHTML() {
     {
         $('.all').remove();
         $('.wrapper-welcome').html('<h2 class="welcome">Representing companies such as...</h2>');
+    }
+
+    if(includeMembersPage) {
+        $('.section-hero .contact-btn').remove();
+        $('.all').remove();
+        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">GEM Member Access</h2></div>');
     }
 }
 includeHTML();
