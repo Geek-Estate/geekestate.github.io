@@ -97,6 +97,13 @@ a {
   padding-top: 100px;
   padding-bottom: 100px;
 }
+.homepage .section-hero {
+  background: linear-gradient(rgba(38, 38, 38, 0.82), rgba(38, 38, 38, 0.82)),
+    url("../../img/Banner BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #262626;
+}
 .section-hero .wrapper,
 .section-writing .wrapper,
 .section-design .wrapper,
