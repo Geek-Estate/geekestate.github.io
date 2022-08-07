@@ -518,6 +518,9 @@ a {
   margin: 20px;
   overflow: hidden;
 }
+.section-team.with-description .logo-list__li {
+  height: auto;
+}
 .section-team .logo-list__li img {
   width: 370px;
   height: 275px;
