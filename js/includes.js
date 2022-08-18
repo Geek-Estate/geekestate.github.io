@@ -31,6 +31,7 @@ function includeHTML() {
     var includeFAQPage = window.location.href.includes('FAQ.html') || window.location.href.includes('FAQ');
     var includeCompanyPage = window.location.href.includes('companies.html') || window.location.href.includes('companies');
     var includeMembersPage = window.location.href.includes('members.html') || window.location.href.includes('members');
+    var includeAboutPage = window.location.href.includes('about.html') || window.location.href.includes('about');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -80,6 +81,11 @@ function includeHTML() {
         $('.section-hero .contact-btn').remove();
         $('.all').remove();
         $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">GEM Member Access</h2></div>');
+    }
+
+    if(includeAboutPage) {
+        $('.all').remove();
+        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">About GeekEstate</h2></div>');
     }
 }
 includeHTML();
