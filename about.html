@@ -54,6 +54,7 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link rel="stylesheet" href="css/v3/style.css" />
+    <link rel="stylesheet" href="css/brands.min.css" />
     <script id="mcjs">
       !(function (c, h, i, m, p) {
         (m = c.createElement(h)),
@@ -280,16 +281,26 @@
         margin-bottom: 2rem;
       }
 
-      .meet-drew-wrapper .meet-content .meet-description p:last-child {
+      .meet-drew-wrapper .meet-content .meet-description p:nth-child(2) {
         font-weight: 300;
+        margin-bottom: 2rem;
       }
 
       .meet-drew-wrapper
         .meet-content
         .meet-description
-        p:last-child
+        p:nth-child(2)
         .text-green {
         font-weight: bold;
+      }
+
+      .meet-drew-wrapper .meet-content .meet-description .social-icons{
+        display: flex;
+        column-gap: 30px;
+      }
+
+      .meet-drew-wrapper .meet-content .meet-description .social-icons a {
+        font-size: 40px;
       }
 
       .disclosure-wrapper {
@@ -316,7 +327,7 @@
 
       .disclosure-wrapper
         .wrapper
-        .content:nth-child(2)
+        .content:nth-child(3)
         .description
         p:first-child {
         margin-bottom: 2.3rem;
@@ -324,7 +335,7 @@
 
       .disclosure-wrapper
         .wrapper
-        .content:nth-child(2)
+        .content:nth-child(3)
         .description
         p:last-child {
         font-weight: 400;
@@ -334,13 +345,17 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 50px 0;
+        padding: 0 0 50px 0;
         flex-wrap: wrap;
       }
 
-      .disclosure-wrapper .images img {
+      .disclosure-wrapper .images a {
         width: 25%;
         padding: 20px;
+      }
+
+      .disclosure-wrapper .images a img {
+        width: 100%;
       }
 
       .cta-apply-wrapper {
@@ -365,6 +380,14 @@
         color: #ffffff;
       }
 
+      a {
+        text-decoration: none;
+      }
+
+      .fa-brands {
+        font-style: normal;
+      }
+
       @media (max-width: 767.98px) {
         .container.right {
           padding-left: 65px;
@@ -382,7 +405,7 @@
           column-count: 1;
         }
 
-        .disclosure-wrapper .images img {
+        .disclosure-wrapper .images a {
           width: 50%;
         }
       }
@@ -435,10 +458,11 @@
           <p>
             The real estate technology landscape innovates at a lightning pace
             as new companies shake up the status quo and modernize the real
-            estate experience. <a href="https://geekestateblog.com/">Geek Estate Blog</a> is a transparent platform
-            specifically written for tech-savvy real estate practitioners,
-            entrepreneurs, and vendors navigating the most pressing issues
-            facing the RE industry.
+            estate experience.
+            <a href="https://geekestateblog.com/">Geek Estate Blog</a> is a
+            transparent platform specifically written for tech-savvy real estate
+            practitioners, entrepreneurs, and vendors navigating the most
+            pressing issues facing the RE industry.
           </p>
           <p>
             Authored by self-proclaimed geeks—people with deep experience
@@ -483,8 +507,12 @@
               <div class="date">2007</div>
               <div class="content">
                 <p>
-                  Geek Estate 1.0. <a href="https://geekestateblog.com/welcome-to-geekestate-blog/">Geek Estate Blog was launched by Drew Meyers
-                  while employed by Zillow</a>.
+                  Geek Estate 1.0.
+                  <a
+                    href="https://geekestateblog.com/welcome-to-geekestate-blog/"
+                    >Geek Estate Blog was launched by Drew Meyers while employed
+                    by Zillow</a
+                  >.
                 </p>
                 <img src="../../img/timeline-geb-logo.jpg" alt="GEB Logo" />
               </div>
@@ -493,7 +521,14 @@
               <div class="date">2010</div>
               <div class="content">
                 <p class="text-green">
-                  <strong><u><a href="http://www.drewmeyersinsights.com/2010/01/26/its-time-for-the-next-chapter/">Drew’s departure from Zillow</a>.</u></strong>
+                  <strong
+                    ><u
+                      ><a
+                        href="http://www.drewmeyersinsights.com/2010/01/26/its-time-for-the-next-chapter/"
+                        >Drew’s departure from Zillow</a
+                      >.</u
+                    ></strong
+                  >
                 </p>
               </div>
             </div>
@@ -503,7 +538,14 @@
                 <p>
                   Began working at Virtual Results, and launched
                   <span class="text-green"
-                    ><strong><u><a href="https://geekestateblog.com/in-the-works-geek-estate-pro-a-wordpress-internet-marketing-community-forum/">Geek Estate Pro</a></u></strong></span
+                    ><strong
+                      ><u
+                        ><a
+                          href="https://geekestateblog.com/in-the-works-geek-estate-pro-a-wordpress-internet-marketing-community-forum/"
+                          >Geek Estate Pro</a
+                        ></u
+                      ></strong
+                    ></span
                   >. Zillow transferred ownership of the site to Drew.
                 </p>
               </div>
@@ -534,14 +576,21 @@
                 <p>
                   Launch of the Geek Estate Mastermind (now referred to as the
                   GEM). The first member to pay dues was Bryan Copley from
-                  <a href="https://www.citybldr.com/">CityBldr</a> (September 1st).
+                  <a href="https://www.citybldr.com/">CityBldr</a> (September
+                  1st).
                 </p>
               </div>
             </div>
             <div class="container right">
               <div class="date">2018</div>
               <div class="content">
-                <p><a href="https://geekestateblog.com/geek-estate-3-0-the-facelift-1825-days-too-late/">Geek Estate 3.0 Facelift</a> (June 13, 2018)</p>
+                <p>
+                  <a
+                    href="https://geekestateblog.com/geek-estate-3-0-the-facelift-1825-days-too-late/"
+                    >Geek Estate 3.0 Facelift</a
+                  >
+                  (June 13, 2018)
+                </p>
               </div>
             </div>
             <div class="container right">
@@ -590,12 +639,34 @@
               <span class="text-green">MIT Technology Review</span>, and other
               publications.
             </p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-angellist"></i></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="disclosure-wrapper">
       <div class="wrapper">
+        <div class="images-wrapper">
+          <h3 class="description-title text-green">Current Investments</h3>
+          <div class="images">
+            <a href="https://www.meetresident.com/"
+              ><img src="../../img/about-resident.png" alt="Resident"
+            /></a>
+            <a href="https://www.citybldr.com/"
+              ><img src="../../img/about-citybldr.png" alt="CityBldr"
+            /></a>
+            <a href="https://myplace.co/"
+              ><img src="../../img/about-myplace.png" alt="MyPlace"
+            /></a>
+            <a href="https://www.getplunk.com/"
+              ><img src="../../img/about-plunk.png" alt="Plunk"
+            /></a>
+          </div>
+        </div>
         <div class="content">
           <h3 class="description-title text-green">Disclosures</h3>
           <div class="description">
@@ -616,14 +687,12 @@
               building a startup in the real estate space or a vendor looking to
               figure out the best way to reach agents and brokers?
             </p>
-            <p><a href="/apply-now.html">Please apply to the GEM</a>.</p>
+            <p>
+              <a href="/apply-now.html" class="text-green"
+                ><u>Please apply to the GEM</u></a
+              >.
+            </p>
           </div>
-        </div>
-        <div class="images">
-          <a href="https://www.meetresident.com/"><img src="../../img/about-resident.png" alt="Resident" /></a>
-          <a href="https://www.citybldr.com/"><img src="../../img/about-citybldr.png" alt="CityBldr" /></a>
-          <a href="https://myplace.co/"><img src="../../img/about-myplace.png" alt="MyPlace" /></a>
-          <a href="https://www.getplunk.com/"><img src="../../img/about-plunk.png" alt="Plunk" /></a>
         </div>
       </div>
     </div>
@@ -639,14 +708,26 @@
         </div>
       </div>
     </div>
-    <div class="section-contact" style="height: 250px;background: #f6f6f6;padding-top:85px;padding-bottom:85px;">
-        <div class="wrapper">
-            <h2 class="section__small-title"><strong>Questions?</strong> Don't hesitate to ask</h2>
-            
-            <div class="wrapper-link-example">
-                <a class="mailto:community@geekestate.com">community@geekestate.com</a>
-            </div>
-          </div>
+    <div
+      class="section-contact"
+      style="
+        height: 250px;
+        background: #f6f6f6;
+        padding-top: 85px;
+        padding-bottom: 85px;
+      "
+    >
+      <div class="wrapper">
+        <h2 class="section__small-title">
+          <strong>Questions?</strong> Don't hesitate to ask
+        </h2>
+
+        <div class="wrapper-link-example">
+          <a class="mailto:community@geekestate.com"
+            >community@geekestate.com</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Add your site or application content here -->
