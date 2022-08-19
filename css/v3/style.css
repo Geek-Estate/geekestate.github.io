@@ -49,7 +49,7 @@ a {
 }
 .product-card__btn,
 .contact-btn {
-  background-color: #5a9317;
+  background-color: #74bc1f;
   color: #fff;
   height: 60px;
   text-decoration: none;
@@ -85,7 +85,7 @@ a {
   line-height: 22px;
   font-style: normal;
   font-family: "Lato", sans-serif;
-  border: 3px solid #5a9317;
+  border: 3px solid #74bc1f;
   text-transform: uppercase;
 }
 .section-hero {
@@ -131,7 +131,7 @@ a {
 .section-design h3 {
   margin-bottom: 74px;
   text-decoration-line: underline;
-  color: #5a9317;
+  color: #74bc1f;
 }
 .section-design .logo-list__li {
   width: 212.98px;
@@ -145,7 +145,7 @@ a {
   margin: 0 13.5px;
 }
 .section-products .section__title {
-  color: #5a9317;
+  color: #74bc1f;
   font-weight: 300;
   font-style: normal;
 }
@@ -219,14 +219,14 @@ a {
   color: #fff;
 }
 .header-btn-member-only {
-  color: #5a9317 !important;
+  color: #74bc1f !important;
 }
 .section-hero .wrapper-sub-header {
   max-width: 1029px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #5a9317;
+  color: #74bc1f;
   display: -webkit-box;
   text-align: center;
   margin-bottom: 36px;
@@ -276,7 +276,7 @@ a {
   height: 100px;
   padding-right: 1em;
   padding-left: 1em;
-  background-color: #5a9317;
+  background-color: #74bc1f;
   overflow: visible;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -302,7 +302,7 @@ a {
   align-items: center;
   padding-top: 25px;
   padding-bottom: 20px;
-  background-color: #5a9317;
+  background-color: #74bc1f;
   font-size: 18px;
   font-weight: 300;
   margin-top: 35px;
@@ -719,7 +719,7 @@ a {
   height: auto;
 }
 .section-testimonials .testimonials-content h2 {
-  color: #5a9317;
+  color: #74bc1f;
 }
 .section-testimonials .testimonials-content .member-logo img {
   width: 92px;
@@ -756,7 +756,7 @@ a {
   font-size: 30px;
   font-weight: 300;
   line-height: 42px;
-  color: #5a9317;
+  color: #74bc1f;
   display: flex;
   justify-content: center;
 }
@@ -785,7 +785,7 @@ a {
   font-size: 20px;
   line-height: 42px;
   text-decoration-line: underline;
-  color: #5a9317;
+  color: #74bc1f;
   margin-bottom: 66px;
   display: flex;
   justify-content: center;
@@ -853,7 +853,7 @@ a {
   font-size: 20px;
   line-height: 34px;
   text-decoration-line: underline;
-  color: #5a9317;
+  color: #74bc1f;
 }
 
 .ge-logo,
@@ -876,7 +876,7 @@ a {
   font-size: 48px;
   line-height: 58px;
   text-align: center;
-  color: #5a9317;
+  color: #74bc1f;
 }
 .section-body-approved-label-small {
   font-family: Lato;
@@ -895,7 +895,7 @@ a {
 }
 
 .company-link-active {
-  color: #5a9317 !important;
+  color: #74bc1f !important;
 }
 
 .divider {
@@ -978,7 +978,7 @@ a {
   content: '+'; /* Unicode character for "plus" sign (+) */
   font-size: 25px;
   font-weight: bold;
-  color: #5a9317;
+  color: #74bc1f;
   float: right;
   margin-left: 5px;
 }
@@ -1039,7 +1039,7 @@ a {
     font-size: 36px;
     line-height: 43px;
     text-align: center;
-    color: #5a9317;
+    color: #74bc1f;
     margin: 40px 10px 40px 10px !important;
   }
   .section-body-approved-label-small {
@@ -1295,7 +1295,7 @@ a {
     font-size: 48px;
     line-height: 58px;
     text-align: center;
-    color: #5a9317;
+    color: #74bc1f;
   }
   .section-body-approved-label-small {
     font-family: Lato;
