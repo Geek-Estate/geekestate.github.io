@@ -62,7 +62,7 @@ function includeHTML() {
     if(includeJoinNowPage)
     {
         $('.all').remove();
-        $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">Ready to Apply?</h2></div>   <div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label-small" style="color: #ffffff;">We require payment upfront to apply for membership. You’ll be redirected immediately to the GEM membership form after you setup your subscription. We’ll provide a full refund within three days if we decline your application. Still have questions? <a href="/FAQ.html">Check our FAQ</a>.</h2></div></div>');
+        $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">GEM Application</h2></div></div>');
     }
 
     if(includeFAQPage)
