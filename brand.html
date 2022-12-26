@@ -131,6 +131,10 @@
         flex-wrap: wrap;
       }
 
+      .icons .icon-content:first-child {
+        position: relative;
+      }
+
       .logo-content,
       .icon-content {
         width: 48%;
@@ -236,6 +240,21 @@
         .icons > *,
         .colors > * {
           width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 1440px) {
+        .icons .icon-content:first-child:before {
+          content: "";
+          background-image: url(img/brand/GeekEstate_Logo_Icon);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 80px;
+          height: 80px;
+          display: inline-block;
+          position: absolute;
+          left: -90px;
+          top: 80px;
         }
       }
     </style>
