@@ -32,6 +32,7 @@ function includeHTML() {
     var includeCompanyPage = window.location.href.includes('companies.html') || window.location.href.includes('companies');
     var includeMembersPage = window.location.href.includes('members.html') || window.location.href.includes('members');
     var includeAboutPage = window.location.href.includes('about.html') || window.location.href.includes('about');
+    var includeBrandPage = window.location.href.includes('brand.html') || window.location.href.includes('brand');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -86,6 +87,11 @@ function includeHTML() {
     if(includeAboutPage) {
         $('.all').remove();
         $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">About GeekEstate</h2></div>');
+    }
+
+    if(includeBrandPage) {
+        $('.all').remove();
+        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Brand Assets</h2></div>');
     }
 }
 includeHTML();
