@@ -1352,6 +1352,7 @@ a {
   }
   .arrow {
     display: block;
+    margin: 0 auto;
   }
   .section__title {
     font-size: 48px;
