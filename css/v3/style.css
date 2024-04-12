@@ -995,6 +995,24 @@ a {
   word-break: break-word;
 }
 
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#scrollToTop img {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
 @media only screen and (min-width: 1200px) {
   .ge-logo {
     display: none !important;

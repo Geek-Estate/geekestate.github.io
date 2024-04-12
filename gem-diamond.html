@@ -3,370 +3,848 @@
 
 <head>
   <meta charset="utf-8">
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WXWZN36');
-    </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXWZN36');
+  </script>
   <!-- End Google Tag Manager -->
   <title>the GEM, a community for proptech founders and executives. Part of Geek Estate.</title>
-  <meta name="description" content="Private and paid community for proptech founders, executives, VCs, and practitioners.">
+  <meta name="description"
+    content="Private and paid community for proptech founders, executives, VCs, and practitioners.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
   <link rel="manifest" href="/testsite.webmanifest.json" />
 
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-  <link rel="stylesheet" href="css/v3/style.css">
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
-  <style>
+  <link rel="stylesheet" href="css/v4/style.css">
+  <link rel="stylesheet" href="css/v4/header.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <script
+    id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
+  <style type="text/css">
     .section-team .logo-list__li {
       overflow: unset;
     }
+
+    .gem-btn {
+      background-color: var(--green);
+      border-radius: 30px;
+      border: 3px solid var(--green);
+      padding: 8px 40px;
+      font-weight: 500;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .gem-btn.outline {
+      background-color: transparent;
+    }
+
+    .text-green {
+      color: var(--green) !important;
+    }
+
+    .section-hero {
+      position: relative;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .section-hero .overlay-bg {
+      background-image: url("/assets/images/Gem_Diamond_Header_BG.png");
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .section-hero .wrapper {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      text-align: center;
+    }
+
+    .section-hero .wrapper .logo {
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .section-hero .wrapper .description {
+      font-family: 'Open Sans';
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      width: 900px;
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .apply-form-wrapper {
+      background-color: #262626;
+      padding: 40px 100px;
+      width: auto;
+      display: inline-block;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .apply-form-wrapper form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 15px;
+    }
+
+    .apply-form-wrapper form select {
+      background-color: #D9D9D91A;
+      color: #fff;
+      padding: 10px 20px;
+      max-width: 350px;
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* Add custom arrow */
+      background-image: url('/assets/images/caret-down-solid.svg');
+      background-position: right 15px center;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      width: 100vw;
+      border-radius: 30px;
+    }
+
+    .apply-form-wrapper form button {
+      cursor: pointer;
+    }
+
+    .section-hero .wrapper .description-form {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .section-hero .wrapper .header-divider {
+      margin: 30px 0;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-hero .wrapper .header-divider:before {
+      content: "";
+      display: inline-block;
+      background-color: #fff;
+      width: calc(50% - 155px);
+      height: 0.5px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+
+    .section-hero .wrapper .header-divider:after {
+      content: "";
+      display: inline-block;
+      background-color: #fff;
+      width: calc(50% - 155px);
+      height: 0.5px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+    }
+
+    .section-content {
+      background-image: url("/assets/images/Gem_Diamond_Content_BG.webp");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+
+    .section-content .wrapper {
+      text-align: center;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    .section-content hr {
+      border-top: 0.5px solid #D6D6D6;
+    }
+
+    .section-content .testimonial-wrapper {
+      display: flex;
+      border-top: 1px solid #D6D6D6;
+      border-bottom: 1px solid #D6D6D6;
+      padding: 50px 0;
+      column-gap: 30px;
+    }
+
+    .section-content .testimonial-wrapper .left {
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+      flex: 1 0 40%;
+    }
+
+    .section-content .testimonial-wrapper .left .img-wrapper img {
+      width: 100%;
+      max-width: 220px;
+      border-radius: 50%;
+    }
+
+    .section-content .testimonial-wrapper .left .bio-wrapper {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .section-content .testimonial-wrapper .left .bio-wrapper span:first-child {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .section-content .testimonial-wrapper .left .bio-wrapper span:last-child {
+      font-size: 20px;
+    }
+
+    .section-content .testimonial-wrapper .right {
+      align-items: center;
+      display: flex;
+    }
+
+    .section-content .testimonial-wrapper .right p {
+      color: #262626;
+      font-size: 32px;
+      text-align: left;
+      position: relative;
+    }
+
+    .section-content .testimonial-wrapper .right p:after {
+      content: "";
+      display: inline-block;
+      background-image: url(/assets/images/quote.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px;
+      height: 185px;
+      filter: brightness(0.9);
+      position: absolute;
+      right: -30px;
+      top: 0;
+      transform: scale(0.6) translate(0, -44%);
+      z-index: -1;
+    }
+
+    .section-content .includes-wrapper {
+      padding-top: 50px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+
+    .section-content .includes-wrapper .row {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .section-content .includes-wrapper .row.second {
+      align-items: center;
+      margin-top: -10vw;
+      margin-bottom: 50px;
+    }
+
+    .section-content .includes-wrapper .row .col {
+      flex: 1 0 50%;
+      position: relative;
+    }
+
+    .section-content .includes-wrapper .row.first .col.description,
+    .section-content .includes-wrapper .row.second .col.description {
+      padding-top: 5vw;
+      max-width: 633px;
+    }
+
+    .section-content .includes-wrapper .row .col.img-wrapper {
+      max-width: 50%;
+    }
+
+    .section-content .includes-wrapper .row.first .col img {
+      width: 100%;
+      right: -73px;
+    }
+
+    .section-content .includes-wrapper .row.second .col img {
+      width: 100%;
+      left: -73px;
+    }
+
+    .section-content .includes-wrapper h3 {
+      font-size: 40px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .section-content .includes-wrapper .row.second h3 {
+      max-width: 400px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    .section-content .includes-wrapper p {
+      font-size: 18px;
+    }
+
+    .section-content .includes-wrapper .description {
+      font-size: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .section-content .includes-wrapper .gem-btn {
+      text-transform: uppercase;
+    }
+
+    .section-content .inspiring-wrapper {
+      margin-bottom: 50px;
+    }
+
+    .section-content .inspiring-wrapper h3 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    .section-content .inspiring-wrapper .inspiring-list {
+      display: flex;
+      column-gap: 50px;
+    }
+
+    .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item .top {
+      position: relative;
+    }
+
+    .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item .top img {
+      display: block;
+    }
+
+    .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item .top span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item .description {
+      background-color: #fff;
+      padding: 20px 30px 30px;
+      display: flex;
+      flex-flow: column;
+      text-align: left;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .section-content .develop-wrapper {
+      padding: 50px;
+    }
+
+    .section-content .develop-wrapper h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .section-content .develop-wrapper .develop-list {
+      display: flex;
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .section-content .develop-wrapper .develop-list .develop-list-item {
+      flex: 1 0 33%;
+    }
+
+    .section-content .develop-wrapper .develop-list .develop-list-item .top img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1/0.72;
+      border-radius: 30px;
+    }
+
+    .section-content .develop-wrapper .develop-list .develop-list-item .description {
+      font-size: 18px;
+    }
+
+    .section-content .develop-wrapper p {
+      font-size: 24px;
+    }
+
+    .section-content .who-is-it-wrapper {
+      padding: 50px;
+    }
+
+    .section-content .who-is-it-wrapper h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .section-content .who-is-it-wrapper .who-is-it-list {
+      display: flex;
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    .section-content .who-is-it-wrapper span {
+      color: #666666;
+    }
+
+    .section-content .who-is-it-wrapper a {
+      font-size: 20px;
+    }
+
+    .testimonial-footer-wrapper {
+      background-color: var(--green);
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .testimonial-footer-wrapper .greetings {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-footer-wrapper .content {
+      font-size: 32px;
+      font-weight: 300;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-footer-wrapper .author-wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+    }
+
+    .testimonial-footer-wrapper .author-wrapper .author-img {
+      width: 20%;
+      max-width: 167px;
+    }
+
+    .testimonial-footer-wrapper .author-wrapper img {
+      width: 100%;
+      border-radius: 50% 50% 0;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .testimonial-footer-wrapper .author-wrapper .bio-wrapper {
+      display: flex;
+      flex-flow: column;
+      text-align: left;
+    }
+
+    .testimonial-footer-wrapper .author-wrapper .bio-wrapper .position {
+      color: #ffffff;
+    }
+
+    .section-subfooter {
+      background-image: url("/assets/images/Gem_Diamond_Footer_BG.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      color: #fff;
+    }
+
+    .section-subfooter .title {
+      font-weight: bold;
+      font-size: 64px;
+      font-family: Poppins;
+      margin-bottom: 30px;
+    }
+
+    .section-subfooter .sub-title {
+      font-size: 20px;
+      font-family: Poppins, Inter;
+    }
+
+    .section-subfooter .form-title {
+      font-size: 24px;
+      font-weight: 400;
+      font-family: Poppins, Inter;
+      margin-bottom: 20px;
+    }
+
+    .section-subfooter .apply-form-wrapper {
+      margin-bottom: 40px;
+    }
+
+    .section-subfooter .question-wrapper {
+      padding: 50px 0;
+    }
+
+    .section-subfooter .question-wrapper .title {
+      font-size: 40px;
+    }
+
+    .section-subfooter .question-wrapper a,
+    .section-subfooter .question-wrapper span {
+      font-size: 20px;
+      font-family: Inter, Poppins;
+    }
+
+    .section-subfooter .question-wrapper span {
+      margin: 0 10px;
+    }
+
+    .section-subfooter hr {
+      border-top: 1px solid #535353
+    }
+
+    .section-subfooter .gem-crystal-wrapper {
+      padding: 50px 0 0;
+    }
+
+    .section-subfooter .gem-crystal-wrapper .title {
+      font-size: 24px;
+      font-weight: 400;
+      font-family: Poppins, Inter;
+      margin-bottom: 20px;
+    }
+
+    .section-subfooter img {
+      margin-bottom: 50px;
+      max-width: 268px;
+      width: 100%;
+    }
+
+    .section-subfooter p {
+      font-family: Inter;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31.2px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 50px;
+    }
+
+    .section-subfooter a {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 600px) {}
   </style>
 </head>
 
 <body class="homepage">
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXWZN36" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXWZN36" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
   <div class="container">
-    <div class="wrapper-header-btn">
-      <a href="/members.html" button class="members-only-btn">MEMBERS ONLY</a button>
-    </div>
+    <div w3-include-html="header-tag.html"></div>
     <div class="section-hero">
+      <div class="overlay-bg"></div>
       <div class="wrapper">
-        <img class="ge-logo-desktop" src="img/theGEM_Logo_1500.png" alt="the GEM">
-        <h1 class="welcome">Connecting the boldest proptech entrepreneurs across every sector</h1>
-        <div class="wrapper-sub-header">
-          A PRIVATE COMMUNITY FREE FROM SPONSORED MESSAGES AND NOISE BUILT FOR INDEPENDENT CREATIVES, DOERS,  AND PIONEERS.
+        <img class="logo" src="/assets/images/Gem_Diamond_1500_Reverse_Logo.png" />
+        <p class="description">An invite only community of independent proptech creatives, doers, and pioneers free from
+          sponsored messages and noise.</p>
+        <div class="apply-form-wrapper">
+          <form method="GET" action="https://www.geekestate.com/join-now.html">
+            <label>
+              I'm a
+            </label>
+            <select>
+              <option value="founder">Founder</option>
+            </select>
+            <input type="hidden" name="utm_source" value="Geek-Estate" />
+            <input type="hidden" name="utm_medium" value="button" />
+            <input type="hidden" name="utm_campaign" value="home-page-apply-top" />
+            <button type="submit" class="gem-btn">APPLY</button>
+          </form>
         </div>
-        <h3 class="header-small">
-          Smaller is better: Limited to 1,500
-        </h3>
-        <a href="https://www.geekestate.com/join-now.html?utm_source=Geek-Estate&utm_medium=button&utm_campaign=home-page-apply-top"" id="drop-line-HP-button" class="contact-btn">Apply Now</a>
-  
-        <svg  class="arrow" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292969 1.70718L1.70718 0.292969L13.0001 11.5859L24.293 0.292969L25.7072 1.70718L13.0001 14.4143L0.292969 1.70718Z" fill="white"/>
-        </svg>
+        <p class="description-form">Smaller is better: Limited to 1,500</p>
+        <p class="sign-in-description">Already a member? <a class="text-green"
+            href="https://www.geekestate.com/members.html">Sign
+            in</a></p>
       </div>
     </div>
-  
-    <div class="section-writing">
+
+    <div class="section-content">
       <div class="wrapper">
-        <div class="section__title">Superficial networks <span class="section__description">are not in short supply.</span></div>
-        <div class="section__title">Depth of conversations <span class="section__description">and relationships are.</span></div>
-        
-        <div class="section__description section__subdescription">Join 625+ other:</div>
-  
-        <ul class="logo-list">
-          <li class="logo-list__li">
-            <div class="wrapper-image-with-caption">
-              <img src="assets/v2/Icons/C-Suite.png" alt="Founders">
-              <span class="caption">Founders</span>
+        <div w3-include-html="trusted-by-founders-partners.html"></div>
+        <div class="testimonial-wrapper">
+          <div class="left">
+            <div class="img-wrapper">
+              <img src="/assets/images/Ted_Adler.png" />
             </div>
-          </li>
-          <li class="logo-list__li">
-            <div class="wrapper-image-with-caption">
-              <img src="assets/v2/Icons/VSs.png" alt="VC & Angels">
-              <span class="caption">VCs & Angels</span>
+            <div class="bio-wrapper">
+              <span class="text-green">Ted Adler</span>
+              <span><strong>Founder,</strong> Union Street Media</span>
             </div>
-          </li>
-          <li class="logo-list__li">
-            <div class="wrapper-image-with-caption">
-              <img src="assets/v2/Icons/Broker-Owners.png" alt="Broker-Owners">
-              <span class="caption">Broker - Owners</span>
-            </div>
-          </li>
-          <li class="logo-list__li">
-            <div class="wrapper-image-with-caption">
-              <img src="assets/v2/Icons/Founders.png" alt="C-Suite">
-              <span class="caption">C-Suite</span>
-            </div>
-          </li>
-          <li class="logo-list__li">
-            <div class="wrapper-image-with-caption">
-              <img src="assets/v2/Icons/Landlords.png" alt="Landlords-Developers">
-              <span class="caption">Landlords - Developers</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="section-design">
-      <div class="wrapper">
-        <h2 class="section__title">Representing companies such as...</h2>
-        <ul class="logo-list">
-          <li class="logo-list__li"><img class="NFX" src="assets/v2/Partner Logos/nfx.jpg" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/knock.jpg" /></li>
-          <li class="logo-list__li"><img class="open-door" src="assets/v2/Partner Logos/opendoor.png" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/ojo-labs.png" /></li>
-          <li class="logo-list__li"><img class="pacaso" src="assets/v2/Partner Logos/Pacaso_Dark_Logo.jpg" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/realtor-dot-com.png" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/second-century.png" /></li>
-          <li class="logo-list__li" style="background: #595959"><img src="assets/v2/Partner Logos/side.png" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/Zillow-Group_Horizontal_Dark-Blue_RGB.jpg" /></li>
-          <li class="logo-list__li"><img src="assets/v2/Partner Logos/zumper.jpg" /></li>
-  
-        </ul>
-        <a href="https://www.geekestate.com/companies.html" id="drop-line-HP-button" class="contact-btn">More</a>
-  
-        <h3><a href="https://geekestateblog.com/state-of-the-gem-2023/">See a breakdown by geography, role and sector</a></h3>
-      </div>
-    </div>
-    <div class="section-products">
-      <div class="wrapper">
-        <h2 class="section__title">VIP Roundtable Dinners</h2>
-        <h2 class="section__title section__subtitle">Sparking product innovation and building transformative partnerships.</h2>
-    
-        <h3 class="section__title section_small-title">Proptech changemakers. Intimate setting. Michelin star cuisine.</h3>
-        
-      </div>
-    </div>
-    <div class="section-team">
-      <div class="wrapper">
-        <ul class="team-list">
-          <li>
-            <div class="wrapper-img-single-row">
-                <img src="assets/v2/resident-dinner-setting.jpg" class="img-roundtable-dinners" />
-            </div>
-          </li>
-          <li>
-            <div class="wrapper-img-row">
-                <img src="assets/v2/resident-dinner-table.jpg" class="img-mg">
-            </div>
-            <div class="wrapper-img-row">
-                <img src="assets/v2/Zubin+Kat-resident.jpg" class="img-rooftop">
-            </div>
-          </li>
-        </ul>
-        <div class="wrapper-resident" style="margin-top: 50px;">
-          <span class="section__title section_small-title">In partnership with Resident</span> <a href="https://meetresident.com/"><img src="assets/v2/resident-logo.png" /></a>
+          </div>
+          <div class="right">
+            <p>“I'd chalk the VIP dinner up as the best event I attended in either 2019 or 2020!”</p>
+          </div>
         </div>
-        <div class="section__title section__subtitle">Develop lasting relationships.</div>
-  
-        <ul class="logo-list">
-            <li class="logo-list__li">
-                <div class="wrapper-team-images">
-                    <img src="assets/v2/chicago-happy-hour.png" alt="Proptech Happy Hours">
-                    <span class="caption">Happy Hours & Innovator Roundtables</span>
-                </div>
-            </li>
-            <li class="logo-list__li">
-                <div class="wrapper-team-images">
-                    <img src="assets/v2/Icons/Proptech_Roulette-14.jpg" alt="Proptech Roulette">
-                    <span class="caption">Proptech Roulette</span>
-                </div>
-            </li>
-            <li class="logo-list__li">
-                <div class="wrapper-team-images">
-                    <img src="assets/v2/Icons/peer_practice_pitch.png" alt="Peer Practice Pitches">
-                    <span class="caption">Peer Practice Pitches</span>
-                </div>
-            </li>
-        </ul>
-  
       </div>
-    </div>
-  
-    <div class="section-contact">
+      <div class="includes-wrapper">
+        <p class="description">Includes all the analysis, commentary, and business intelligence in GEM Crystal. <span
+            class="text-green"><strong>Plus...</strong></span></p>
+        <div class="row first">
+          <div class="col description">
+            <h3>Community & Innovator Roundtable Dinners</h3>
+            <p>Sparking product innovation and building transformative partnerships.
+              The proptech executives dinner community.</p>
+          </div>
+          <div class="col img-wrapper">
+            <img src="/assets/images/Innovator_Rountable_Dinner.png" />
+          </div>
+        </div>
+        <div class="row second">
+          <div class="col img-wrapper">
+            <img src="/assets/images/Special_NYC_Experience.png" />
+          </div>
+          <div class="col description">
+            <h3>A Beyond Special NYC Experience</h3>
+            <p>Proptech changemakers. Intimate setting. Michelin star cuisine.</p>
+          </div>
+        </div>
+        <a href="https://crystal.geekestate.com/events/" class="gem-btn outline">See upcoming event lineup</a>
+      </div>
+      <div class="wrapper">
+        <div class="testimonial-wrapper" style="margin-bottom: 50px;">
+          <div class="left">
+            <div class="img-wrapper">
+              <img src="/assets/images/Anthony_Romano.png" />
+            </div>
+            <div class="bio-wrapper">
+              <span class="text-green">Anthony Romano</span>
+              <span><strong>CEO,</strong> CREtelligent</span>
+            </div>
+          </div>
+          <div class="right">
+            <p>“The wine and food was excellent, the conversations were even better.”</p>
+          </div>
+        </div>
+        <div class="inspiring-wrapper">
+          <h3>Inspiring curious real estate minds.</h3>
+          <div class="inspiring-list">
+            <div class="inspiring-list-item">
+              <div class="top">
+                <img src="/assets/images/Radars.png" />
+                <span>Radars</span>
+              </div>
+              <div class="description">
+                <span class="text">Curated news and commentary</span>
+                <a href="https://geekestateblog.com/geek-estates-july-radar-2022/" class="text-green"><i
+                    class="fa fa-caret-right" aria-hidden="true"></i> Example</a>
+              </div>
+            </div>
+            <div class="inspiring-list-item">
+              <div class="top">
+                <img src="/assets/images/Transmissions.png" />
+                <span>Transmissions</span>
+              </div>
+              <div class="description">
+                <span class="text">Thesis-driven essays</span>
+                <a href="https://geekestateblog.com/the-topic-no-one-will-touch-with-a-ten-foot-pole/"
+                  class="text-green"><i class="fa fa-caret-right" aria-hidden="true"></i> Example</a>
+              </div>
+            </div>
+            <div class="inspiring-list-item">
+              <div class="top">
+                <img src="/assets/images/Biz_Intel.png" />
+                <span>Biz Intel</span>
+              </div>
+              <div class="description">
+                <span class="text">Quarterly earnings summaries</span>
+                <a href="https://geekestateblog.com/small-landlord-property-management-software-landscape-in-2020/"
+                  class="text-green"><i class="fa fa-caret-right" aria-hidden="true"></i> Example</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="develop-wrapper">
+          <h3>Develop Lasting relationships...</h3>
+          <div class="develop-list">
+            <div class="develop-list-item">
+              <div class="top">
+                <img src="/assets/images/Happy_Hours.jpeg" />
+              </div>
+              <div class="description">
+                <span>Happy Hours</span>
+              </div>
+            </div>
+            <div class="develop-list-item">
+              <div class="top">
+                <img src="/assets/images/Proptech_Getaway.png" />
+              </div>
+              <div class="description">
+                <span class="text">Proptech Getaway</span>
+              </div>
+            </div>
+            <div class="develop-list-item">
+              <div class="top">
+                <img src="/assets/images/Peer_Practice_Pitches.png" />
+              </div>
+              <div class="description">
+                <span class="text">Peer Practice Pitches</span>
+              </div>
+            </div>
+          </div>
+          <p><span class="text-green"><strong>Superficial networks</strong></span> are not in short supply.</p>
+          <p><span class="text-green"><strong>Depth of conversations</strong></span> and relationships are.</p>
+        </div>
+        <hr />
+        <div class="who-is-it-wrapper">
+          <h3>Who is it for?</h3>
+          <div class="who-is-it-list">
+            <div class="who-is-it-list-item">
+              <div class="top">
+                <img src="/assets/images/Founders.svg" />
+              </div>
+              <div class="description">
+                <span>Founders</span>
+              </div>
+            </div>
+            <div class="who-is-it-list-item">
+              <div class="top">
+                <img src="/assets/images/VC.svg" />
+              </div>
+              <div class="description">
+                <span class="text">VCs & Angels</span>
+              </div>
+            </div>
+            <div class="who-is-it-list-item">
+              <div class="top">
+                <img src="/assets/images/Broker_Owner.svg" />
+              </div>
+              <div class="description">
+                <span class="text">Broker - Owners</span>
+              </div>
+            </div>
+            <div class="who-is-it-list-item">
+              <div class="top">
+                <img src="/assets/images/C_Suite.svg" />
+              </div>
+              <div class="description">
+                <span class="text">C- Suite</span>
+              </div>
+            </div>
+            <div class="who-is-it-list-item">
+              <div class="top">
+                <img src="/assets/images/Landlord_Developer.svg" />
+              </div>
+              <div class="description">
+                <span class="text">Landlords - Developers</span>
+              </div>
+            </div>
+          </div>
+          <a class="text-green" href="https://geekestateblog.com/state-of-the-gem-2023/">See a breakdown by geography,
+            role and sector</a>
+        </div>
+      </div>
+      <div class="testimonial-footer-wrapper">
         <div class="wrapper">
-          <h2 class="section__small-title">Intellectual stimulation for aspiring minds.</h2>
-          <p class="section__description">
-            Discover an exclusive, objective lens into the trends, companies, people, and ideas shaping the future of real estate and the broader built world.
-          </p>
+          <p class="greetings">What members have to say...</p>
+          <p class="content">Our REACH cohorts participating in the GEM allows our founders to establish deeper
+            connections with the top industry players.</p>
+          <div class="author-wrapper">
+            <div class="author-img">
+              <img src="/assets/images/Dave_Garland.png">
+            </div>
+            <div class="bio-wrapper">
+              <span><strong>Dave Garland</strong></span>
+              <span><span class="position">Position</span>, Second Century Ventures</span>
+            </div>
+          </div>
         </div>
-    </div>
-  
-    <div class="section-team with-description">
-      <div class="wrapper">
-        <ul class="logo-list">
-            <li class="logo-list__li">
-                <div class="image-center-text">
-                    <img src="assets/v2/Radars.png" alt="Weekly Radars">
-                    <div class="centered">Radars</div>
-                </div>
-                <span class="caption">Curated news and commentary</span>
-                <div class="wrapper-link-example"><a href="https://geekestateblog.com/geek-estates-july-radar-2022/" class="link-example">Example</a></div>
-            </li>
-            <li class="logo-list__li">
-                <div class="image-center-text">
-                    <img src="assets/v2/Transmission.png" alt="Weekly Transmissions">
-                    <div class="centered">Transmissions</div>
-                </div>
-              <span class="caption">Thesis-driven essays</span>
-              <div class="wrapper-link-example"><a href="https://geekestateblog.com/the-topic-no-one-will-touch-with-a-ten-foot-pole/" class="link-example">Example</a></div>
-            </li>
-            <li class="logo-list__li">
-                <div class="image-center-text">
-                    <img src="assets/v2/BizIntel1.png" alt="Founders">
-                    <div class="centered">Biz Intel</div>
-                </div>
-              <span class="caption">Sector analysis & product reviews</span>
-              <div class="wrapper-link-example"><a href="https://geekestateblog.com/small-landlord-property-management-software-landscape-in-2020/" class="link-example">Example</a></div>
-            </li>
-        </ul>
-  
       </div>
     </div>
-  
-    <div class="section-testimonials">
-      <p class="testimonials-header">What members have to say</p>
-      <ul class="product-list">
 
-        <!-- Start 1st carousel testimonial -->
-        <li>
-          <div class="product-card">
-            <div class="product-card__content">
-              <div class="block">
-                <img src="assets/v2/Partner Logos/bcopley.jpg" class="default-pic">
-                <div class="testimonials-content">
-                  <h2>“The strategic intel and networking are top notch.”</h2>
-                  <div class="member-logo">
-                    <img src="assets/v2/Partner Logos/citybldr.jpg" />
-                    <div class="wrapper-reviewer-label">
-                      <span class="reviewer-name">Bryan Copley</span>
-                      <div class="reviewer-title">Co-founder and CEO, CityBldr</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- End 1st carousel testimonial -->
-
-
-        <!-- Start 2nd carousel testimonial -->
-        <li>
-          <div class="product-card">
-            <div class="product-card__content">
-              <div class="block">
-                <img src="assets/v2/Partner Logos/ted-adler.jpeg" class="default-pic">
-                <div class="testimonials-content">
-                  <h2>“I'd chalk the VIP dinner up as the best event I attended in either 2019 or 2020!”</h2>
-                  <div class="member-logo">
-                    <img src="assets/v2/Partner Logos/union-square-media.png" />
-                    <div class="wrapper-reviewer-label">
-                      <span class="reviewer-name">Ted Adler</span>
-                      <div class="reviewer-title">Founder, Union Street Media</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- End 2nd carousel testimonial -->
-
-
-        <!-- Start 3rd carousel testimonial -->
-        <li>
-          <div class="product-card">
-            <div class="product-card__content">
-              <div class="block">
-                <img src="assets/v2/Partner Logos/dave-garland.png" class="default-pic">
-                <div class="testimonials-content">
-                  <h2>“Our REACH cohorts participating in the GEM allows our founders to establish deeper connections with the top industry players.”</h2>
-                  <div class="member-logo">
-                    <img src="assets/v2/Partner Logos/second-century-ventures.jpeg" />
-                    <div class="wrapper-reviewer-label">
-                      <span class="reviewer-name">Dave Garland</span>
-                      <div class="reviewer-title">Partner, Second Century Ventures</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- End 3rd carousel testimonial -->
-
-
-        <!-- Start 4th carousel testimonial -->
-        <li>
-          <div class="product-card">
-            <div class="product-card__content">
-              <div class="block">
-                <img src="assets/v2/Partner Logos/mike-chang.jpeg" class="default-pic">
-                <div class="testimonials-content">
-                  <h2>“Through GEM I’ve connected with industry execs, VCs and startup founders. I’ve also seen startups get funded, execs hired and partnerships established through community interactions and private community events. GEM is a must-join for any proptech leader.”</h2>
-                  <div class="member-logo">
-                    <img src="assets/v2/Partner Logos/ojo-labs.png" />
-                    <div class="wrapper-reviewer-label">
-                      <span class="reviewer-name">Mike Chang</span>
-                      <div class="reviewer-title">OJO Select Network & Angel</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- End 4th carousel testimonial -->
-                                                
-       <!-- Start 5th carousel testimonial -->
-        <li>
-          <div class="product-card">
-            <div class="product-card__content">
-              <div class="block">
-                <img src="assets/v2/Partner Logos/romano.png" class="default-pic">
-                <div class="testimonials-content">
-                  <h2>"The wine and food were excellent, the conversations were even better."</h2>
-                  <div class="member-logo">
-                    <img src="assets/v2/Partner Logos/cretelligent.png" />
-                    <div class="wrapper-reviewer-label">
-                      <span class="reviewer-name">Anthony Romano</span>
-                      <div class="reviewer-title">CEO, CREtelligent</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- End 5th carousel testimonial -->
-  
-      </ul>
-    </div>
-  
     <div class="section-subfooter">
       <div class="wrapper">
-        <h2 class="subfooter-header">SMALL IS THE NEW BIG</h2>
-        <h3 class="subfooter-description" style="margin-bottom: 50px;">On a mission to attract 1,500 bold thinkers, only the best and brightest will do.</h3>
-        <h3 class="subfooter-description-green">The GEM is a paid membership & private community</h3>
-        <h3 class="subfooter-highlight-white">$139 per quarter</h3>
-        <div class="apply-btn">
-          <a href="https://www.geekestate.com/join-now.html?utm_source=Geek-Estate&utm_medium=button&utm_campaign=home-page-apply-bottom" id="drop-line-HP-button" class="contact-btn">Apply for Membership</a>  
+        <p class="text-green title">Small is the New Big</p>
+        <p class="sub-title">With a mission to attract the 1,500 boldest thinkers, nothing but the best and brightest
+          will do.</p>
+        <p class="form-title">GEM Diamond is a Paid Membership & Private Community.</p>
+        <div class="apply-form-wrapper">
+          <form method="GET" action="https://www.geekestate.com/join-now.html">
+            <label>
+              I'm a
+            </label>
+            <select>
+              <option value="founder">Founder</option>
+            </select>
+            <input type="hidden" name="utm_source" value="Geek-Estate" />
+            <input type="hidden" name="utm_medium" value="button" />
+            <input type="hidden" name="utm_campaign" value="home-page-apply-top" />
+            <button type="submit" class="gem-btn">APPLY</button>
+          </form>
         </div>
-        <h3 class="subfooter-description">Questions?</h3>
-  
-        <h4 class="subfooter-underline-green"><a href="https://calendly.com/drewmeyers/30min">Schedule a call with Drew Meyers</a></h4>
-        <h3 class="subfooter-description">Not quite ready to apply? Sign up to receive our Crystal tier to start.</h3>
-        <div class="sign-up-btn">
-          <a href="https://crystal.geekestate.com/" id="drop-line-HP-button" class="contact-btn">Sign Up Now</a>
+        <hr />
+        <div class="question-wrapper">
+          <p class="title">Questions?</p>
+          <a href="https://app.highnote.io/c/p/f34df5b3/the-gem-diamond?cp=link" class="text-green">Read more details
+            here</a> <span> or </span> <a href="https://calendly.com/drewmeyers/30min" class="text-green">Schedule a
+            call</a>
+        </div>
+        <hr />
+        <div class="gem-crystal-wrapper">
+          <p class="title">Not quite ready? Get Started with GEM Crystal</p>
+          <img src="/assets/images/Gem_Crystal_Reverse_Logo.png" />
+          <div style="min-height:58px; max-width:440px; width:100%; margin: 0 auto 30px;">
+            <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
+              data-button-color="#74BC1F" data-button-text-color="#FFFFFF" data-site="https://crystal.geekestate.com/"
+              async></script>
+          </div>
+          <a href="https://crystal.geekestate.com/" class="text-green">Learn more</a>
         </div>
       </div>
     </div>
 
     <div w3-include-html="footer.html"></div>
   
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/includes.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/includes.js"></script>
 </body>
 
 </html>

@@ -743,6 +743,23 @@ a {
     text-decoration-line: underline;
     color: #85AB37;
 }
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#scrollToTop img {
+width: 60px;
+height: 60px;
+display: block;
+}
 @media screen and (max-width: 600px) {
     .nfx-logo, .open-door, .pacaso {
         width: 70%;

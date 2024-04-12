@@ -1,0 +1,40 @@
+header.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+header.header .main-header {
+    max-width: 1266px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+header.header img.logo {
+    width: 300px;
+}
+
+nav.main-nav ul {
+    display: flex;
+    column-gap: 20px;
+}
+
+nav.main-nav ul li a {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}

@@ -1,3 +1,4 @@
+var scrollToTopButton;
 
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
@@ -18,6 +19,11 @@ function includeHTML() {
                     elmnt.removeAttribute("w3-include-html");
                     includeHTML();
                     initHeaderHamburger();
+
+                    if(file.indexOf('footer.html') !== -1)
+                    {
+                        scrollToTipInit();
+                    }
                 }
             }
             xhttp.open("GET", file, true);
@@ -114,6 +120,7 @@ function initHeaderHamburger() {
 function headerHamburgerEvent() {
     $('.header-hamburger').on('click', function() {
         $('.header-menu-collapsed').toggleClass('show');
+        $('.main-nav').toggleClass('show');
     });
      /**
    * Add Padding Before Body Content
@@ -124,10 +131,14 @@ function headerHamburgerEvent() {
     if(window.outerWidth <= 600)
     {
         wrapperHeader = document.querySelector(".wrapper-header-btn");
-        let wrapperHeaderHeight = wrapperHeader.clientHeight;
-        let nextElement = wrapperHeader.parentElement.nextElementSibling;
+        if(wrapperHeader)
+        {
+            let wrapperHeaderHeight = wrapperHeader.clientHeight;
+            let nextElement = wrapperHeader.parentElement.nextElementSibling;
+    
+            nextElement.style.paddingTop = wrapperHeaderHeight + 'px';
+        }
 
-        nextElement.style.paddingTop = wrapperHeaderHeight + 'px';
     }else if(wrapperHeader)
     {
         let wrapperHeaderHeight = wrapperHeader.clientHeight;
@@ -138,3 +149,26 @@ function headerHamburgerEvent() {
 }
 
 initHeaderHamburger();
+
+function scrollFunction() {
+    console.log(scrollToTopButton);
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopButton.style.display = "block";
+    } else {
+        scrollToTopButton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function goToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+    // document.body.scrollTop = 0; // For Safari
+    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function scrollToTipInit() {
+    // Get the button:
+    scrollToTopButton = document.getElementById("scrollToTop");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+}
