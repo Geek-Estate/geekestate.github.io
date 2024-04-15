@@ -183,6 +183,8 @@ a {
 .trusted-by-founders-wrapper h3 {
   font-size: 40px;
   margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 48px;
 }
 
 .trusted-by-founders-wrapper .image-list {

@@ -31,7 +31,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <link rel="stylesheet" href="css/v4/style.css">
@@ -150,9 +150,10 @@
 
         .section-hero .wrapper .inspiring-lists {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             column-gap: 30px;
             width: 100%;
+            justify-content: center;
         }
 
         .section-hero .wrapper .inspiring-lists .inspiring-item {
@@ -334,6 +335,11 @@
         .tiers-wrapper table tbody tr td {
             padding: 4px 30px;
             color: #666666;
+            font-family: Inter, Poppins;
+        }
+
+        .tiers-wrapper table tbody tr td:first-child {
+            font-weight: 700;
         }
 
         .tiers-wrapper table tbody td:first-child {
@@ -383,6 +389,17 @@
 
         .section-subfooter a {
             color: #fff;
+        }
+
+        @media screen and (max-width: 735px) {
+            .section-hero .wrapper .inspiring-lists-wrapper .inspiring-lists {
+                flex-wrap: wrap;
+            }
+
+            .section-hero .wrapper .inspiring-lists-wrapper .inspiring-lists .inspiring-item {
+                flex: 0 0 calc(33.33% - 20px);
+                margin-bottom: 20px;
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -510,14 +527,14 @@
                                     <td>4x a month</td>
                                 </tr>
                                 <tr>
-                                    <td>Earning Reports</td>
+                                    <td>Earnings Reports</td>
                                     <td>1x a quarter</td>
                                     <td>1x a quarter</td>
                                 </tr>
                                 <tr>
                                     <td>Membership Criteria</td>
                                     <td>None</td>
-                                    <td>Founders of Executives</td>
+                                    <td>Founders or Executives</td>
                                 </tr>
                                 <tr>
                                     <td>Discounts for Industry Events</td>
