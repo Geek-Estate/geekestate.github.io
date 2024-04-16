@@ -612,6 +612,96 @@
       color: #fff;
     }
 
+    .testimonial-footer-items {
+      margin-bottom: 30px;
+    }
+
+    .slick-dots {
+      justify-content: center;
+      align-items: center;
+      display: inline-flex;
+      flex-grow: 1;
+      width: 100%;
+      max-width: fit-content;
+    }
+
+    .slick-dots li {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      height: 10px;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer;
+      flex-grow: 1;
+      max-width: 80px;
+      min-width: 80px;
+    }
+
+    .slick-dots li button {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+      border: 0;
+      outline: none;
+      background: #fff;
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    .slick-dots .slick-active button {
+      background: #000000;
+    }
+
+    .slick-dots li button:before {
+      font-family: 'slick';
+      font-size: 6px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '•';
+      text-align: center;
+      opacity: 0;
+      color: black;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    #slick-meta {
+      display:  flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    #slick-meta .slick-prev {
+      order: 1;
+    }
+
+    #slick-meta .slick-dots {
+      order: 2;
+    }
+
+    #slick-meta .slick-next {
+      order: 3;
+    }
+
+    #slick-meta > button {
+      background-color: transparent;
+      padding: 0;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+    }
+
+    #slick-meta > button img {
+      max-width: 60px;
+    }
+
     @media screen and (max-width: 1400px) {
       .section-content .includes-wrapper .row.second {
         margin-top: calc(-50vw * 0.05);
@@ -843,17 +933,51 @@
       </div>
       <div class="testimonial-footer-wrapper">
         <div class="wrapper">
-          <p class="greetings">What members have to say...</p>
-          <p class="content">Our REACH cohorts participating in the GEM allows our founders to establish deeper
-            connections with the top industry players.</p>
-          <div class="author-wrapper">
-            <div class="author-img">
-              <img src="/assets/images/Dave_Garland.png">
+          <div class="testimonial-footer-items">
+            <div class="testimonial-footer-item">
+              <p class="greetings">What members have to say...</p>
+              <p class="content">Our REACH cohorts participating in the GEM allows our founders to establish deeper
+                connections with the top industry players.</p>
+              <div class="author-wrapper">
+                <div class="author-img">
+                  <img src="/assets/images/Dave_Garland.png">
+                </div>
+                <div class="bio-wrapper">
+                  <span><strong>Dave Garland</strong></span>
+                  <span><span class="position">Position</span>, Second Century Ventures</span>
+                </div>
+              </div>
             </div>
-            <div class="bio-wrapper">
-              <span><strong>Dave Garland</strong></span>
-              <span><span class="position">Position</span>, Second Century Ventures</span>
+            <div class="testimonial-footer-item">
+              <p class="greetings">What members have to say...</p>
+              <p class="content">Our REACH cohorts participating in the GEM allows our founders to establish deeper
+                connections with the top industry players.</p>
+              <div class="author-wrapper">
+                <div class="author-img">
+                  <img src="/assets/images/Dave_Garland.png">
+                </div>
+                <div class="bio-wrapper">
+                  <span><strong>Dave Garland</strong></span>
+                  <span><span class="position">Position</span>, Second Century Ventures</span>
+                </div>
+              </div>
             </div>
+            <div class="testimonial-footer-item">
+              <p class="greetings">What members have to say...</p>
+              <p class="content">Our REACH cohorts participating in the GEM allows our founders to establish deeper
+                connections with the top industry players.</p>
+              <div class="author-wrapper">
+                <div class="author-img">
+                  <img src="/assets/images/Dave_Garland.png">
+                </div>
+                <div class="bio-wrapper">
+                  <span><strong>Dave Garland</strong></span>
+                  <span><span class="position">Position</span>, Second Century Ventures</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slick-meta">
           </div>
         </div>
       </div>
@@ -887,7 +1011,9 @@
         <div class="question-wrapper">
           <p class="title">Questions?</p>
           <a href="https://app.highnote.io/c/p/f34df5b3/the-gem-diamond?cp=link" class="text-green">Read more details
-            here</a> <span> or </span> <a href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member" class="text-green">Schedule a
+            here</a> <span> or </span> <a
+            href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member"
+            class="text-green">Schedule a
             call</a>
         </div>
         <hr />
@@ -905,13 +1031,24 @@
     </div>
 
     <div w3-include-html="footer.html"></div>
-  
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/includes.js"></script>
+    <script type="text/javascript">
+      $('.testimonial-footer-items').slick({
+        infinite: true,
+        dots: true,
+        prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
+        appendArrows: $('#slick-meta'),
+        appendDots: $('#slick-meta'),
+        lazyLoad: 'progressive'
+      });
+    </script>
 </body>
 
 </html>
