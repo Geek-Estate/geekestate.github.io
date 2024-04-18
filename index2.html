@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -102,6 +102,7 @@
             text-align: center;
             width: 900px;
             max-width: 100%;
+            margin: 0 auto;
         }
 
         .section-hero .wrapper h2 {
@@ -223,6 +224,9 @@
 
         .section-content .gem-diamond-content-wrapper .gem-diamond-description+.gem-btn {
             margin-bottom: 30px;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 30px;
         }
 
         .section-content hr {
@@ -252,8 +256,21 @@
             margin-bottom: 30px;
         }
 
+        .section-content .gem-crystal-content-wrapper .ad-free {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 31.2px;
+            text-align: center;
+        }
+
         .section-content .gem-crystal-content-wrapper .trial {
             margin-bottom: 30px;
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23.4px;
+            text-align: center;
         }
 
         .tiers-wrapper {
@@ -264,6 +281,7 @@
             font-size: 48px;
             color: var(--green);
             margin-bottom: 30px;
+            font-weight: 500;
         }
 
         .tiers-wrapper .tier-table-wrapper {
@@ -329,7 +347,13 @@
         }
 
         .tiers-wrapper table tbody tr:nth-of-type(even) td:first-child {
-            background: #26262626;
+            /* background: #26262626; */
+            background-color: rgba(38, 38, 38, 0.15);
+        }
+
+        .tiers-wrapper table tbody tr:nth-of-type(even) td:first-child:before {
+            /* background-color: #000000; */
+            content: "";
         }
 
         .tiers-wrapper table tbody tr td {
@@ -349,6 +373,7 @@
         .tiers-wrapper .tier-footer {
             font-size: 31px;
             font-family: Inter, Poppins;
+            font-weight: 700;
         }
 
         .tiers-wrapper .tier-footer span {
@@ -356,7 +381,9 @@
         }
 
         .tiers-wrapper .tier-footer .text-divider {
-            font-weight: 100;
+            font-weight: 200;
+            font-family: Poppins;
+            color: #D6D6D6;
         }
 
         .section-content hr {
@@ -391,7 +418,7 @@
             color: #fff;
         }
 
-        @media screen and (max-width: 735px) {
+        @media screen and (max-width: 768px) {
             .section-hero .wrapper .inspiring-lists-wrapper .inspiring-lists {
                 flex-wrap: wrap;
             }
@@ -399,6 +426,63 @@
             .section-hero .wrapper .inspiring-lists-wrapper .inspiring-lists .inspiring-item {
                 flex: 0 0 calc(33.33% - 20px);
                 margin-bottom: 20px;
+            }
+
+            .tier-table-wrapper table thead tr th:first-child {
+                border-top-left-radius: 0;
+                background-color: #262626;
+            }
+
+            .tier-table-wrapper table thead tr th:last-child {
+                border-top-right-radius: 0;
+            }
+
+            .tier-table-wrapper table thead tr th:first-child,
+            .tier-table-wrapper table tbody tr td:first-child {
+                position: sticky;
+                left: 0;
+                z-index: 2;
+            }
+
+            .tier-table-wrapper table tbody tr td {
+                position: relative;
+            }
+
+            .tier-table-wrapper table tbody tr:nth-child(even) td:first-child {
+                background-color: #262626;
+                color: #262626;
+            }
+
+            .tier-table-wrapper table tbody tr:nth-child(odd) td:first-child {
+                background-color: #f0f0f0;
+                color: #f0f0f0;
+            }
+
+            .tier-table-wrapper table tbody tr td:first-child::before  {
+                content: attr(data-title) !important;
+                display: inline-block;
+                position: absolute;
+                color: #666666;
+                top: 50%;
+                transform: translate(0, -50%);
+                width: calc(100% - 20px);
+            }
+
+            .tier-table-wrapper table tbody tr:nth-child(even) td:first-child::before {
+                color: #ffffff;
+            }
+
+            .tiers-wrapper table thead tr th:first-child {
+                min-width: 160px;
+            }
+
+            .tier-table-wrapper table thead tr th:first-child,
+            .tier-table-wrapper table tbody tr td {
+                padding: 30px 10px;
+            }
+
+            .tier-table-wrapper table tbody tr td:first-child span {
+                display: none;
             }
         }
 
@@ -493,7 +577,7 @@
                     <img class="gem-crystal-logo" src="/assets/images/Gem_Crystal_Logo.png" />
                     <p class="gem-crystal-description">Discover an exclusive, objective lens into the trends, companies,
                         people and ideas shaping the future of real estate and the broader built world. <span
-                            class="text-green">Always ad-free.</span></p>
+                            class="text-green ad-free">Always ad-free.</span></p>
                     <p class="text-green trial">Try a 30 day free trial today.</p>
                     <div style="min-height:58px; max-width:440px; width:100%; margin: 0 auto;">
                         <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
@@ -517,67 +601,67 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Radars</td>
+                                    <td data-title="Radars"><span>Radars</span></td>
                                     <td>4x a month</td>
                                     <td>4x a month</td>
                                 </tr>
                                 <tr>
-                                    <td>Transmissions</td>
+                                    <td data-title="Transmissions"><span>Transmissions</span></td>
                                     <td>2x a month</td>
                                     <td>4x a month</td>
                                 </tr>
                                 <tr>
-                                    <td>Earnings Reports</td>
+                                    <td data-title="Earnings Reports"><span>Earnings Reports</span></td>
                                     <td>1x a quarter</td>
                                     <td>1x a quarter</td>
                                 </tr>
                                 <tr>
-                                    <td>Membership Criteria</td>
+                                    <td data-title="Membership Criteria"><span>Membership Criteria</span></td>
                                     <td>None</td>
                                     <td>Founders or Executives</td>
                                 </tr>
                                 <tr>
-                                    <td>Discounts for Industry Events</td>
+                                    <td data-title="Discounts for Industry Events"><span>Discounts for Industry Events</span></td>
                                     <td><i class="fa fa-check"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Private Community Forum</td>
+                                    <td data-title="Private Community Forum"><span>Private Community Forum</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Online Networking Events (peer practice pitches, fundraising office hours, etc.)
+                                    <td data-title="Online Networking Events"><span>Online Networking Events (peer practice pitches, fundraising office hours, etc.)</span>
                                     </td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>In-person Networking Events (dinners, happy hours, lunches, baseball games,
-                                        ets.)
+                                    <td data-title="In-person Networking Events"><span>In-person Networking Events (dinners, happy hours, lunches, baseball games,
+                                        ets.)</span>
                                     </td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Proptech Roulette (member introductions)</td>
+                                    <td data-title="Proptech Roulette"><span>Proptech Roulette (member introductions)</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Biz Intel (sector analysis and product reviews)</td>
+                                    <td data-title="Biz Intel"><span>Biz Intel (sector analysis and product reviews)</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>Membership Cap</td>
+                                    <td data-title="Membership Cap"><span>Membership Cap</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td>1500 max</td>
                                 </tr>
                                 <tr>
-                                    <td>Pricing</td>
-                                    <td>$20/month or $180/year</td>
-                                    <td>$179/quarter or $497/year</td>
+                                    <td data-title="Pricing"><span>Pricing</span></td>
+                                    <td>$10/month or $99/year</td>
+                                    <td>$139/quarter or $497/year</td>
                                 </tr>
                             </tbody>
                         </table>

@@ -187,26 +187,20 @@ a {
   line-height: 48px;
 }
 
-.trusted-by-founders-wrapper .image-list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 50px;
-}
-
 .trusted-by-founders-wrapper .image-list.partners {
   margin-bottom: 30px;
-}
-
-.trusted-by-founders-wrapper .image-list .img-wrapper {
-  width: calc(20% - 40px);
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
 }
 
 .trusted-by-founders-wrapper .image-list .img-wrapper img {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
+}
+
+.trusted-by-founders-wrapper .gem-btn {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 30px;
+  text-align: center;
 }
 
 #scrollToTop {
@@ -314,5 +308,120 @@ a {
   }
   .copyright {
     font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .trusted-by-founders-wrapper .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+  }
+  
+  .trusted-by-founders-wrapper .image-list .img-wrapper {
+    width: calc(20% - 40px);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-meta {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .trusted-by-founders-wrapper .slick-meta {
+    margin-bottom: 50px;
+  }
+
+  .slick-list .slick-track {
+    align-items: center;
+    display: flex;
+    column-gap: 50px;
+  }
+
+  .slick-meta {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+  }
+  
+  .slick-meta .slick-prev {
+    order: 1;
+  }
+  
+  .slick-meta .slick-dots {
+    order: 2;
+  }
+  
+  .slick-meta .slick-next {
+    order: 3;
+  }
+  
+  .slick-meta > button {
+    background-color: transparent;
+    padding: 0;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .slick-meta > button img {
+    max-width: 40px;
+  }
+  
+  .slick-meta .slick-dots {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex-grow: 1;
+    width: 100%;
+    max-width: fit-content;
+  }
+  
+  .slick-meta .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+  
+  .slick-meta .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #fff;
+    width: 100%;
+    border-radius: 30px;
+  }
+  
+  .slick-meta .slick-dots .slick-active button {
+    background: #000000;
+  }
+  
+  .slick-meta .slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '•';
+    text-align: center;
+    opacity: 0;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

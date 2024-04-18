@@ -24,6 +24,10 @@ function includeHTML() {
                     {
                         scrollToTipInit();
                     }
+
+                    if(file.indexOf('trusted-by-founders') !== -1) {
+                        trustedByFoundersPartners();
+                    }
                 }
             }
             xhttp.open("GET", file, true);
@@ -170,4 +174,33 @@ function scrollToTipInit() {
     scrollToTopButton = document.getElementById("scrollToTop");
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
+}
+
+function trustedByFoundersPartners() {
+    if(window.innerWidth < 768){
+        console.log("MOBILE");
+        $('.image-list.founders').slick({
+            infinite: true,
+            dots: true,
+            prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
+            appendArrows: $('#slick-meta-founders'),
+            appendDots: $('#slick-meta-founders'),
+            lazyLoad: 'progressive',
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+
+        $('.image-list.partners').slick({
+            infinite: true,
+            dots: true,
+            prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
+            nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
+            appendArrows: $('#slick-meta-partners'),
+            appendDots: $('#slick-meta-partners'),
+            lazyLoad: 'progressive',
+            slidesToShow: 2,
+            slidesToScroll: 2
+        });
+    }
 }
