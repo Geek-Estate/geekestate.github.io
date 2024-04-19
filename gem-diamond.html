@@ -87,8 +87,9 @@
     }
 
     .section-hero .wrapper .logo {
-      max-width: 500px;
+      width: 500px;
       margin-bottom: 30px;
+      max-width: 80%;
     }
 
     .section-hero .wrapper .description {
@@ -111,6 +112,7 @@
       border-radius: 30px;
       margin-bottom: 20px;
       color: #fff;
+      max-width: 100%;
     }
 
     .apply-form-wrapper form {
@@ -124,8 +126,8 @@
       background-color: #D9D9D91A;
       color: #fff;
       padding: 10px 20px;
-      max-width: 350px;
-      width: 100%;
+      max-width: 100%;
+      width: 350px;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -134,7 +136,6 @@
       background-position: right 15px center;
       background-repeat: no-repeat;
       background-size: 10px;
-      width: 100vw;
       border-radius: 30px;
     }
 
@@ -179,10 +180,10 @@
     }
 
     .section-content {
-      background-image: url("/assets/images/Gem_Diamond_Content_BG.webp");
-      background-repeat: no-repeat;
+      background-image: url("/assets/images/Bubbles_BG.webp");
       background-size: 100%;
-      background-position: center;
+      background-position: top;
+      background-repeat: repeat-y;
     }
 
     .section-content .wrapper {
@@ -377,6 +378,10 @@
       column-gap: 50px;
     }
 
+    .section-content .inspiring-wrapper .inspiring-list-item {
+      flex: 1 0 calc(33% - 50px);
+    }
+
     .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item .top {
       position: relative;
     }
@@ -404,7 +409,7 @@
     }
 
     .section-content .develop-wrapper {
-      padding: 50px;
+      padding: 50px 0;
     }
 
     .section-content .develop-wrapper h3 {
@@ -419,7 +424,7 @@
     }
 
     .section-content .develop-wrapper .develop-list .develop-list-item {
-      flex: 1 0 33%;
+      flex: 1 0 calc(33% - 50px);
     }
 
     .section-content .develop-wrapper .develop-list .develop-list-item .top img {
@@ -541,6 +546,8 @@
       font-size: 64px;
       font-family: Poppins;
       margin-bottom: 30px;
+      line-height: 1;
+      text-transform: uppercase;
     }
 
     .section-subfooter .sub-title {
@@ -634,8 +641,6 @@
       padding: 0;
       cursor: pointer;
       flex-grow: 1;
-      max-width: 80px;
-      min-width: 80px;
     }
 
     .slick-dots li button {
@@ -702,10 +707,69 @@
       max-width: 60px;
     }
 
+    @media screen and (min-width: 768px) {
+      .slick-dots li {
+        max-width: 80px;
+        min-width: 80px;
+      }
+    }
+
     @media screen and (max-width: 1400px) {
       .section-content .includes-wrapper .row.second {
         margin-top: calc(-50vw * 0.05);
       }
+    }
+
+    @media screen and (max-width: 768px) {
+      .section-content .wrapper {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      .apply-form-wrapper {
+        padding: 40px 10px;
+      }
+
+      .apply-form-wrapper label {
+        white-space: nowrap;
+      }
+
+      .apply-form-wrapper form {
+        flex-wrap: wrap;
+      }
+
+      .apply-form-wrapper form select {
+        width: auto;
+        flex-grow: 1;
+      }
+
+      .apply-form-wrapper form button {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .testimonial-wrapper {
+        flex-flow: column-reverse;
+      }
+
+      .section-content .inspiring-wrapper .inspiring-list,
+      .section-content .develop-wrapper .develop-list,
+      .section-content .who-is-it-wrapper  .who-is-it-list {
+        flex-flow: column;
+      }
+
+      .section-content .inspiring-wrapper .inspiring-list .inspiring-list-item,
+      .section-content .develop-wrapper .develop-list .develop-list-item,
+      .section-content .who-is-it-wrapper  .who-is-it-list .who-is-it-list-item {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      .section-content .testimonial-footer-wrapper .testimonial-footer-items .testimonial-footer-item .content {
+        padding-left: 0;
+      }
+
+
     }
   </style>
 </head>
@@ -946,7 +1010,7 @@
                 </div>
                 <div class="bio-wrapper">
                   <span><strong>Mike Chang</strong></span>
-                  <span><span class="position">Director</span>, OJO Select Network & Angel</span>
+                  <span class="position"><span>Director</span>, OJO Select Network & Angel</span>
                 </div>
               </div>
             </div>
@@ -962,7 +1026,7 @@
                 </div>
                 <div class="bio-wrapper">
                   <span><strong>Nate Smoyer</strong></span>
-                  <span><span class="position">Host & RE Investor</span>, Technest</span>
+                  <span class="position"><span>Host & RE Investor</span>, Technest</span>
                 </div>
               </div>
             </div>
@@ -976,7 +1040,7 @@
                 </div>
                 <div class="bio-wrapper">
                   <span><strong>Dave Garland</strong></span>
-                  <span><span class="position">Partner</span>, Second Century Ventures</span>
+                  <span class="position"><span>Partner</span>, Second Century Ventures</span>
                 </div>
               </div>
             </div>
@@ -989,7 +1053,7 @@
                 </div>
                 <div class="bio-wrapper">
                   <span><strong>Ted Adler</strong></span>
-                  <span><span class="position">Founder</span>, Union Street Media</span>
+                  <span class="position"><span>Founder</span>, Union Street Media</span>
                 </div>
               </div>
             </div>
@@ -1002,7 +1066,7 @@
                 </div>
                 <div class="bio-wrapper">
                   <span><strong>Bryan Copley</strong></span>
-                  <span><span class="position">Co-founder and CEO</span>, CityBldr</span>
+                  <span class="position"><span>Co-founder and CEO</span>, CityBldr</span>
                 </div>
               </div>
             </div>
@@ -1075,8 +1139,7 @@
         prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
         appendArrows: $('#slick-meta'),
-        appendDots: $('#slick-meta'),
-        lazyLoad: 'progressive'
+        appendDots: $('#slick-meta')
       });
     </script>
 </body>
