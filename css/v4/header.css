@@ -38,3 +38,13 @@ nav.main-nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-color: rgba(38, 38, 38, 1);
+    }    
+
+    header.header .main-header .main-nav.show {
+        margin-bottom: 20px;
+    }
+}
