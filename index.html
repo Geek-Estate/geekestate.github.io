@@ -31,7 +31,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <link rel="stylesheet" href="css/v4/style.css">
@@ -48,7 +48,7 @@
             background-color: var(--green);
             border-radius: 30px;
             border: 3px solid var(--green);
-            padding: 8px 40px;
+            padding: 10px 50px;
             font-weight: 500;
             display: inline-block;
             text-decoration: none;
@@ -95,21 +95,21 @@
         }
 
         .section-hero .wrapper .sub-heading {
-            font-family: 'Open Sans';
-            font-size: 23px;
-            font-weight: 400;
-            line-height: 32px;
             text-align: center;
             width: 900px;
             max-width: 100%;
             margin: 0 auto;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 31.2px;
         }
 
         .section-hero .wrapper h2 {
             font-family: Poppins;
-            font-size: 32px;
+            font-size: 40px;
             font-weight: 500;
-            line-height: 50px;
+            line-height: 52px;
             text-align: center;
             margin-bottom: 30px;
         }
@@ -120,13 +120,17 @@
             position: relative;
             text-align: center;
             text-transform: uppercase;
+            font-family: Inter, Poppins;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.78px;
         }
 
         .section-hero .wrapper .header-divider:before {
             content: "";
             display: inline-block;
             background-color: #fff;
-            width: calc(50% - 155px);
+            width: calc(50% - 180px);
             height: 0.5px;
             position: absolute;
             left: 0;
@@ -137,7 +141,7 @@
             content: "";
             display: inline-block;
             background-color: #fff;
-            width: calc(50% - 155px);
+            width: calc(50% - 180px);
             height: 0.5px;
             position: absolute;
             right: 0;
@@ -186,8 +190,8 @@
         }
 
         .section-hero .wrapper .inspiring-lists .inspiring-item span {
-            font-family: Poppins;
-            font-size: 18px;
+            font-family: Poppins, Inter;
+            font-size: 24px;
             font-weight: 500;
             line-height: 28.8px;
             text-align: center;
@@ -217,9 +221,10 @@
         }
 
         .section-content .gem-diamond-content-wrapper .gem-diamond-description {
-            font-size: 32px;
-            font-weight: normal;
             margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 41.6px;
         }
 
         .section-content .gem-diamond-content-wrapper .gem-diamond-description+.gem-btn {
@@ -227,6 +232,17 @@
             font-weight: 800;
             font-size: 20px;
             line-height: 30px;
+        }
+
+        .section-content .gem-diamond-content-wrapper .sign-in {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 31.2px;
+        }
+
+        .section-content .gem-diamond-content-wrapper .sign-in a {
+            font-weight: 700;
         }
 
         .section-content hr {
@@ -245,11 +261,14 @@
         }
 
         .section-content .gem-crystal-content-wrapper .gem-crystal-description {
-            font-size: 22px;
-            font-weight: normal;
             margin: 0 auto;
             margin-bottom: 30px;
             max-width: 900px;
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 31.2px;
+            text-align: center;
         }
 
         .section-content .gem-crystal-content-wrapper .gem-crystal-description+.gem-btn {
@@ -360,6 +379,9 @@
             padding: 4px 30px;
             color: #666666;
             font-family: Inter, Poppins;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22.08px;
         }
 
         .tiers-wrapper table tbody tr td:first-child {
@@ -371,9 +393,11 @@
         }
 
         .tiers-wrapper .tier-footer {
-            font-size: 31px;
             font-family: Inter, Poppins;
+            font-size: 24px;
             font-weight: 700;
+            line-height: 31.2px;
+            text-align: center;
         }
 
         .tiers-wrapper .tier-footer span {
@@ -405,7 +429,7 @@
         }
 
         .section-subfooter p {
-            font-family: Inter;
+            font-family: Inter, Poppins;
             font-size: 24px;
             font-weight: 400;
             line-height: 31.2px;
@@ -416,6 +440,10 @@
 
         .section-subfooter a {
             color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 24px;
+            text-align: center;
         }
 
         @media screen and (max-width: 768px) {
@@ -428,14 +456,19 @@
                 margin-bottom: 20px;
             }
 
-            .tier-table-wrapper table thead tr th:first-child {
-                border-top-left-radius: 0;
-                background-color: #262626;
+            .tier-table-wrapper {
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
             }
 
-            .tier-table-wrapper table thead tr th:last-child {
+            /* .tier-table-wrapper table thead tr th:first-child {
+                border-top-left-radius: 0;
+                background-color: #262626;
+            } */
+
+            /* .tier-table-wrapper table thead tr th:last-child {
                 border-top-right-radius: 0;
-            }
+            } */
 
             .tier-table-wrapper table thead tr th:first-child,
             .tier-table-wrapper table tbody tr td:first-child {
@@ -458,7 +491,7 @@
                 color: #f0f0f0;
             }
 
-            .tier-table-wrapper table tbody tr td:first-child::before  {
+            .tier-table-wrapper table tbody tr td:first-child::before {
                 content: attr(data-title) !important;
                 display: inline-block;
                 position: absolute;
@@ -569,7 +602,8 @@
                         pioneers free from sponsored messages
                         and noise.</p>
                     <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">LEARN MORE</a>
-                    <p>Already a member? <a class="text-green" href="https://www.geekestate.com/members.html">Sign
+                    <p class="sign-in">Already a member? <a class="text-green"
+                            href="https://www.geekestate.com/members.html">Sign
                             in</a></p>
                 </div>
                 <hr />
@@ -621,7 +655,8 @@
                                     <td>Founders or Executives</td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Discounts for Industry Events"><span>Discounts for Industry Events</span></td>
+                                    <td data-title="Discounts for Industry Events"><span>Discounts for Industry
+                                            Events</span></td>
                                     <td><i class="fa fa-check"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
@@ -631,25 +666,29 @@
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Online Networking Events"><span>Online Networking Events (peer practice pitches, fundraising office hours, etc.)</span>
+                                    <td data-title="Online Networking Events"><span>Online Networking Events (peer
+                                            practice pitches, fundraising office hours, etc.)</span>
                                     </td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="In-person Networking Events"><span>In-person Networking Events (dinners, happy hours, lunches, baseball games,
-                                        ets.)</span>
+                                    <td data-title="In-person Networking Events"><span>In-person Networking Events
+                                            (dinners, happy hours, lunches, baseball games,
+                                            ets.)</span>
                                     </td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Proptech Roulette"><span>Proptech Roulette (member introductions)</span></td>
+                                    <td data-title="Proptech Roulette"><span>Proptech Roulette (member
+                                            introductions)</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
                                 <tr>
-                                    <td data-title="Biz Intel"><span>Biz Intel (sector analysis and product reviews)</span></td>
+                                    <td data-title="Biz Intel"><span>Biz Intel (sector analysis and product
+                                            reviews)</span></td>
                                     <td><i class="fa fa-times"></i></td>
                                     <td><i class="fa fa-check"></i></td>
                                 </tr>
@@ -669,7 +708,8 @@
                     <div class="tier-footer">
                         More Details: <a href="https://app.highnote.io/c/p/f34df5b3/the-gem-diamond?cp=link"
                             class="text-green">2 Pager</a> <span class="text-divider">|</span> <a
-                            href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member" class="text-green">Schedule a call</a>
+                            href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member"
+                            class="text-green">Schedule a call</a>
                     </div>
                 </div>
             </div>
