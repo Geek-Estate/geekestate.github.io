@@ -897,7 +897,18 @@
         padding-left: 0;
       }
 
+      .section-content .includes-wrapper .row {
+        flex-flow: column;
+      }
 
+      .section-content .includes-wrapper .row .col.img-wrapper {
+        order: 1;
+        max-width: 100%;
+      }
+
+      .section-content .includes-wrapper .row .col.description {
+        order: 2;
+      }
     }
     
     @media only screen and (max-width: 570px) {
