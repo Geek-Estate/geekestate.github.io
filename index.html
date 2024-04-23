@@ -446,7 +446,21 @@
             text-align: center;
         }
 
+        @media only screen and (min-width: 768px) {
+            .mobile-only {
+                display: none;
+            }
+        }
+
         @media screen and (max-width: 768px) {
+            .hidden-mobile {
+                display: none;
+            }
+
+            .mobile-only {
+                display: block;
+            }
+
             .section-hero .wrapper .inspiring-lists-wrapper .inspiring-lists {
                 flex-wrap: wrap;
             }
@@ -636,23 +650,30 @@
                             <tbody>
                                 <tr>
                                     <td data-title="Radars"><span>Radars</span></td>
-                                    <td>4x a month</td>
-                                    <td>4x a month</td>
+                                    <td><span class="hidden-mobile">4x a month</span><span
+                                            class="mobile-only">4x/month</span></td>
+                                    <td><span class="hidden-mobile">4x a month</span><span
+                                            class="mobile-only">4x/month</span></td>
                                 </tr>
                                 <tr>
                                     <td data-title="Transmissions"><span>Transmissions</span></td>
-                                    <td>2x a month</td>
-                                    <td>4x a month</td>
+                                    <td><span class="hidden-mobile">2x a month</span><span
+                                            class="mobile-only">2x/month</span></td>
+                                    <td><span class="hidden-mobile">4x a month</span><span
+                                            class="mobile-only">4x/month</span></td>
                                 </tr>
                                 <tr>
                                     <td data-title="Earnings Reports"><span>Earnings Reports</span></td>
-                                    <td>1x a quarter</td>
-                                    <td>1x a quarter</td>
+                                    <td><span class="hidden-mobile">1x a quarter</span><span
+                                            class="mobile-only">1x/quarter</span></td>
+                                    <td><span class="hidden-mobile">1x a quarter</span><span
+                                            class="mobile-only">1x/quarter</span></td>
                                 </tr>
                                 <tr>
                                     <td data-title="Membership Criteria"><span>Membership Criteria</span></td>
                                     <td>None</td>
-                                    <td>Founders or Executives</td>
+                                    <td><span class="hidden-mobile">Founders or Executives</span><span
+                                            class="mobile-only">Founders/Executives</span></td>
                                 </tr>
                                 <tr>
                                     <td data-title="Discounts for Industry Events"><span>Discounts for Industry
