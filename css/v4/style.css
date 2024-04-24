@@ -209,6 +209,11 @@ a {
   text-align: center;
 }
 
+.trusted-by-founders-wrapper .nfx-logo {
+  aspect-ratio: 1 / 0.35;
+  object-fit: contain;
+}
+
 #scrollToTop {
   display: none;
   position: fixed;
@@ -341,11 +346,11 @@ a {
     margin-bottom: 50px;
   }
 
-  .slick-list .slick-track {
+  /* .slick-list .slick-track {
     align-items: center;
     display: flex;
     column-gap: 50px;
-  }
+  } */
 
   .slick-meta {
     display:  flex;

@@ -43,6 +43,7 @@ function includeHTML() {
     var includeMembersPage = window.location.href.includes('members.html') || window.location.href.includes('members');
     var includeAboutPage = window.location.href.includes('about.html') || window.location.href.includes('about');
     var includeBrandPage = window.location.href.includes('brand.html') || window.location.href.includes('brand');
+    var includeApprovedPage = window.location.href.includes('approved.html') || window.location.href.includes('approved');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -85,7 +86,8 @@ function includeHTML() {
     if(includeCompanyPage)
     {
         $('.all').remove();
-        $('.wrapper-welcome').html('<h2 class="welcome">Representing companies such as...</h2>');
+        // $('.wrapper-welcome').html('<h2 class="welcome">Representing companies such as...</h2>');
+        $('.section-hero .wrapper h1').html('Representing companies such as...');
     }
 
     if(includeMembersPage) {
@@ -96,12 +98,20 @@ function includeHTML() {
 
     if(includeAboutPage) {
         $('.all').remove();
-        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">About GeekEstate</h2></div>');
+        $('.section-hero h1').html('About GeekEstate');
+        // $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">About GeekEstate</h2></div>');
     }
 
     if(includeBrandPage) {
         $('.all').remove();
-        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Brand Assets</h2></div>');
+        // $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Brand Assets</h2></div>');
+        $('.section-hero .wrapper h1').html('Brand Assets');
+    }
+
+    if(includeApprovedPage) {
+        $('.all').remove();
+        // $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">Brand Assets</h2></div>');
+        $('.section-hero .wrapper h1').html('Connecting the boldest proptech entrepreneurs across every sector');
     }
 }
 includeHTML();

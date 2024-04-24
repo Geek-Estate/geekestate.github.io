@@ -835,6 +835,24 @@
       max-width: 60px;
     }
 
+    .slick-list .slick-track .testimonial-footer-item.slick-slide:not(.slick-current) {
+      /* position: absolute; */
+    }
+
+    /* .slick-slide {
+      display: none;
+      float: left;
+      height: 100%;
+      min-height: 1px;
+    } */
+
+    /* .testimonial-footer-items .slick-slide {
+      display: none;
+      float: left;
+      height: auto;
+      min-height: 1px;
+    } */
+
     @media screen and (min-width: 768px) {
       .slick-dots li {
         max-width: 80px;
@@ -910,7 +928,7 @@
         order: 2;
       }
     }
-    
+
     @media only screen and (max-width: 570px) {
       .section-content .testimonial-wrapper.anthony-romano .left .bio-wrapper span:first-child {
         white-space: normal;
@@ -1293,7 +1311,8 @@
         prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
         appendArrows: $('#slick-meta'),
-        appendDots: $('#slick-meta')
+        appendDots: $('#slick-meta'),
+        adaptiveHeight: true
       });
     </script>
 </body>

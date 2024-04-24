@@ -1,3 +1,7 @@
+:root {
+  --green: #74BC1F;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;

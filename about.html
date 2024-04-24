@@ -1,778 +1,723 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Geek Estate - About</title>
-    <meta
-      name="description"
-      content="Geek Estate is a think-tank for real estate tech innovators as well as a multi-author industry blog."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-WXWZN36");
-    </script>
-    <!-- End Google Tag Manager -->
-    <script
-      src="https://js.chargebee.com/v2/chargebee.js"
-      data-cb-site="geekestate"
-    ></script>
-    <title>
-      the GEM, a community for proptech founders and executives. Part of Geek
-      Estate.
-    </title>
-    <meta
-      name="description"
-      content="Private and paid community for proptech founders, executives, VCs, and practitioners."
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="shortcut icon"
-      href="/assets/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest.json" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Geek Estate - About</title>
+  <meta name="description"
+    content="Geek Estate is a think-tank for real estate tech innovators as well as a multi-author industry blog." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WXWZN36");
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="https://js.chargebee.com/v2/chargebee.js" data-cb-site="geekestate"></script>
+  <title>
+    the GEM, a community for proptech founders and executives. Part of Geek
+    Estate.
+  </title>
+  <meta name="description"
+    content="Private and paid community for proptech founders, executives, VCs, and practitioners." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link rel="stylesheet" href="css/v3/style.css" />
-    <link rel="stylesheet" href="css/brands.min.css" />
-    <script id="mcjs">
-      !(function (c, h, i, m, p) {
-        (m = c.createElement(h)),
-          (p = c.getElementsByTagName(h)[0]),
-          (m.async = 1),
-          (m.src = i),
-          p.parentNode.insertBefore(m, p);
-      })(
-        document,
-        "script",
-        "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js"
-      );
-    </script>
-    <style>
-      .description-wrapper {
-        background-image: url(../../img/Description_BG.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        color: #ffffff;
-        text-align: center;
-        border-top: 2px solid #74bc1f;
-      }
-      .description-wrapper p {
-        margin-bottom: 2.5rem;
-        font-size: 30px;
-        font-weight: 300;
-      }
-      .description-wrapper p.text-green.first {
-        font-size: 40px;
-        font-weight: bold;
-      }
-      .description-wrapper p.text-green.second {
-        font-weight: 400;
-      }
-      .text-green,
-      a {
-        color: #74bc1f !important;
-      }
-      a {
-        font-weight: 400;
-      }
-      .descrition-second-wrapper {
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-      .descrition-second-wrapper .content {
-        column-count: 2;
-      }
-      .descrition-second-wrapper .content p {
-        margin-bottom: 1.5rem;
-        color: #262626;
-        font-size: 24px;
-        font-weight: 300;
-      }
-      .description-title {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-      }
-      .history-wrapper {
-        background-color: #f6f6f6;
-        padding-top: 60px;
-        padding-bottom: 60px;
-        text-align: center;
-      }
-      .history-wrapper .description {
-        font-size: 32px;
-        color: #262626;
-        text-align: center;
-        font-weight: 300;
-        margin-bottom: 2.5rem;
-      }
-      .history-wrapper .timeline-wrapper .timeline-title {
-        font-size: 24px;
-        margin-bottom: 2.5rem;
-      }
-      .timeline {
-        position: relative;
-        width: 100%;
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 15px 0;
-      }
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest.json" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500&display=swap"
+  rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="css/v3/style.css" />
+  <link rel="stylesheet" href="css/brands.min.css" />
+  <link rel="stylesheet" href="css/v4/header.css" />
+  <link rel="stylesheet" href="css/v4/secondary-header.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <script id="mcjs">
+    !(function (c, h, i, m, p) {
+      (m = c.createElement(h)),
+        (p = c.getElementsByTagName(h)[0]),
+        (m.async = 1),
+        (m.src = i),
+        p.parentNode.insertBefore(m, p);
+    })(
+      document,
+      "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js"
+    );
+  </script>
+  <style>
+    .description-wrapper {
+      background-image: url(../../img/Description_BG.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      color: #ffffff;
+      text-align: center;
+      border-top: 2px solid #74bc1f;
+    }
 
-      .timeline::after {
-        content: "";
-        position: absolute;
-        width: 2px;
-        background: #bcbcbc;
-        top: 10px;
-        bottom: 60px;
-        left: 0;
-        margin-left: -1px;
-      }
+    .description-wrapper p {
+      margin-bottom: 2.5rem;
+      font-size: 30px;
+      font-weight: 300;
+    }
 
-      .container {
-        padding: 0 50px;
-        position: relative;
-        background: inherit;
-        text-align: left;
-      }
+    .description-wrapper p.text-green.first {
+      font-size: 40px;
+      font-weight: bold;
+    }
 
-      .container.left {
-        left: 0;
-      }
+    .description-wrapper p.text-green.second {
+      font-weight: 400;
+    }
 
+    .text-green,
+    a {
+      color: #74bc1f !important;
+    }
+
+    a {
+      font-weight: 400;
+    }
+
+    .descrition-second-wrapper {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .descrition-second-wrapper .content {
+      column-count: 2;
+    }
+
+    .descrition-second-wrapper .content p {
+      margin-bottom: 1.5rem;
+      color: #262626;
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .description-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .history-wrapper {
+      background-color: #f6f6f6;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      text-align: center;
+    }
+
+    .history-wrapper .description {
+      font-size: 32px;
+      color: #262626;
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .history-wrapper .timeline-wrapper .timeline-title {
+      font-size: 24px;
+      margin-bottom: 2.5rem;
+    }
+
+    .timeline {
+      position: relative;
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 15px 0;
+    }
+
+    .timeline::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      background: #bcbcbc;
+      top: 10px;
+      bottom: 60px;
+      left: 0;
+      margin-left: -1px;
+    }
+
+    .container {
+      padding: 0 50px;
+      position: relative;
+      background: inherit;
+      text-align: left;
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 0;
+      padding-left: 100px;
+      margin-bottom: 2.5rem;
+    }
+
+    .container.right:last-child {
+      margin-bottom: 0;
+    }
+
+    .container::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 13px;
+      right: -8px;
+      background: #74bc1f;
+      border: 2px solid #74bc1f;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .container.right::after {
+      left: 30px;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      top: 16px;
+      right: 8px;
+      background: #bcbcbc;
+      z-index: 1;
+    }
+
+    .container.right::before {
+      left: 0;
+    }
+
+    .container .date {
+      display: block;
+      font-size: 24px;
+      color: #000000;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .container .icon {
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      padding: 9px 0;
+      top: calc(50% - 20px);
+      background: #f6d155;
+      border: 2px solid #74bc1f;
+      border-radius: 40px;
+      text-align: center;
+      font-size: 18px;
+      color: #74bc1f;
+      z-index: 1;
+    }
+
+    .container.left .icon {
+      right: 56px;
+    }
+
+    .container.right .icon {
+      left: 56px;
+    }
+
+    .container .content {
+      position: relative;
+    }
+
+    .container .content h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: normal;
+      color: #74bc1f;
+    }
+
+    .container .content p {
+      margin: 0;
+      font-size: 24px;
+      color: #000000;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .meet-drew-wrapper {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .meet-drew-wrapper .meet-content {
+      display: flex;
+      align-items: center;
+      column-gap: 45px;
+      padding: 25px 0;
+    }
+
+    .meet-drew-wrapper .meet-image {
+      flex: 1 1 30%;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description {
+      font-size: 24px;
+      align-self: baseline;
+      flex: 1 1 50%;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description p:first-child {
+      margin-bottom: 2rem;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description p:nth-child(2) {
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description p:nth-child(2) .text-green {
+      font-weight: bold;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description .social-icons {
+      display: flex;
+      column-gap: 30px;
+    }
+
+    .meet-drew-wrapper .meet-content .meet-description .social-icons a {
+      font-size: 40px;
+    }
+
+    .disclosure-wrapper {
+      background-color: #f6f6f6;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .disclosure-wrapper .wrapper {
+      display: flex;
+      column-gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .disclosure-wrapper .content {
+      flex: 1 1 48%;
+      margin-bottom: 2rem;
+    }
+
+    .disclosure-wrapper .content p {
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .disclosure-wrapper .wrapper .content:nth-child(3) .description p:first-child {
+      margin-bottom: 2.3rem;
+    }
+
+    .disclosure-wrapper .wrapper .content:nth-child(3) .description p:last-child {
+      font-weight: 400;
+    }
+
+    .disclosure-wrapper .images {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 50px 0;
+      flex-wrap: wrap;
+    }
+
+    .disclosure-wrapper .images a {
+      width: 25%;
+      padding: 20px;
+    }
+
+    .disclosure-wrapper .images a img {
+      width: 100%;
+    }
+
+    .cta-apply-wrapper {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .cta-apply-wrapper .content {
+      text-align: center;
+    }
+
+    .cta-apply-wrapper .content p {
+      margin-bottom: 3rem;
+      font-size: 24px;
+    }
+
+    .cta-apply-wrapper .content a {
+      background-color: #74bc1f;
+      font-size: 20px;
+      padding: 10px 50px;
+      text-decoration: none;
+      color: #ffffff !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .fa-brands {
+      font-style: normal;
+    }
+
+    @media (max-width: 767.98px) {
       .container.right {
-        left: 0;
-        padding-left: 100px;
-        margin-bottom: 2.5rem;
-      }
-
-      .container.right:last-child {
-        margin-bottom: 0;
-      }
-
-      .container::after {
-        content: "";
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        top: 13px;
-        right: -8px;
-        background: #74bc1f;
-        border: 2px solid #74bc1f;
-        border-radius: 8px;
-        z-index: 1;
-      }
-
-      .container.right::after {
-        left: 30px;
-      }
-
-      .container::before {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 2px;
-        top: 16px;
-        right: 8px;
-        background: #bcbcbc;
-        z-index: 1;
-      }
-
-      .container.right::before {
-        left: 0;
-      }
-
-      .container .date {
-        display: block;
-        font-size: 24px;
-        color: #000000;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        z-index: 1;
-        margin-bottom: 0.5rem;
-      }
-
-      .container .icon {
-        position: absolute;
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        padding: 9px 0;
-        top: calc(50% - 20px);
-        background: #f6d155;
-        border: 2px solid #74bc1f;
-        border-radius: 40px;
-        text-align: center;
-        font-size: 18px;
-        color: #74bc1f;
-        z-index: 1;
-      }
-
-      .container.left .icon {
-        right: 56px;
-      }
-
-      .container.right .icon {
-        left: 56px;
-      }
-
-      .container .content {
-        position: relative;
-      }
-
-      .container .content h2 {
-        margin: 0 0 10px 0;
-        font-size: 18px;
-        font-weight: normal;
-        color: #74bc1f;
-      }
-
-      .container .content p {
-        margin: 0;
-        font-size: 24px;
-        color: #000000;
-        font-weight: 300;
-        margin-bottom: 1.5rem;
-      }
-
-      .meet-drew-wrapper {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-left: 65px;
       }
 
       .meet-drew-wrapper .meet-content {
-        display: flex;
-        align-items: center;
-        column-gap: 45px;
-        padding: 25px 0;
+        flex-flow: column;
       }
 
-      .meet-drew-wrapper .meet-image {
-        flex: 1 1 30%;
-      }
-
-      .meet-drew-wrapper .meet-content .meet-description {
-        font-size: 24px;
-        align-self: baseline;
-        flex: 1 1 50%;
-      }
-
-      .meet-drew-wrapper .meet-content .meet-description p:first-child {
+      .meet-drew-wrapper .meet-content .meet-image {
         margin-bottom: 2rem;
       }
 
-      .meet-drew-wrapper .meet-content .meet-description p:nth-child(2) {
-        font-weight: 300;
-        margin-bottom: 2rem;
-      }
-
-      .meet-drew-wrapper
-        .meet-content
-        .meet-description
-        p:nth-child(2)
-        .text-green {
-        font-weight: bold;
-      }
-
-      .meet-drew-wrapper .meet-content .meet-description .social-icons{
-        display: flex;
-        column-gap: 30px;
-      }
-
-      .meet-drew-wrapper .meet-content .meet-description .social-icons a {
-        font-size: 40px;
-      }
-
-      .disclosure-wrapper {
-        background-color: #f6f6f6;
-        padding-top: 60px;
-        padding-bottom: 60px;
-      }
-
-      .disclosure-wrapper .wrapper {
-        display: flex;
-        column-gap: 40px;
-        flex-wrap: wrap;
-      }
-
-      .disclosure-wrapper .content {
-        flex: 1 1 48%;
-        margin-bottom: 2rem;
-      }
-
-      .disclosure-wrapper .content p {
-        font-size: 24px;
-        font-weight: 300;
-      }
-
-      .disclosure-wrapper
-        .wrapper
-        .content:nth-child(3)
-        .description
-        p:first-child {
-        margin-bottom: 2.3rem;
-      }
-
-      .disclosure-wrapper
-        .wrapper
-        .content:nth-child(3)
-        .description
-        p:last-child {
-        font-weight: 400;
-      }
-
-      .disclosure-wrapper .images {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 0 50px 0;
-        flex-wrap: wrap;
+      .descrition-second-wrapper .content {
+        column-count: 1;
       }
 
       .disclosure-wrapper .images a {
-        width: 25%;
-        padding: 20px;
+        width: 50%;
       }
+    }
 
-      .disclosure-wrapper .images a img {
-        width: 100%;
-      }
+  </style>
+</head>
 
-      .cta-apply-wrapper {
-        padding-top: 100px;
-        padding-bottom: 100px;
-      }
-
-      .cta-apply-wrapper .content {
-        text-align: center;
-      }
-
-      .cta-apply-wrapper .content p {
-        margin-bottom: 3rem;
-        font-size: 24px;
-      }
-
-      .cta-apply-wrapper .content a {
-        background-color: #74bc1f;
-        font-size: 20px;
-        padding: 10px 50px;
-        text-decoration: none;
-        color: #ffffff !important;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      .fa-brands {
-        font-style: normal;
-      }
-
-      @media (max-width: 767.98px) {
-        .container.right {
-          padding-left: 65px;
-        }
-
-        .meet-drew-wrapper .meet-content {
-          flex-flow: column;
-        }
-
-        .meet-drew-wrapper .meet-content .meet-image {
-          margin-bottom: 2rem;
-        }
-
-        .descrition-second-wrapper .content {
-          column-count: 1;
-        }
-
-        .disclosure-wrapper .images a {
-          width: 50%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-WXWZN36"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!--[if lt IE 8]>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXWZN36" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!--[if lt IE 8]>
       <p class="browserupgrade">
         You are using an <strong>outdated</strong> browser. Please
         <a href="http://browsehappy.com/">upgrade your browser</a> to improve
         your experience.
       </p>
     <![endif]-->
-    <div w3-include-html="header.html"></div>
-    <div class="description-wrapper">
-      <div class="wrapper">
+  <div w3-include-html="header-geekestate.html"></div>
+  <div class="description-wrapper">
+    <div class="wrapper">
+      <p>
+        Founded in 2007, Geek Estate’s guiding principle has always been:
+        <br /><span><strong>“By operator, for operator.”</strong></span>
+      </p>
+      <p class="text-green first">All signal, no noise.</p>
+      <p>
+        The GEM (short for <strong>Geek Estate Mastermind</strong>) was
+        founded in 2017 to bring <br />
+        together the industry’s most forward-thinking, diverse, and innovative
+        entrepreneurs<br />
+        so they can spend more time building companies, and less time
+        navigating the <br />
+        industry. We are on a mission to make real estate, financial
+        independence, and home <br />
+        ownership more accessible using technology.
+      </p>
+      <p class="text-green second">Membership is limited to 1,500</p>
+    </div>
+  </div>
+  <div class="descrition-second-wrapper">
+    <div class="wrapper">
+      <h3 class="description-title text-green">Geek Estate Blog</h3>
+      <div class="content">
         <p>
-          Founded in 2007, Geek Estate’s guiding principle has always been:
-          <br /><span><strong>“By operator, for operator.”</strong></span>
+          The real estate technology landscape innovates at a lightning pace
+          as new companies shake up the status quo and modernize the real
+          estate experience.
+          <a href="https://geekestateblog.com/">Geek Estate Blog</a> is a
+          transparent platform specifically written for tech-savvy real estate
+          practitioners, entrepreneurs, and vendors navigating the most
+          pressing issues facing the RE industry.
         </p>
-        <p class="text-green first">All signal, no noise.</p>
         <p>
-          The GEM (short for <strong>Geek Estate Mastermind</strong>) was
-          founded in 2017 to bring <br />
-          together the industry’s most forward-thinking, diverse, and innovative
-          entrepreneurs<br />
-          so they can spend more time building companies, and less time
-          navigating the <br />
-          industry. We are on a mission to make real estate, financial
-          independence, and home <br />
-          ownership more accessible using technology.
+          Authored by self-proclaimed geeks—people with deep experience
+          providing technology services to the real estate industry and
+          practitioners buying/selling properties—they understand technology
+          and how it can work for you.
         </p>
-        <p class="text-green second">Membership is limited to 1,500</p>
-      </div>
-    </div>
-    <div class="descrition-second-wrapper">
-      <div class="wrapper">
-        <h3 class="description-title text-green">Geek Estate Blog</h3>
-        <div class="content">
-          <p>
-            The real estate technology landscape innovates at a lightning pace
-            as new companies shake up the status quo and modernize the real
-            estate experience.
-            <a href="https://geekestateblog.com/">Geek Estate Blog</a> is a
-            transparent platform specifically written for tech-savvy real estate
-            practitioners, entrepreneurs, and vendors navigating the most
-            pressing issues facing the RE industry.
-          </p>
-          <p>
-            Authored by self-proclaimed geeks—people with deep experience
-            providing technology services to the real estate industry and
-            practitioners buying/selling properties—they understand technology
-            and how it can work for you.
-          </p>
-          <p>
-            They demystify new technologies, break through the hype, and
-            challenge easy assumptions. Topics discussed range from a review of
-            the latest RE smart phone app to a thought-provoking analysis of a
-            new proptech startup to curated search engine optimization (SEO)
-            tips for real estate websites.
-          </p>
-          <p>
-            The opinions expressed on the blog by its authors don’t necessarily
-            reflect the views of Geek Estate Labs LLC. GeekEstate Blog’s
-            contributors are not employed or paid by Geek Estate (unless
-            otherwise stated). If you’d like to become a contributor to the
-            blog, a
-            <span class="text-green"
-              ><strong>membership in the GEM is required.</strong></span
-            >
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="history-wrapper">
-      <div class="wrapper">
-        <h3 class="description-title text-green">
-          History & Business Structure
-        </h3>
-        <p class="description text-center">
-          Geek Estate Labs is primarily funded by the GEM, a private and paid
-          community of more than 625 diverse real estate creatives, doers, and
-          pioneers. Geek Estate Blog is now operated as a member benefit.
+        <p>
+          They demystify new technologies, break through the hype, and
+          challenge easy assumptions. Topics discussed range from a review of
+          the latest RE smart phone app to a thought-provoking analysis of a
+          new proptech startup to curated search engine optimization (SEO)
+          tips for real estate websites.
         </p>
-        <div class="timeline-wrapper">
-          <h4 class="timeline-title text-green">Timeline</h4>
-          <div class="timeline">
-            <div class="container right">
-              <div class="date">2007</div>
-              <div class="content">
-                <p>
-                  Geek Estate 1.0.
-                  <a
-                    href="https://geekestateblog.com/welcome-to-geekestate-blog/"
-                    >Geek Estate Blog was launched by Drew Meyers while employed
-                    by Zillow</a>.
-                </p>
-                <img src="../../img/timeline-geb-logo.jpg" alt="GEB Logo" />
-              </div>
+        <p>
+          The opinions expressed on the blog by its authors don’t necessarily
+          reflect the views of Geek Estate Labs LLC. GeekEstate Blog’s
+          contributors are not employed or paid by Geek Estate (unless
+          otherwise stated). If you’d like to become a contributor to the
+          blog, a
+          <span class="text-green"><strong>membership in the GEM is required.</strong></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="history-wrapper">
+    <div class="wrapper">
+      <h3 class="description-title text-green">
+        History & Business Structure
+      </h3>
+      <p class="description text-center">
+        Geek Estate Labs is primarily funded by the GEM, a private and paid
+        community of more than 625 diverse real estate creatives, doers, and
+        pioneers. Geek Estate Blog is now operated as a member benefit.
+      </p>
+      <div class="timeline-wrapper">
+        <h4 class="timeline-title text-green">Timeline</h4>
+        <div class="timeline">
+          <div class="container right">
+            <div class="date">2007</div>
+            <div class="content">
+              <p>
+                Geek Estate 1.0.
+                <a href="https://geekestateblog.com/welcome-to-geekestate-blog/">Geek Estate Blog was launched by Drew
+                  Meyers while employed
+                  by Zillow</a>.
+              </p>
+              <img src="../../img/timeline-geb-logo.jpg" alt="GEB Logo" />
             </div>
-            <div class="container right">
-              <div class="date">2010</div>
-              <div class="content">
-                <p class="text-green">
-                  <strong
-                    ><u
-                      ><a
-                        href="http://www.drewmeyersinsights.com/2010/01/26/its-time-for-the-next-chapter/"
-                        >Drew’s departure from Zillow</a
-                      >.</u
-                    ></strong
-                  >
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2010</div>
+            <div class="content">
+              <p class="text-green">
+                <strong><u><a href="http://www.drewmeyersinsights.com/2010/01/26/its-time-for-the-next-chapter/">Drew’s
+                      departure from Zillow</a>.</u></strong>
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2011</div>
-              <div class="content">
-                <p>
-                  Began working at Virtual Results, and launched
-                  <span class="text-green"
-                    ><strong
-                      ><u
-                        ><a
-                          href="https://geekestateblog.com/in-the-works-geek-estate-pro-a-wordpress-internet-marketing-community-forum/"
-                          >Geek Estate Pro</a
-                        ></u
-                      ></strong
-                    ></span
-                  >. Zillow transferred ownership of the site to Drew.
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2011</div>
+            <div class="content">
+              <p>
+                Began working at Virtual Results, and launched
+                <span class="text-green"><strong><u><a
+                        href="https://geekestateblog.com/in-the-works-geek-estate-pro-a-wordpress-internet-marketing-community-forum/">Geek
+                        Estate Pro</a></u></strong></span>. Zillow transferred ownership of the site to Drew.
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2011</div>
-              <div class="content">
-                <p>
-                  Geek Estate 2.0. Website redesigned by Virtual Results.
-                </p>
-                <img src="../../img/timeline-VR-2011-theme.png" alt="GEB Logo" />
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2011</div>
+            <div class="content">
+              <p>
+                Geek Estate 2.0. Website redesigned by Virtual Results.
+              </p>
+              <img src="../../img/timeline-VR-2011-theme.png" alt="GEB Logo" />
             </div>
-            <div class="container right">
-              <div class="date">2016</div>
-              <div class="content">
-                <p>
-                  Formation of <a href="http://www.geekestatelabs.com">Geek Estate Labs</a>, LLC after traveling for several
-                  years (while keeping a keen eye on developments in the real
-                  estate industry).
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2016</div>
+            <div class="content">
+              <p>
+                Formation of <a href="http://www.geekestatelabs.com">Geek Estate Labs</a>, LLC after traveling for
+                several
+                years (while keeping a keen eye on developments in the real
+                estate industry).
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2017</div>
-              <div class="content">
-                <p>
-                  Launch of the Geek Estate Mastermind (now referred to as the
-                  GEM). The first member to pay dues was Bryan Copley from
-                  <a href="https://www.citybldr.com/">CityBldr</a> (September
-                  1st).
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2017</div>
+            <div class="content">
+              <p>
+                Launch of the Geek Estate Mastermind (now referred to as the
+                GEM). The first member to pay dues was Bryan Copley from
+                <a href="https://www.citybldr.com/">CityBldr</a> (September
+                1st).
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2018</div>
-              <div class="content">
-                <p>
-                  <a
-                    href="https://geekestateblog.com/geek-estate-3-0-the-facelift-1825-days-too-late/"
-                    >Geek Estate 3.0 Facelift</a
-                  >
-                  (June 13, 2018)
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2018</div>
+            <div class="content">
+              <p>
+                <a href="https://geekestateblog.com/geek-estate-3-0-the-facelift-1825-days-too-late/">Geek Estate 3.0
+                  Facelift</a>
+                (June 13, 2018)
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2020</div>
-              <div class="content">
-                <p>
-                  First VIP Dinner in partnership with <a href="https://www.meetresident.com/">Resident</a> (January 29th)
-                </p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2020</div>
+            <div class="content">
+              <p>
+                First VIP Dinner in partnership with <a href="https://www.meetresident.com/">Resident</a> (January 29th)
+              </p>
             </div>
-            <div class="container right">
-              <div class="date">2022</div>
-              <div class="content">
-                <p>The GEM surpasses 500 members.</p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2022</div>
+            <div class="content">
+              <p>The GEM surpasses 500 members.</p>
             </div>
-            <div class="container right">
-              <div class="date">2023</div>
-              <div class="content">
-                <p>The GEM surpasses 600 members.</p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2023</div>
+            <div class="content">
+              <p>The GEM surpasses 600 members.</p>
             </div>
-            <div class="container right">
-              <div class="date">2023</div>
-              <div class="content">
-                <p><a href="https://crystal.geekestate.com/a-crystal-is-born-from-the-gem/">Launch of GEM Crystal</a>.</p>
-              </div>
+          </div>
+          <div class="container right">
+            <div class="date">2023</div>
+            <div class="content">
+              <p><a href="https://crystal.geekestate.com/a-crystal-is-born-from-the-gem/">Launch of GEM Crystal</a>.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="meet-drew-wrapper">
-      <div class="wrapper">
-        <h3 class="description-title text-green">Meet Drew Meyers</h3>
-        <div class="meet-content">
-          <div class="meet-image">
-            <img src="../../img/drew-picture.png" alt="Drew Meyer" />
-          </div>
-          <div class="meet-description">
-            <p>
-              Drew is a product strategist and community builder with 15+ years
-              of cross-functional experience in the sharing economy, real
-              estate, and travel industries. He conceptualized and led two
-              bootstrapped travel apps, reaching 15k+ total global users.
-            </p>
-            <p>
-              He has spoken at Inman Connect, REBAR Camps, and a range of other
-              events including <span class="text-green">InnovateHousing,</span>, a half-day
-              conference co-hosted by The Washington Center for Real Estate
-              Research and Fannie Mae exploring the intersection of housing,
-              innovation, and tech. The panel he moderated was
-              <span class="text-green"
-                >“The Future of Data: Can Innovation and Privacy Coexist?” —
-                <a href="https://www.youtube.com/watch?v=auyllCJBXQE">watch the entire panel here</a></span
-              >. Has been cited as an expert in
-              <span class="text-green"><a href="https://www.technologyreview.com/2022/04/13/1049227/house-flipping-algorithms-are-coming-to-your-neighborhood/">MIT Technology Review</a></span>, and other
-              publications.
-            </p>
-            <div class="social-icons">
-              <a href="https://www.linkedin.com/in/drewmeyers/"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="https://twitter.com/drewmeyers"><i class="fa-brands fa-square-twitter"></i></a>
-              <a href="https://angel.co/u/drewmeyers"><i class="fa-brands fa-angellist"></i></a>
-            </div>
-          </div>
+  </div>
+  <div class="meet-drew-wrapper">
+    <div class="wrapper">
+      <h3 class="description-title text-green">Meet Drew Meyers</h3>
+      <div class="meet-content">
+        <div class="meet-image">
+          <img src="../../img/drew-picture.png" alt="Drew Meyer" />
         </div>
-      </div>
-    </div>
-    <div class="disclosure-wrapper">
-      <div class="wrapper">
-        <div class="images-wrapper">
-          <h3 class="description-title text-green">Current Investments</h3>
-          <div class="images">
-            <a href="https://www.meetresident.com/"
-              ><img src="../../img/about-resident.png" alt="Resident"
-            /></a>
-            <a href="https://www.citybldr.com/"
-              ><img src="../../img/about-citybldr.png" alt="CityBldr"
-            /></a>
-            <a href="https://myplace.co/"
-              ><img src="../../img/about-myplace.png" alt="MyPlace"
-            /></a>
-            <a href="https://blueprintvegas.com/"
-              ><img src="../../img/about-blueprint.png" alt="Blueprint"
-            /></a>
-          </div>
-        </div>
-        <div class="content">
-          <h3 class="description-title text-green">Disclosures</h3>
-          <div class="description">
-            <p>
-              Drew Meyers was employed by Zillow from 2005-2010; he is not a
-              current stock holder (sold all of his early stock to fund his
-              travel startup). Virtual Results employed him from late 2010 until
-              December of 2011, and he has consulted for both StreetAdvisor and
-              360modern for extended periods of time in the past.
-            </p>
-          </div>
-        </div>
-        <div class="content">
-          <h3 class="description-title text-green">Keep in Mind</h3>
-          <div class="description">
-            <p>
-              <strong>Drew is not a reporter</strong>. Are you an entrepreneur
-              building a startup in the real estate space or a vendor looking to
-              figure out the best way to reach agents and brokers?
-            </p>
-            <p>
-              <a href="/apply-now.html" class="text-green"
-                ><u>Please apply to the GEM</u></a
-              >.
-            </p>
-          </div>
-        </div>
-        <div class="content">
+        <div class="meet-description">
           <p>
-            Syndicate Investments: <a href="https://www.getplunk.com/">Plunk</a>, 
-            <a href="https://gosummer.com/">Summer</a>, 
-            <a href="https://www.wander.com/">Wander</a>, 
-            and <a href="https://www.cubytechnologies.com/">Cuby</a>
+            Drew is a product strategist and community builder with 15+ years
+            of cross-functional experience in the sharing economy, real
+            estate, and travel industries. He conceptualized and led two
+            bootstrapped travel apps, reaching 15k+ total global users.
+          </p>
+          <p>
+            He has spoken at Inman Connect, REBAR Camps, and a range of other
+            events including <span class="text-green">InnovateHousing,</span>, a half-day
+            conference co-hosted by The Washington Center for Real Estate
+            Research and Fannie Mae exploring the intersection of housing,
+            innovation, and tech. The panel he moderated was
+            <span class="text-green">“The Future of Data: Can Innovation and Privacy Coexist?” —
+              <a href="https://www.youtube.com/watch?v=auyllCJBXQE">watch the entire panel here</a></span>. Has been
+            cited as an expert in
+            <span class="text-green"><a
+                href="https://www.technologyreview.com/2022/04/13/1049227/house-flipping-algorithms-are-coming-to-your-neighborhood/">MIT
+                Technology Review</a></span>, and other
+            publications.
+          </p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/drewmeyers/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com/drewmeyers"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="https://angel.co/u/drewmeyers"><i class="fa-brands fa-angellist"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="disclosure-wrapper">
+    <div class="wrapper">
+      <div class="images-wrapper">
+        <h3 class="description-title text-green">Current Investments</h3>
+        <div class="images">
+          <a href="https://www.meetresident.com/"><img src="../../img/about-resident.png" alt="Resident" /></a>
+          <a href="https://www.citybldr.com/"><img src="../../img/about-citybldr.png" alt="CityBldr" /></a>
+          <a href="https://myplace.co/"><img src="../../img/about-myplace.png" alt="MyPlace" /></a>
+          <a href="https://blueprintvegas.com/"><img src="../../img/about-blueprint.png" alt="Blueprint" /></a>
+        </div>
+      </div>
+      <div class="content">
+        <h3 class="description-title text-green">Disclosures</h3>
+        <div class="description">
+          <p>
+            Drew Meyers was employed by Zillow from 2005-2010; he is not a
+            current stock holder (sold all of his early stock to fund his
+            travel startup). Virtual Results employed him from late 2010 until
+            December of 2011, and he has consulted for both StreetAdvisor and
+            360modern for extended periods of time in the past.
           </p>
         </div>
-        <div class="content">
-          <p>
-            Brand Assets: <a href="/brand.html">Geek Estate logos, images, colors, and general brand guidelines</a>.</p>
-        </div>
       </div>
-    </div>
-    <div class="cta-apply-wrapper">
-      <div class="wrapper">
-        <div class="content">
+      <div class="content">
+        <h3 class="description-title text-green">Keep in Mind</h3>
+        <div class="description">
           <p>
-            With a mission to attract the 1,500 most forward-thinking, and
-            diverse, innovators, we’re looking for the best and brightest in all
-            the land... Want to get involved?
+            <strong>Drew is not a reporter</strong>. Are you an entrepreneur
+            building a startup in the real estate space or a vendor looking to
+            figure out the best way to reach agents and brokers?
           </p>
-          <a href="/join-now.html">Apply Now</a>
+          <p>
+            <a href="/apply-now.html" class="text-green"><u>Please apply to the GEM</u></a>.
+          </p>
         </div>
       </div>
+      <div class="content">
+        <p>
+          Syndicate Investments: <a href="https://www.getplunk.com/">Plunk</a>,
+          <a href="https://gosummer.com/">Summer</a>,
+          <a href="https://www.wander.com/">Wander</a>,
+          and <a href="https://www.cubytechnologies.com/">Cuby</a>
+        </p>
+      </div>
+      <div class="content">
+        <p>
+          Brand Assets: <a href="/brand.html">Geek Estate logos, images, colors, and general brand guidelines</a>.</p>
+      </div>
     </div>
-    <div
-      class="section-contact"
-      style="
+  </div>
+  <div class="cta-apply-wrapper">
+    <div class="wrapper">
+      <div class="content">
+        <p>
+          With a mission to attract the 1,500 most forward-thinking, and
+          diverse, innovators, we’re looking for the best and brightest in all
+          the land... Want to get involved?
+        </p>
+        <a href="/join-now.html">Apply Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="section-contact" style="
         height: 250px;
         background: #f6f6f6;
         padding-top: 85px;
         padding-bottom: 85px;
-      "
-    >
-      <div class="wrapper">
-        <h2 class="section__small-title">
-          <strong>Questions?</strong> Don't hesitate to ask
-        </h2>
+      ">
+    <div class="wrapper">
+      <h2 class="section__small-title">
+        <strong>Questions?</strong> Don't hesitate to ask
+      </h2>
 
-        <div class="wrapper-link-example">
-          <a class="mailto:community@geekestate.com"
-            >community@geekestate.com</a
-          >
-        </div>
+      <div class="wrapper-link-example">
+        <a class="mailto:community@geekestate.com">community@geekestate.com</a>
       </div>
     </div>
+  </div>
 
-    <!-- Add your site or application content here -->
-    <div class="wrapper"></div>
-    <div w3-include-html="footer.html"></div>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+  <!-- Add your site or application content here -->
+  <div class="wrapper"></div>
+  <div w3-include-html="footer.html"></div>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/includes.js"></script>
-  </body>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/includes.js"></script>
+</body>
 </html>
