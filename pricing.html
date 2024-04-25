@@ -611,23 +611,71 @@
         </div>
 
         <div class="section-subfooter">
-            <div class="wrapper">
-                <img src="/assets/images/GEB_Logo.png" />
-                <p>Delivering the pulse of the real estate tech and the Built World since 2007.<br />Now operated as a
-                    member benefit for the GEM membership base.</p>
-                <a href="https://geekestateblog.com/" class="gem-btn outline">READ THE BLOG</a>
-            </div>
+      <div class="wrapper">
+        <p class="text-green title">Small is the New Big</p>
+        <p class="sub-title">With a mission to attract the 1,500 boldest thinkers, nothing but the best and brightest
+          will do.</p>
+        <p class="form-title">GEM Diamond is a Paid Membership & Private Community.</p>
+        <div class="apply-form-wrapper">
+          <form method="GET" action="https://www.geekestate.com/join-now.html">
+            <label>
+              I'm a
+            </label>
+            <select>
+              <option value="founder">Founder</option>
+              <option value="Executive">Executive</option>
+              <option value="VC">VC</option>
+              <option value="Broker-Owner">Broker-Owner</option>
+              <option value="Other">Other</option>
+            </select>
+            <input type="hidden" name="utm_source" value="Geek-Estate" />
+            <input type="hidden" name="utm_medium" value="button" />
+            <input type="hidden" name="utm_campaign" value="home-page-apply-top" />
+            <button type="submit" class="gem-btn">APPLY</button>
+          </form>
         </div>
+        <hr />
+        <div class="question-wrapper">
+          <p class="title">Questions?</p>
+          <a href="https://app.highnote.io/c/p/f34df5b3/the-gem-diamond?cp=link" class="text-green">Read more details
+            here</a> <span> or </span> <a
+            href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member"
+            class="text-green">Schedule a
+            call</a>
+        </div>
+        <hr />
+        <div class="gem-crystal-wrapper">
+          <p class="title">Not quite ready? Get Started with GEM Crystal</p>
+          <img src="/assets/images/Gem_Crystal_Reverse_Logo.png" />
+          <div style="min-height:58px; max-width:440px; width:100%; margin: 0 auto 30px;">
+            <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
+              data-button-color="#74BC1F" data-button-text-color="#FFFFFF" data-site="https://crystal.geekestate.com/"
+              async></script>
+          </div>
+          <a href="https://crystal.geekestate.com/" class="text-green">Learn more</a>
+        </div>
+      </div>
+    </div>
 
-        <div w3-include-html="footer.html"></div>
+    <div w3-include-html="footer.html"></div>
 
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/includes.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/includes.js"></script>
+    <script type="text/javascript">
+      $('.testimonial-footer-items').slick({
+        infinite: true,
+        dots: true,
+        prevArrow: '<button type="button" class="slick-prev"><img src="/assets/images/arrow-left-circle.png" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="/assets/images/arrow-right-circle.png" /></button>',
+        appendArrows: $('#slick-meta'),
+        appendDots: $('#slick-meta'),
+        adaptiveHeight: true
+      });
+    </script>
 </body>
 
 </html>
