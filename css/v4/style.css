@@ -212,6 +212,7 @@ a {
 .trusted-by-founders-wrapper .nfx-logo {
   aspect-ratio: 1 / 0.35;
   object-fit: contain;
+  max-height: 100px;
 }
 
 #scrollToTop {
@@ -334,10 +335,15 @@ a {
     margin-bottom: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .slick-meta {
     display: none;
+  }
+
+  .trusted-by-founders-wrapper .nfx-logo { 
+    max-height: 60px;
   }
 }
 
