@@ -87,7 +87,7 @@ function includeHTML() {
     {
         $('.all').remove();
         // $('.wrapper-welcome').html('<h2 class="welcome">Representing companies such as...</h2>');
-        $('.section-hero .wrapper h1').html('Representing companies such as...');
+        $('.section-hero .wrapper h1').html('Companies Represented in GEM');
     }
 
     if(includeMembersPage) {
