@@ -98,7 +98,7 @@ function includeHTML() {
 
     if(includeAboutPage) {
         $('.all').remove();
-        $('.section-hero h1').html('About GeekEstate');
+        $('.section-hero h1').html('About Geek Estate');
         // $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">About GeekEstate</h2></div>');
     }
 
