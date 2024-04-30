@@ -74,7 +74,8 @@ function includeHTML() {
     if(includeJoinNowPage)
     {
         $('.all').remove();
-        $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">GEM Application</h2></div></div>');
+        // $('.wrapper-welcome').html('<div class="section-body-approved"><div style="margin: 40px 0 40px 0;"><h2 class="section-body-approved-label">GEM Application</h2></div></div>');
+        $('.section-hero .wrapper h1').html('GEM Application');
     }
 
     if(includeFAQPage)
