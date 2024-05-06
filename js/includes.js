@@ -44,6 +44,7 @@ function includeHTML() {
     var includeAboutPage = window.location.href.includes('about.html') || window.location.href.includes('about');
     var includeBrandPage = window.location.href.includes('brand.html') || window.location.href.includes('brand');
     var includeApprovedPage = window.location.href.includes('approved.html') || window.location.href.includes('approved');
+    var includeWelcomePage = window.location.href.includes('welcome.html') || window.location.href.includes('welcome');
     
     if(window.location.href.includes('approved.html') ||
         includeJoinNowPage ||
@@ -69,6 +70,12 @@ function includeHTML() {
         $('.all').remove();
         $('.wrapper-welcome').html('<h1 class="welcome" style="color: #85AB37;font-weight:500;">Welcome to GEM!</h1>' +
             '<h2 style="color: #fff;text-align:center;">Thank you so much for joining</h2>');
+    }
+
+    if(includeWelcomePage)
+    {
+        $('.section-hero .wrapper h1').html('Welcome to GEM!');
+        $('.section-hero .wrapper').append('<h2 style="color: #ffffff; z-index:1; font-size: 40px; font-family: Poppins; margin-bottom: 20px; text-align: center;">Thank you so much for joining</h2>');
     }
 
     if(includeJoinNowPage)
