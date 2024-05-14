@@ -101,7 +101,8 @@ function includeHTML() {
     if(includeMembersPage) {
         $('.section-hero .contact-btn').remove();
         $('.all').remove();
-        $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">GEM Member Access</h2></div>');
+        // $('.wrapper-welcome').html('<div class="section-products section-body-approved wrapper"><h2 class="section-body-approved-label">GEM Member Access</h2></div>');
+        $('.section-hero .wrapper h1').html('GEM Member Access');
     }
 
     if(includeAboutPage) {
