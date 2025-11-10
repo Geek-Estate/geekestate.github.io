@@ -54,6 +54,7 @@
         align-items: baseline;
         padding-top: 20px;
         margin-bottom: 60px;
+        flex-wrap: wrap;
     }
 
     .ambassadors-wrapper .ambassadors-grid .ambassadors-card {
@@ -87,5 +88,11 @@
         font-weight: 400;
         font-size: 24px;
         text-align: center;
+    }
+
+    @media screen and (max-width: 600px) {
+        .ambassadors-wrapper .ambassadors-grid {
+            flex-direction: column;
+        }
     }
 </style>
