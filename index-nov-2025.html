@@ -84,6 +84,7 @@
             position: relative;
             z-index: 1;
             color: #fff;
+            padding-top: 120px;
         }
 
         .section-hero .wrapper h1 {
@@ -198,7 +199,7 @@
             text-align: center;
         }
 
-        body.homepage {
+        body.homepage > .container {
             background-image: url("/assets/v5/Beehive_Lines_BG.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -206,8 +207,9 @@
         }
 
         .section-content .wrapper {
-            padding-top: 200px;
+            padding-top: 150px;
             text-align: center;
+            color: #fff;
         }
 
         .section-content .gem-diamond-content-wrapper {
@@ -218,7 +220,6 @@
         .section-content .gem-diamond-content-wrapper .gem-diamond-logo {
             width: 480px;
             height: auto;
-            margin-bottom: 30px;
         }
 
         .section-content .gem-diamond-content-wrapper .gem-diamond-description {
@@ -244,7 +245,6 @@
             font-size: 24px;
             font-weight: normal;
             margin: 40px 0;
-
         }
 
         .section-content .gem-diamond-content-wrapper .sign-in {
@@ -258,8 +258,9 @@
             font-weight: 700;
         }
 
-        .section-content hr {
-            border-top: 0.5px solid #D6D6D6;
+        .section-content .hr {
+            background-color: rgba(214, 214, 214, 1);
+            height: 0.5px;
         }
 
         .section-content .gem-crystal-content-wrapper {
@@ -305,15 +306,40 @@
             text-align: center;
         }
 
-        .tiers-wrapper {
-            padding: 50px 0;
+        .section-content .gem-diamond-content-wrapper.benefits-wrapper {
+            padding-top: 50px;
         }
 
-        .tiers-wrapper h3 {
+        .benefits-wrapper .benefits-wrapper-access-list {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .benefits-wrapper ul {
+            font-weight: 400;
+            font-size: 32px;
+            list-style: inside;
+            text-align: left;
+        }
+
+        .benefits-wrapper .benefits-wrapper-title-list {
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 41.6px;
+        }
+
+        .wrapper h3.text-green {
             font-size: 48px;
             color: var(--green);
             margin-bottom: 30px;
             font-weight: 500;
+        }
+
+        .tiers-wrapper {
+            padding: 50px 0;
         }
 
         .tiers-wrapper .tier-table-wrapper {
@@ -421,10 +447,6 @@
             font-weight: 200;
             font-family: Poppins;
             color: #D6D6D6;
-        }
-
-        .section-content hr {
-            border-top: 0.5px solid #D6D6D6;
         }
 
         .section-subfooter {
@@ -625,7 +647,8 @@
         <div class="section-content">
             <div class="wrapper">
                 <div class="gem-diamond-content-wrapper">
-                    <img class="gem-diamond-logo" src="/assets/images/Gem_1500_Diamond_Logo.png" />
+                    <img class="gem-diamond-logo" src="/assets/v5/Gem_1500_Logo.svg" />
+                    <p class="gem-diamond-description"><b>Where Proptech Leaders Belong</b></p>
                     <p class="gem-diamond-description">An invite only community of independent creatives, doers, and
                         pioneers free from sponsored messages
                         and noise.</p>
@@ -635,7 +658,28 @@
                             href="https://www.geekestate.com/members.html">Sign
                             in</a></p>
                 </div>
-                <hr />
+                <div class="hr"></div>
+                <div class="gem-diamond-content-wrapper benefits-wrapper">
+                    <h3 class="text-green">Benefits</h3>
+                    <p class="gem-diamond-description">Get out of your silo and learn from exposure to differing perspectives; to help
+                        you build wildly successful companies that contribute to better real estate, homeownership, rental, and
+                        workplace experiences through technology.</p>
+                    <div class="benefits-wrapper-access-list">
+                        <img src="/assets/v5/members_benefits_pic.png" />
+                        <div>
+                            <p class="benefits-wrapper-title-list">Members gain access to...</p>
+                            <ul>
+                                <li>GEM Ventures</li>
+                                <li>Peer Circles</li>
+                                <li>Retreats</li>
+                                <li>Private mobile app</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">LEARN MORE</a>
+                </div>
+                <div class="hr"></div>
+                <div w3-include-html="ambassadors-section.html"></div>
                 <div class="gem-crystal-content-wrapper">
                     <img class="gem-crystal-logo" src="/assets/images/Gem_Crystal_Logo.png" />
                     <p class="gem-crystal-description">Discover an exclusive, objective lens into the trends, companies,
@@ -648,11 +692,11 @@
                             data-site="https://crystal.geekestate.com/" async></script>
                     </div>
                 </div>
-                <hr />
+                <div class="hr"></div>
                 <div w3-include-html="trusted-by-founders-partners.html"></div>
-                <hr />
+                <div class="hr"></div>
                 <div class="tiers-wrapper">
-                    <h3>Tiers of GEM</h3>
+                    <h3 class="text-green">Tiers of GEM</h3>
                     <div class="tier-table-wrapper">
                         <table>
                             <thead>
