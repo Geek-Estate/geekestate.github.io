@@ -43,7 +43,7 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <link rel="stylesheet" href="css/v5/style.css">
-  <link rel="stylesheet" href="css/v4/header.css">
+  <link rel="stylesheet" href="css/v5/header.css">
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <script
     id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
@@ -62,12 +62,25 @@
       text-decoration: none;
     }
 
+    .gem-btn-black {
+      color: #000;
+      font-weight: 800;
+    }
+
     .gem-btn.outline {
       background-color: transparent;
     }
 
     .text-green {
       color: var(--green) !important;
+    }
+
+    .hero-title {
+      font-family: Poppins, Inter;
+      color: #fff;
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 30px;
     }
 
     .section-hero {
@@ -91,7 +104,7 @@
 
     .section-hero .wrapper .description {
       font-family: Poppins, Inter;
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 400;
       line-height: 41.6px;
       text-align: center;
@@ -99,7 +112,7 @@
       width: 1114px;
       max-width: 100%;
       margin: 0 auto;
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
 
     .apply-form-wrapper {
@@ -158,10 +171,10 @@
     }
 
     .section-hero .wrapper .description-form {
-      margin-bottom: 20px;
+      margin-top: 50px;
       font-family: Poppins;
-      font-size: 28px;
-      font-weight: 700;
+      font-size: 20px;
+      font-weight: 400;
       line-height: 36.4px;
       text-align: center;
     }
@@ -966,34 +979,14 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
   <div class="container">
-    <div w3-include-html="header-tag.html"></div>
+    <div w3-include-html="header-tag-nov-2025.html"></div>
     <div class="section-hero">
       <div class="wrapper">
-        <img class="logo" src="/assets/images/Gem_Diamond_1500_Reverse_Logo.png" />
-        <p class="description">An invite only community of independent proptech creatives, doers, and pioneers free from
-          sponsored messages and noise.</p>
-        <div class="apply-form-wrapper">
-          <form method="GET" action="https://www.geekestate.com/join-now.html">
-            <label>
-              I'm a
-            </label>
-            <select>
-              <option value="Founder">Founder</option>
-              <option value="Executive">Executive</option>
-              <option value="VC">VC</option>
-              <option value="Broker-Owner">Broker-Owner</option>
-              <option value="Other">Other</option>
-            </select>
-            <input type="hidden" name="utm_source" value="Geek-Estate" />
-            <input type="hidden" name="utm_medium" value="button" />
-            <input type="hidden" name="utm_campaign" value="home-page-apply-top" />
-            <button type="submit" class="gem-btn">APPLY</button>
-          </form>
-        </div>
+        <img class="logo" src="/assets/images/Gem_Diamond_1500_Reverse_Logo.png"/>
+        <h2 class="hero-title">Where Proptech Leaders Belong</h2>
+        <p class="description">An invite only community of independent builders, creatives, doers, and pioneers free from sponsored messages and noise.</p>
+        <a href="https://www.geekestate.com/join-now.html?utm_source=Geek-Estate&utm_medium=button&utm_campaign=home-page-apply-top" class="gem-btn gem-btn-black">APPLY</a>
         <p class="description-form">Smaller is better: Limited to 1,500</p>
-        <p class="sign-in-description">Already a member? <a class="text-green"
-            href="https://www.geekestate.com/members.html">Sign
-            in</a></p>
       </div>
     </div>
 
