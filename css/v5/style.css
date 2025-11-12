@@ -92,6 +92,8 @@ a {
 .section-footer .wrapper .row {
   flex-wrap: wrap;
   overflow: inherit;
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .footer-nav {
@@ -122,7 +124,7 @@ a {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .social-nav__item {
   width: 40px;
@@ -328,17 +330,40 @@ a {
   .trusted-by-founders-wrapper .image-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 50px;
+    width: 100%;
     justify-content: center;
-      margin-bottom: 50px;
   }
   
   .trusted-by-founders-wrapper .image-list .img-wrapper {
-    width: calc(20% - 40px);
-    margin-bottom: 30px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 0;
+      flex-shrink: 0;
+    }
+    
+    .trusted-by-founders-wrapper .image-list.founders {
+      max-width: 1000px;
+      margin: 2rem auto;
+      flex-basis: calc(100% / 3);
+    }
+    
+    .trusted-by-founders-wrapper .image-list.founders .img-wrapper {
+      padding: 50px;
+    }
+    
+    .trusted-by-founders-wrapper .image-list .img-wrapper:hover img {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+    
+    .trusted-by-founders-wrapper .image-list.founders .img-wrapper:nth-child(n+4):nth-child(-n+7) {
+      flex-basis: calc(100% / 4);
+    }
+    
+    .trusted-by-founders-wrapper .image-list.partners .img-wrapper {
+      padding: 20px;
   }
 
   .slick-meta {
@@ -351,15 +376,23 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  .trusted-by-founders-wrapper .image-list.founders {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+  .trusted-by-founders-wrapper .image-list .img-wrapper {
+    padding: 20px;
+  }
+  
   .trusted-by-founders-wrapper .slick-meta {
     margin-bottom: 50px;
   }
 
-  /* .slick-list .slick-track {
+  .slick-list .slick-track {
     align-items: center;
     display: flex;
-    column-gap: 50px;
-  } */
+  }
 
   .slick-meta {
     display:  flex;
@@ -421,13 +454,13 @@ a {
     color: transparent;
     border: 0;
     outline: none;
-    background: #fff;
+    background: #ffffff48;
     width: 100%;
     border-radius: 30px;
   }
   
   .slick-meta .slick-dots .slick-active button {
-    background: #000000;
+    background: #fff;
   }
   
   .slick-meta .slick-dots li button:before {
