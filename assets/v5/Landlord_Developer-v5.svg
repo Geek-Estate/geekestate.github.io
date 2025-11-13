@@ -1,0 +1,54 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 212" width="192" height="212">
+	<title>image</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m39 37h114.4v130h-114.4z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #333333 } 
+		.s1 { fill: none;stroke: #74bc1f;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4 } 
+	</style>
+	<path id="Layer" class="s0" d="m81.5 4.4c9-5.2 20-5.2 29 0l66.3 38.2c8.9 5.2 14.5 14.8 14.5 25.1v76.6c0 10.3-5.6 19.9-14.5 25.1l-66.3 38.2c-9 5.2-20 5.2-29 0l-66.3-38.2c-8.9-5.2-14.5-14.8-14.5-25.1v-76.6c0-10.3 5.6-19.9 14.5-25.1z"/>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m73.7 72.4v16.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m110.7 72.7v-31.2-1.9h-37.1v9.5"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m88.6 89.2h-33.7v75.2h33.7z"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 108.8h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 108.8h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 108.8h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 118h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 118h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 118h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 127.2h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 127.2h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 127.2h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 136.4h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 136.4h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 136.4h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 145.6h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 145.6h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 145.6h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m61.1 154.9h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m70.1 154.9h3.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m79.2 154.9h3.2"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m137.7 81.2h-31.3v83.2h31.3z"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m133.3 72.7h-22.6v8.5h22.6z"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 91.1h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 101.5h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 111.8h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 122.2h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 132.6h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 143h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m112.9 153.4h18.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m122 71.5v-12.3"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m104 49.1h-5"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m151 164.4h-109.6"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m64.2 68.1c-1.2 1.6-3 2.7-5.1 2.7-3.5 0-6.4-3.1-6.4-6.9 0-3.9 2.9-7 6.4-7 1.5 0 2.8 0.6 3.9 1.5"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m81.4 68c-2 2.4-4.7 3.8-7.9 3.8-5.8 0-10.5-5.1-10.5-11.3 0-6.3 4.7-11.4 10.5-11.4 4.7 0 8.7 3.3 10 7.9"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m86.2 70.2c3.5 0 6.4-3.1 6.4-6.9 0-3.8-2.9-6.9-6.4-6.9-3.5 0-6.4 3.1-6.4 6.9 0 3.8 2.9 6.9 6.4 6.9z"/>
+			<path id="Layer" fill-rule="evenodd" class="s1" d="m55.8 99.4h17.9"/>
+		</g>
+	</g>
+</svg>
