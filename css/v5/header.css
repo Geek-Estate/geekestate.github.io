@@ -69,8 +69,12 @@ nav.main-nav ul li a.gem-btn {
 	margin-bottom: 0;
 	max-height: 45px;
 	line-height: 1;
+	font-weight: 700;
 }
 
+.gem-btn:hover {
+	opacity: 0.9;
+}
 @media only screen and (max-width: 768px) {
 	header {
 		background-color: rgba(38, 38, 38, 1);
@@ -88,6 +92,11 @@ nav.main-nav ul li a.gem-btn {
 		display: none;
 	}
 
+	nav.main-nav ul li:last-child {
+		flex-grow: 1;
+    	justify-content: end;
+	}
+
 	.header-hamburger {
 		display: flex;
 		align-items: center;
@@ -98,5 +107,16 @@ nav.main-nav ul li a.gem-btn {
 	.header-hamburger i {
 		color: #fff;
 		font-size: 40px;
+	}
+}
+@media only screen and (max-width: 425px) {
+	nav.main-nav ul {
+		row-gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	nav.main-nav ul li:last-child {
+		flex-grow: 1;
+    	justify-content: center;
 	}
 }
