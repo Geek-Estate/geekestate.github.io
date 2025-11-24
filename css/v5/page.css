@@ -47,6 +47,15 @@
   transform: translateY(-47%);
 }
 
+.section-hero.page-hero .wrapper {
+  max-width: 1300px;
+  align-items: start;
+}
+.section-hero.page-hero .wrapper .hero-title {
+  padding-left: 34px;
+  text-align: left;
+}
+
 .section-hero .wrapper {
   position: relative;
   z-index: 1;
