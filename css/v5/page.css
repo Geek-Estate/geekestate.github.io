@@ -121,7 +121,22 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 1200px) {
+  .section-hero.page-hero {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .section-hero.page-hero::after {
+    transform: translateY(-45%);
+    background-size: 50%;
+  }
+}
 @media only screen and (max-width: 570px) {
+  .section-hero.page-hero::after {
+    top: 60%;
+  }
+
   header .header-banner-content {
     flex-direction: column;
   }
