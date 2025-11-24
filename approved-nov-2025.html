@@ -22,6 +22,7 @@
   <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- <link rel="stylesheet" href="css/main.css"> -->
@@ -74,10 +75,75 @@
         text-align: center;
       }
 
+      .section-content.section-approved-membership .tier-group-wrapper {
+        max-width: 1266px;
+        margin: 40px auto;
+      }
+
       .section-content.section-approved-membership .tier-group {
         display: grid;
-        grid-column: 2;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+
+      .section-content.section-approved-membership .tier-group .tier-card {
+        background-color: rgba(9, 9, 9, 1);
+        border: 1px solid rgba(38, 38, 38, 1);
+        border-radius: 5px;
+        min-height: 380px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 20px;
+      }
+
+      .section-content.section-approved-membership .tier-group .tier-card h3 {
+        font-size: 36px;
+      }
+
+      .section-content.section-approved-membership .tier-group .tier-card .gem-btn {
+        font-family: Inter;
+        color: #000;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .section-content.section-approved-membership .tier-group .tier-card p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .section-content.section-approved-membership h2 {
+          font-size: 54px;
+        }
+        .section-content.section-approved-membership .tier-group {
+          gap: 30px;
+        }
+        .section-content.section-approved-membership .tier-group .tier-card h3 {
+          font-size: 30px;
+        }
+        .section-content.section-approved-membership .tier-group .tier-card .gem-btn {
+          font-size: 18px;
+        }
+        .section-content.section-approved-membership .tier-group .tier-card p {
+          font-size: 16px;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        .section-content.section-approved-membership h2 {
+          font-size: 44px;
+          line-height: 54px;
+        }
+        .section-content.section-approved-membership .tier-group {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
 </head>
@@ -104,56 +170,42 @@
           <h2>We're looking forward to welcoming you!</h2>
           <h3>Please confirm your GEM tier...</h3>
       
-          <div class="tier-group">
-            <div class="tier-card">
-              <h3>NYC, Bay Area, Seattle, Denver</h3>
-              <div>
-                <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">Confirm at <strong>$1,250 / year</strong></a>
-                <p>For: Innovators residing in markets where GEM operates formal chapters.</p>
+          <div class="tier-group-wrapper">
+            <div class="tier-group">
+              <div class="tier-card">
+                <h3>NYC, Bay Area, Seattle, Denver</h3>
+                <div>
+                  <a href="#" class="gem-btn">Confirm at <strong>$1,250 / year</strong></a>
+                  <p>For: Innovators residing in markets where GEM operates formal chapters.</p><p>&nbsp</p>
+                </div>
+              </div>
+              <div class="tier-card">
+                <h3>All Other Markets</h3>
+                <div>
+                  <a href="#" class="gem-btn">Confirm at <strong>$750 / year</strong></a>
+                  <p>For: Innovators in all other geographies. Once a chapter launches in your market, you’ll be migrated to new pricing.</p>
+                </div>
+              </div>
+              <div class="tier-card">
+                <h3>Lifetime Member</h3>
+                <div>
+                  <a href="#" class="gem-btn">Confirm at <strong>$15,000</strong> (one-time)</a>
+                  <p>For: CEOs of public companies and proptech lifers.</p><p>&nbsp</p>
+                </div>
+              </div>
+              <div class="tier-card">
+                <h3>Professional Services</h3>
+                <div>
+                  <a href="#" class="gem-btn">Confirm at <strong>$1,500 / year</strong></a>
+                  <p>For: Vendors and services providers. Spots are limited.</p><p>&nbsp</p>
+                </div>
               </div>
             </div>
-            <div class="tier-card">
-              <h3>NYC, Bay Area, Seattle, Denver</h3>
-              <div>
-                <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">Confirm at <strong>$1,250 / year</strong></a>
-                <p>For: Innovators residing in markets where GEM operates formal chapters.</p>
-              </div>
-            </div>
-            <div class="tier-card">
-              <h3>NYC, Bay Area, Seattle, Denver</h3>
-              <div>
-                <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">Confirm at <strong>$1,250 / year</strong></a>
-                <p>For: Innovators residing in markets where GEM operates formal chapters.</p>
-              </div>
-            </div>
-            <div class="tier-card">
-              <h3>NYC, Bay Area, Seattle, Denver</h3>
-              <div>
-                <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">Confirm at <strong>$1,250 / year</strong></a>
-                <p>For: Innovators residing in markets where GEM operates formal chapters.</p>
-              </div>
-            </div>
-          </div>
-          <div class="wrapper-confirm-buttons">
-              <a class="btn btn--blog" href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="gem-139" > Confirm at $139 / qtr </a>
-              <p>OR</p>
-              <a class="btn btn--blog" href="javascript:void(0)" data-cb-type="checkout" data-cb-plan-id="gem-139-yearly"> Confirm at $497 / year </a>
           </div>
         </div>
     </div>
   
-    <div class="section-contact" style="height: 250px;background: #f6f6f6;padding-top:85px;padding-bottom:85px;">
-        <div class="wrapper">
-            <h2 class="section__small-title"><strong>Questions?</strong> Don't hesitate to ask </h2>
-            
-            <div class="wrapper-link-example">
-                <a class="link-example">community@geekestate.com</a>
-            </div>
-          </div>
-    </div>
-  
     <div w3-include-html="footer-nov-2025.html"></div>
-  
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
