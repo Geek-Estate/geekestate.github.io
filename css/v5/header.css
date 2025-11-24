@@ -23,12 +23,13 @@ header .header-banner-content {
 	gap: 30px;
     align-items: center;
     padding: 10px;
-	font-family: Poppins, "Lato", sans-serif;
 }
 
 header .header-banner-content > div {
 	display: flex;
 	gap: 10px;
+    align-items: center;
+	font-family: Poppins, "Lato", sans-serif;
 }
 
 header.header .main-header {
