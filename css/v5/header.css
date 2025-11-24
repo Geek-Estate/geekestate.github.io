@@ -23,6 +23,7 @@ header .header-banner-content {
 	gap: 30px;
     align-items: center;
     padding: 10px;
+	font-family: Poppins, "Lato", sans-serif;
 }
 
 header .header-banner-content > div {
@@ -65,7 +66,7 @@ nav.main-nav ul li a {
 }
 
 nav.main-nav ul li a.gem-btn {
-	color: #000;
+	color: rgba(38, 38, 38, 1);
 	margin-bottom: 0;
 	max-height: 45px;
 	line-height: 1;
