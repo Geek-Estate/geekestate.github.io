@@ -20,7 +20,7 @@ function includeHTML() {
                     includeHTML();
                     initHeaderHamburger();
 
-                    if(file.indexOf('footer.html') !== -1 || file.indexOf('footer-nov-2025.html') !== -1)
+                    if(file.indexOf('footer.html') !== -1)
                     {
                         scrollToTipInit();
                     }
