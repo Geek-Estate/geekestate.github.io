@@ -34,8 +34,8 @@
     <link href="https://fonts.googleapis.com/css?family=Inter:100,300,300i,400,400i,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-    <link rel="stylesheet" href="css/v4/style.css">
-    <link rel="stylesheet" href="css/v4/header.css">
+    <link rel="stylesheet" href="css/v5/style.css">
+    <link rel="stylesheet" href="css/v5/header.css">
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <script
         id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
@@ -49,7 +49,7 @@
             border-radius: 30px;
             border: 3px solid var(--green);
             padding: 10px 50px;
-            font-weight: 500;
+            font-weight: 700;
             display: inline-block;
             text-decoration: none;
             margin-bottom: 20px;
@@ -70,8 +70,8 @@
         }
 
         .section-hero .overlay-bg {
-            background-image: url("/assets/images/homepage-hero-bg.webp");
-            background-position: center;
+            background-image: url("/assets/v5/homepage-hero-bg.png");
+            background-position: bottom center;
             background-size: cover;
             height: 100%;
             width: 100%;
@@ -84,6 +84,7 @@
             position: relative;
             z-index: 1;
             color: #fff;
+            padding-top: 120px;
         }
 
         .section-hero .wrapper h1 {
@@ -198,16 +199,17 @@
             text-align: center;
         }
 
-        .section-content {
-            padding: 100px 20px;
-            background-image: url("/assets/images/Beehive_BG.webp");
+        body.homepage .section-content {
+            background-image: url("/assets/v5/Beehive_Home_BG.png");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top;
         }
 
         .section-content .wrapper {
+            padding-top: 150px;
             text-align: center;
+            color: #fff;
         }
 
         .section-content .gem-diamond-content-wrapper {
@@ -218,7 +220,6 @@
         .section-content .gem-diamond-content-wrapper .gem-diamond-logo {
             width: 480px;
             height: auto;
-            margin-bottom: 30px;
         }
 
         .section-content .gem-diamond-content-wrapper .gem-diamond-description {
@@ -244,7 +245,6 @@
             font-size: 24px;
             font-weight: normal;
             margin: 40px 0;
-
         }
 
         .section-content .gem-diamond-content-wrapper .sign-in {
@@ -252,28 +252,35 @@
             font-size: 24px;
             font-weight: 400;
             line-height: 31.2px;
+            margin: 15px 0;
         }
 
         .section-content .gem-diamond-content-wrapper .sign-in a {
             font-weight: 700;
         }
 
-        .section-content hr {
-            border-top: 0.5px solid #D6D6D6;
+        .section-content .hr {
+            background-color: rgba(214, 214, 214, 1);
+            height: 0.5px;
         }
 
-        .section-content .gem-crystal-content-wrapper {
+        .section-subfooter .gem-crystal-content-wrapper {
             padding-top: 50px;
             padding-bottom: 70px;
+            max-width: 1266px;
+            width: 100%;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
-        .section-content .gem-crystal-content-wrapper .gem-crystal-logo {
-            width: 300px;
-            height: auto;
+        .section-subfooter .gem-crystal-content-wrapper .gem-crystal-logo {
+            width: auto;
+            height: 100px;
             margin-bottom: 30px;
         }
 
-        .section-content .gem-crystal-content-wrapper .gem-crystal-description {
+        .section-subfooter .gem-crystal-content-wrapper .gem-crystal-description {
             margin: 0 auto;
             margin-bottom: 30px;
             max-width: 900px;
@@ -284,11 +291,11 @@
             text-align: center;
         }
 
-        .section-content .gem-crystal-content-wrapper .gem-crystal-description+.gem-btn {
+        .section-subfooter .gem-crystal-content-wrapper .gem-crystal-description+.gem-btn {
             margin-bottom: 30px;
         }
 
-        .section-content .gem-crystal-content-wrapper .ad-free {
+        .section-subfooter .gem-crystal-content-wrapper .ad-free {
             font-family: Inter;
             font-size: 24px;
             font-weight: 700;
@@ -296,24 +303,79 @@
             text-align: center;
         }
 
-        .section-content .gem-crystal-content-wrapper .trial {
+        .section-subfooter .gem-crystal-content-wrapper .trial {
             margin-bottom: 30px;
             font-family: Inter;
             font-size: 18px;
             font-weight: 700;
             line-height: 23.4px;
             text-align: center;
+            display: block;
         }
 
-        .tiers-wrapper {
-            padding: 50px 0;
+        .section-content .gem-diamond-content-wrapper.benefits-wrapper {
+            padding-top: 50px;
         }
 
-        .tiers-wrapper h3 {
+        .benefits-wrapper .benefits-wrapper-access-list {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .benefits-wrapper ul {
+            font-weight: 400;
+            font-size: 32px;
+            list-style: inside;
+            text-align: left;
+        }
+
+        .benefits-wrapper .benefits-wrapper-title-list {
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 32px;
+            line-height: 41.6px;
+            text-align: left;
+        }
+
+        .wrapper h3.text-green {
             font-size: 48px;
             color: var(--green);
             margin-bottom: 30px;
             font-weight: 500;
+        }
+
+        .section-content .gem-diamond-content-wrapper.trusted-by-wrapper  {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .trusted-by-wrapper .gem-diamond-description {
+            max-width: 846px;
+            margin: 0 auto;
+        }
+
+        .trusted-by-wrapper .button-ctas {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 846px;
+            margin: 0 auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .trusted-by-wrapper .button-ctas>a {
+            flex: 1;
+            padding: 10px 20px;
+            min-width: 260px;
+        }
+
+        .tiers-wrapper {
+            padding: 50px 0;
         }
 
         .tiers-wrapper .tier-table-wrapper {
@@ -423,10 +485,6 @@
             color: #D6D6D6;
         }
 
-        .section-content hr {
-            border-top: 0.5px solid #D6D6D6;
-        }
-
         .section-subfooter {
             background-image: url("/assets/images/Innovation_BG.png");
             background-repeat: no-repeat;
@@ -459,6 +517,16 @@
             text-align: center;
         }
 
+        .section-subfooter.section-subfooter-crystal {
+            background-image: url("/assets/v5/homepage-subfooter-bg.webp");
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .section-subfooter.section-subfooter-crystal .gem-crystal-description {
+            max-width: 980px;
+        }
+
         @media only screen and (min-width: 768px) {
             .mobile-only {
                 display: none;
@@ -483,6 +551,10 @@
                 margin-bottom: 20px;
             }
 
+            .trusted-by-wrapper .button-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
             .tier-table-wrapper {
                 border-top-left-radius: 30px;
                 border-top-right-radius: 30px;
@@ -544,6 +616,13 @@
             .tier-table-wrapper table tbody tr td:first-child span {
                 display: none;
             }
+
+            .benefits-wrapper .benefits-wrapper-access-list {
+                flex-direction: column;
+                max-width: 60%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -559,9 +638,17 @@
                 font-size: 16px;
                 font-family: Inter, Poppins;
             }
+
+            .benefits-wrapper .benefits-wrapper-access-list {
+                flex-direction: column;
+                max-width: 90%;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
         }
     </style>
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/6a2cc577d7cea9fbeef128f05.js");</script>
+    <script
+        id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/6a2cc577d7cea9fbeef128f05.js");</script>
 </head>
 
 <body class="homepage">
@@ -583,7 +670,7 @@
                     biz intel
                     briefings, and thesis-driven essays.</p>
 
-                <div class="header-divider"><span>Cross sector and cross stage.</span></div>
+                <div class="header-divider"><span>Peer collaboration and support</span></div>
                 <h2>Inspiring PropTech intellectuals across...</h2>
                 <div class="inspiring-lists-wrapper">
                     <div class="inspiring-lists">
@@ -625,135 +712,77 @@
         <div class="section-content">
             <div class="wrapper">
                 <div class="gem-diamond-content-wrapper">
-                    <img class="gem-diamond-logo" src="/assets/images/Gem_1500_Diamond_Logo.png" />
+                    <img class="gem-diamond-logo" src="/assets/v5/Gem_1500_Logo.svg" />
+                    <p class="gem-diamond-description"><b>Where Proptech Leaders Belong</b></p>
                     <p class="gem-diamond-description">An invite only community of independent creatives, doers, and
                         pioneers free from sponsored messages
                         and noise.</p>
-                    <p class="gem-diamond-circles"><span class="text-green">New:</span> Add a personal brain trust to your life by being matched into a <a href="https://geekestateblog.com/peer-circles">Peer Circle</a>, a highly curated 6-8 person mastermind group for accountability and knowledge sharing.</p>
+                    <p class="gem-diamond-circles"><span class="text-green">New:</span> Add a personal brain trust to
+                        your life by being matched into a <a href="https://geekestateblog.com/peer-circles">Peer
+                            Circle</a>, a highly curated 6-8 person mastermind group for accountability and knowledge
+                        sharing.</p>
                     <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">LEARN MORE</a>
                     <p class="sign-in">Already a member? <a class="text-green"
                             href="https://www.geekestate.com/members.html">Sign
                             in</a></p>
                 </div>
-                <hr />
+                <div class="hr"></div>
+                <div class="gem-diamond-content-wrapper benefits-wrapper">
+                    <h3 class="text-green">Benefits</h3>
+                    <p class="gem-diamond-description">Get out of your silo and learn from exposure to differing
+                        perspectives; to help
+                        you build wildly successful companies that contribute to better real estate, homeownership,
+                        rental, and
+                        workplace experiences through technology.</p>
+                    <div class="benefits-wrapper-access-list">
+                        <img src="/assets/v5/members_benefits_pic.png" />
+                        <div>
+                            <p class="benefits-wrapper-title-list">Members gain access to...</p>
+                            <ul>
+                                <li>GEM Ventures</li>
+                                <li>Peer Circles</li>
+                                <li>Retreats</li>
+                                <li>Private mobile app</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">LEARN MORE</a>
+                </div>
+                <div class="hr"></div>
+                <div w3-include-html="ambassadors-section.html"></div>
+                <div class="hr"></div>
+                <div w3-include-html="trusted-by-founders-partners-nov-2025.html"></div>
+                <div class="hr"></div>
+                <div class="gem-diamond-content-wrapper trusted-by-wrapper">
+                    <h3 class="text-green">Get Started</h3>
+                    <p class="gem-diamond-description">Leverage the peer collaboration and support network so you don't
+                        build in
+                        isolation. No sales pitches. No fluff. Just builders helping builders.</p>
+                    <div class="button-ctas">
+                        <a href="https://www.geekestate.com/gem-diamond.html" class="gem-btn">LEARN MORE</a>
+                        <a href="https://www.geekestate.com/join-now.html?utm_source=Geek-Estate&utm_medium=button&utm_campaign=home-page-apply-top"
+                            class="gem-btn">APPLY</a>
+                        <a href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member" target="_blank"
+                            class="gem-btn">SCHEDULE A CALL</a>
+                    </div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="section-subfooter section-subfooter-crystal">
+                    
                 <div class="gem-crystal-content-wrapper">
-                    <img class="gem-crystal-logo" src="/assets/images/Gem_Crystal_Logo.png" />
-                    <p class="gem-crystal-description">Discover an exclusive, objective lens into the trends, companies,
-                        people and ideas shaping the future of real estate and the broader built world. <span
-                            class="text-green ad-free">Always ad-free.</span></p>
-                    <p class="text-green trial">Try a 30 day free trial today.</p>
-                    <div style="min-height:58px; max-width:440px; width:100%; margin: 0 auto;">
-                        <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
-                            data-button-color="#74BC1F" data-button-text-color="#FFFFFF"
-                            data-site="https://crystal.geekestate.com/" async></script>
-                    </div>
+                        <img class="gem-crystal-logo" src="/assets/v5/Crystal_GEM_Logo.svg" />
+                        <p class="gem-crystal-description">Discover an exclusive, objective lens into the trends, companies,
+                            people and ideas shaping the future of real estate and the broader built world. <b class="text-green ad-free">Always
+                                ad-free.</b></p>
+                            <span class="text-green trial">Try a 30 day free trial today.</span>
+                        <div style="min-height:58px; max-width:440px; width:100%; margin: 0 auto;">
+                            <script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
+                                data-button-color="#74BC1F" data-button-text-color="#FFFFFF"
+                                data-site="https://crystal.geekestate.com/" async></script>
+                        </div>
                 </div>
-                <hr />
-                <div w3-include-html="trusted-by-founders-partners.html"></div>
-                <hr />
-                <div class="tiers-wrapper">
-                    <h3>Tiers of GEM</h3>
-                    <div class="tier-table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th><img src="/assets/images/Gem_Crystal_Reverse_Logo.png" /></th>
-                                    <th><img src="/assets/images/Gem_Diamond_1500_Reverse_Logo.png" /></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-title="Radars"><span>Peer Circles</span></td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Radars"><span>Radars</span></td>
-                                    <td><span class="hidden-mobile">4x a month</span><span
-                                            class="mobile-only">4x/month</span></td>
-                                    <td><span class="hidden-mobile">4x a month</span><span
-                                            class="mobile-only">4x/month</span></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Transmissions"><span>Transmissions</span></td>
-                                    <td><span class="hidden-mobile">2x a month</span><span
-                                            class="mobile-only">2x/month</span></td>
-                                    <td><span class="hidden-mobile">4x a month</span><span
-                                            class="mobile-only">4x/month</span></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Earnings Reports"><span>Earnings Reports</span></td>
-                                    <td><span class="hidden-mobile">1x a quarter</span><span
-                                            class="mobile-only">1x/quarter</span></td>
-                                    <td><span class="hidden-mobile">1x a quarter</span><span
-                                            class="mobile-only">1x/quarter</span></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Membership Criteria"><span>Membership Criteria</span></td>
-                                    <td>None</td>
-                                    <td><span class="hidden-mobile">Founders or Executives</span><span
-                                            class="mobile-only">Founders/Executives</span></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Discounts for Industry Events"><span>Discounts for Industry
-                                            Events</span></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Private Community Forum"><span>Private Community Forum</span></td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Online Networking Events"><span>Online Networking Events (peer
-                                            practice pitches, fundraising office hours, etc.)</span>
-                                    </td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="In-person Networking Events"><span>In-person Networking Events
-                                            (dinners, happy hours, lunches, baseball games,
-                                            ets.)</span>
-                                    </td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Proptech Roulette"><span>Proptech Roulette (member
-                                            introductions)</span></td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Biz Intel"><span>Biz Intel (sector analysis and product
-                                            reviews)</span></td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td><i class="fa fa-check"></i></td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Membership Cap"><span>Membership Cap</span></td>
-                                    <td><i class="fa fa-times"></i></td>
-                                    <td>1500 max</td>
-                                </tr>
-                                <tr>
-                                    <td data-title="Pricing"><span>Pricing</span></td>
-                                    <td>$10/month or $99/year</td>
-                                    <td>$179/quarter or $497/year</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tier-footer">
-                        More Details: <a href="https://app.highnote.io/c/p/f34df5b3/the-gem-diamond?cp=link"
-                            class="text-green">2 Pager</a> <span class="text-divider">|</span> <a
-                            href="https://tidycal.com/drewmeyers/30-minute-meeting-gemdiamond-prospective-member"
-                            class="text-green">Schedule a call</a>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="section-subfooter">
@@ -765,15 +794,14 @@
             </div>
         </div>
 
-        <div w3-include-html="footer.html"></div>
-
+        <div w3-include-html="footer-nov-2025.html"></div>
 
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/includes.js"></script>
+        <script type="text/javascript" src="js/includes.js?rel=1"></script>
 </body>
 
 </html>

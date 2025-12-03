@@ -20,14 +20,14 @@
   <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest.json" />
   <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500&display=swap"
+  rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- <link rel="stylesheet" href="css/main.css"> -->
   <link rel="stylesheet" href="css/v3/style.css">
-  <link rel="stylesheet" href="css/v5/header.css" />
-  <link rel="stylesheet" href="css/v5/page.css" />
+  <link rel="stylesheet" href="css/v4/header.css" />
+  <link rel="stylesheet" href="css/v4/secondary-header.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/574cb0e876d9ad5ad9a640c5d/e5f2e2a0550d166ea43c09cc8.js");</script>
 </head>
@@ -41,34 +41,32 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <div class="container">
-    <div w3-include-html="header-tag.html"></div>
+    <div w3-include-html="header-geekestate.html"></div>
        
-    <div class="section-hero page-hero">
-      <div class="wrapper">
-        <h2 class="hero-title">GEM Application</h2>
-      </div>
-    </div>
-    
     <div class="section-products section-body-approved wrapper">
       <div style="margin: 40px 0 40px 0;">
         <h2 class="section-body-approved-label">Ready to Apply?</h2>
       </div>
 
       <div style="margin: 40px 0 40px 0;">
-        <h2 class="section-body-approved-label-small">We require $100 application fee to apply for GEM membership to ensure you're serious about leveling up. If approved, the $100 will be applied as a credit to your first year's payment ($750 or $1,250). Questions? <a href="/FAQ.html">Check our FAQ</a>.</h2>
+        <h2 class="section-body-approved-label-small">We require payment upfront to apply for membership. You’ll be redirected immediately to the GEM membership form after you setup your subscription. We’ll provide a full refund within three days if we decline your application. Still have questions? <a href="/FAQ.html">Check our FAQ</a>.</h2>
       </div>
     </div>
 
     <div class="section-products section-body-approved wrapper">    
       <div style="margin: 40px 0 40px 0;">
-        <h2 class="section-body-approved-label">Step 1: Application Fee</h2>
+        <h2 class="section-body-approved-label">Select your Membership</h2>
       </div>
 
       <div style="margin: 40px 0 40px 0;">
-        <h2 class="section-body-approved-label-small">You’ll be redirected immediately to the GEM membership application form after you complete the deposit.</h2>
+        <h2 class="section-body-approved-label-small">Please confirm your GEM seat to lock in pricing.</h2>
       </div>
         <div class="wrapper-confirm-buttons">
-            <a class="btn btn--blog" href="javascript:void(0)" data-cb-type="checkout" data-cb-item-0="Application-deposit-750" style="margin-bottom: 10px;"> Apply Now </a>
+            <a class="btn btn--blog" "javascript:void(0)" data-cb-type="checkout" data-cb-item-0="approval-needed-gem" style="margin-bottom: 10px;"> Quarterly Plan </a>
+            <p>Billed $139 every 3 months</p>
+            <p style="margin-top: 30px; margin-bottom: 30px;">OR</p>
+            <a class="btn btn--blog" href="javascript:void(0)" data-cb-type="checkout" data-cb-item-0="approval-needed-gem139-yearly" style="margin-top: 0; margin-bottom: 10px;"> Yearly Plan </a>
+            <p>Billed $497 once per year, a discount of more than 10%.</p>
         </div>
     </div>
     
@@ -83,7 +81,7 @@
           </div>
     </div>
   
-    <div w3-include-html="footer-nov-2025.html"></div>
+    <div w3-include-html="footer.html"></div>
   
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
