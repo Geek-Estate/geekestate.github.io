@@ -153,6 +153,9 @@ a {
   font-size: 28px;
   line-height: 42px;
 }
+.mx-center {
+  margin: 0 auto;
+}
 
 .ge-logo,
 .mobile-only {

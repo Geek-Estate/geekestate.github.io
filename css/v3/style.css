@@ -1017,6 +1017,10 @@ a {
   display: block;
 }
 
+.mx-center {
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 1200px) {
   .ge-logo {
     display: none !important;

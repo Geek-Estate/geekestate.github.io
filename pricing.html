@@ -139,6 +139,10 @@
             text-align: center;
         }
 
+        .table-mobile-heading {
+            display: none;
+        }
+
         .tiers-wrapper h3 {
             font-size: 48px;
             color: var(--green);
@@ -351,7 +355,6 @@
             text-align: center;
             text-transform: uppercase;
             max-width: 273px;
-            margin: 0 auto;
             color: rgba(38, 38, 38, 1);
         }
 
@@ -396,7 +399,7 @@
 
             .tier-table-wrapper table thead tr th:first-child,
             .tier-table-wrapper table tbody tr td {
-                padding: 30px 10px;
+                padding: 20px 10px;
             }
 
             .tier-table-wrapper table tbody tr td:first-child span {
@@ -413,8 +416,29 @@
 
         @media screen and (max-width: 600px) {
 
+            .section-content .wrapper {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
             .section-content .wrapper h2 {
                 font-size: 22px;
+            }
+
+            .table-mobile-heading {
+                display: block;
+                padding: 15px;
+                color: var(--green);
+                font-family: Poppins;
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 42px;
+                font-size: 40px;
+            }
+
+            .tier-table-wrapper table thead tr th:first-child,
+            .tier-table-wrapper table tbody tr td:first-child {
+                position: relative;
             }
 
             .tiers-wrapper table thead tr:first-child th {
@@ -422,12 +446,59 @@
             }
    
             .tier-table-wrapper {
-                overflow-x: auto;
+                overflow-x: hidden !important;
             }
 
+            .tier-table thead,
+            .table-compact thead {
+                display: none;
+            }
+
+            .tier-table,
+            .tier-table tbody,
+            .tier-table tr,
+            .tier-table td {
+                display: block;
+                width: 100%;
+            }
+
+            .tier-table tr {
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+
+            .tier-table td {
+                padding: 10px 0;
+                border: none;
+            }
+
+            .tier-table td::before,
+            .table-compact td::before {
+                content: attr(data-label);
+                display: block;
+                font-size: 12px;
+                font-weight: 600;
+                color: #666;
+                margin-bottom: 6px;
+                text-transform: uppercase;
+            }
+
+            .table-compact {
+                padding: 14px;
+            }
+
+            .table-compact td {
+                padding: 8px 0;
+                border: none;
+            }
+            
             .tiers-wrapper .tier-footer {
                 font-size: 16px;
                 font-family: Inter, Poppins;
+            }
+
+            .hide-mobile {
+                display: none !important;
             }
         }
     </style>
@@ -458,7 +529,10 @@
 
                     <!-- Pricing -->
                     <div class="tier-table-wrapper">
-                        <table>
+                        <div class="table-mobile-heading">
+                            <span>Pricing</span>
+                        </div>
+                        <table class="tier-table">
                             <thead>
                                 <tr>
                                     <th colspan="3">Pricing</th>
@@ -470,104 +544,125 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <p class="row-heading">GEM 1500</p>
-                                        <strong>NYC, SF, Seattle, Denver</strong>
-                                    </td>
-                                    <td>
-                                        <p class="row-pricing">$1,250 / year</p>
-                                    </td>
-                                    <td>
-                                        <ul class="row-benefits">
-                                            <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
-                                            <li><i class="fa-solid fa-calendar-check text-green"></i>4 guaranteed events per year (2
-                                                ticketed dinners included) organized by a local Ambassador
-                                            </li>
-                                            <li><i class="fa-solid fa-people-group text-green"></i>Access to local events and networking
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="row-heading">GEM 1500</p>
-                                        <strong>All Other Markets</strong>
-                                    </td>
-                                    <td class="bg-lighter">
-                                        <p class="row-pricing">$750 / year</p>
-                                    </td>
-                                    <td>
-                                        <ul class="row-benefits">
-                                            <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
-                                            <li><i class="fa-solid fa-calendar-check text-green"></i>Access to all online events</li>
-                                            <li><i class="fa-solid fa-champagne-glasses text-green"></i>Optional dinners and meet-ups
-                                                (ticket purchase required)</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="row-heading">GEM 1500</p>
-                                        <strong>Lifetime Membership</strong>
-                                    </td>
-                                    <td>
-                                        <p class="row-pricing">$15,000 <br> (one-time)</p>
-                                    </td>
-                                    <td>
-                                        <ul class="row-benefits">
-                                            <li><i class="fa fa-crown text-green"></i> Lifetime GEM 1500 access</li>
-                                            <li><i class="fa-solid fa-champagne-glasses text-green"></i>Priority admission to dinners &
-                                                retreats</li>
-                                            <li><i class="fa-solid fa-people-group text-green"></i>Only 15 available</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="row-heading">GEM 1500</p>
-                                        <strong>Professional Services</strong>
-                                    </td>
-                                    <td class="bg-lighter">
-                                        <p class="row-pricing">$1,500 / year</p>
-                                    </td>
-                                    <td>
-                                        <ul class="row-benefits">
-                                            <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
-                                            <li><i class="fa-solid fa-calendar-check text-green"></i>Access to all online events</li>
-                                            <li><i class="fa-solid fa-champagne-glasses text-green"></i>Optional dinners and meet-ups
-                                                (ticket purchase required)</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p class="row-heading">Peer Circles</p>
-                                        <strong>(Add-On)</strong>
-                                    </td>
-                                    <td>
-                                        <p class="row-pricing">$1,000 / 6 months</p>
-                                    </td>
-                                    <td>
-                                        <ul class="row-benefits">
-                                            <li><i class="fa-solid fa-chalkboard-user text-green"></i> Facilitated small-group
-                                                accountability and mentorship sessions curated by GEM</li>
-                                        </ul>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td data-label="Membership Type">
+                                <p class="row-heading">GEM 1500</p>
+                                <strong>NYC, SF, Seattle, Denver</strong>
+                                </td>
+                                <td data-label="Pricing">
+                                <p class="row-pricing">$1,250 / year</p>
+                                </td>
+                                <td data-label="Benefits">
+                                <ul class="row-benefits">
+                                    <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
+                                    <li>
+                                    <i class="fa-solid fa-calendar-check text-green"></i>
+                                    4 guaranteed events per year (2 ticketed dinners included) organized by a local Ambassador
+                                    </li>
+                                    <li>
+                                    <i class="fa-solid fa-people-group text-green"></i>
+                                    Access to local events and networking
+                                    </li>
+                                </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Membership Type">
+                                <p class="row-heading">GEM 1500</p>
+                                <strong>All Other Markets</strong>
+                                </td>
+                                <td class="bg-lighter" data-label="Pricing">
+                                <p class="row-pricing">$750 / year</p>
+                                </td>
+                                <td data-label="Benefits">
+                                <ul class="row-benefits">
+                                    <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
+                                    <li><i class="fa-solid fa-calendar-check text-green"></i> Access to all online events</li>
+                                    <li>
+                                    <i class="fa-solid fa-champagne-glasses text-green"></i>
+                                    Optional dinners and meet-ups (ticket purchase required)
+                                    </li>
+                                </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Membership Type">
+                                <p class="row-heading">GEM 1500</p>
+                                <strong>Lifetime Membership</strong>
+                                </td>
+                                <td data-label="Pricing">
+                                <p class="row-pricing">$15,000 <br> (one-time)</p>
+                                </td>
+                                <td data-label="Benefits">
+                                <ul class="row-benefits">
+                                    <li><i class="fa fa-crown text-green"></i> Lifetime GEM 1500 access</li>
+                                    <li>
+                                    <i class="fa-solid fa-champagne-glasses text-green"></i>
+                                    Priority admission to dinners & retreats
+                                    </li>
+                                    <li><i class="fa-solid fa-people-group text-green"></i> Only 15 available</li>
+                                </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Membership Type">
+                                <p class="row-heading">GEM 1500</p>
+                                <strong>Professional Services</strong>
+                                </td>
+                                <td class="bg-lighter" data-label="Pricing">
+                                <p class="row-pricing">$1,500 / year</p>
+                                </td>
+                                <td data-label="Benefits">
+                                <ul class="row-benefits">
+                                    <li><i class="fa fa-crown text-green"></i> Full GEM 1500 membership</li>
+                                    <li><i class="fa-solid fa-calendar-check text-green"></i> Access to all online events</li>
+                                    <li>
+                                    <i class="fa-solid fa-champagne-glasses text-green"></i>
+                                    Optional dinners and meet-ups (ticket purchase required)
+                                    </li>
+                                </ul>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-label="Membership Type">
+                                <p class="row-heading">Peer Circles</p>
+                                <strong>(Add-On)</strong>
+                                </td>
+                                <td data-label="Pricing">
+                                <p class="row-pricing">$1,000 / 6 months</p>
+                                </td>
+                                <td data-label="Benefits">
+                                <ul class="row-benefits">
+                                    <li>
+                                    <i class="fa-solid fa-chalkboard-user text-green"></i>
+                                    Facilitated small-group accountability and mentorship sessions curated by GEM
+                                    </li>
+                                </ul>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <!-- Features -->
                     <div class="tier-table-wrapper">
+                        <div class="table-mobile-heading">
+                            <span>Features and Benefits</span>
+                            <div>
+                                <img src="./assets/v5/Gem_1500_Logo.svg" width="200px" height="auto" style="min-width: 150px;"/>
+                            </div>
+                        </div>
                         <table class="table-compact">
                             <thead>
                                 <tr>
                                     <th width="50%">
-                                        Features and Benefits 
+                                        <span>Features and Benefits </span>
                                     </th>
-                                    <th width="50%" class="margin-horizontal-center">
+                                    <th width="50%">
                                         <img src="./assets/v5/Gem_1500_Logo.svg" width="200px" height="auto" style="min-width: 150px;"/>
                                     </th>
                                 </tr>
@@ -675,7 +770,7 @@
             <div class="wrapper">
                 <div class="get-ready-cta">
                     <h2>Ready to get started?</h2>
-                    <a href="https://www.geekestate.com/join-now.html" class="gem-btn">Apply to GEM</a>
+                    <a href="https://www.geekestate.com/join-now.html" class="gem-btn mx-center">Apply to GEM</a>
                 </div>
             </div>
         </div>
