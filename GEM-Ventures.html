@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEM Ventures — Proptech Operative-Investor Collective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gem-black:       #232323;
+      --gem-green:       #6dc12e;
+      --gem-green-dark:  #4e8f20;
+      --gem-green-dim:   rgba(109,193,46,0.10);
+      --gem-white:       #ffffff;
+      --gem-off-white:   #f7f7f5;
+      --gem-mid-gray:    #888884;
+      --gem-border-light:rgba(35,35,35,0.1);
+      --gem-border-green:rgba(109,193,46,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--gem-white);
+      color: var(--gem-black);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 5vw;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gem-border-light);
+    }
+    .nav-logo img { height: 30px; display: block; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      color: var(--gem-black);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 400;
+      opacity: 0.55;
+      transition: opacity 0.2s, color 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gem-green); }
+    .nav-cta {
+      background: var(--gem-green);
+      color: var(--gem-white);
+      padding: 0.55rem 1.5rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--gem-green-dark); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 10rem 10vw 6rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--gem-black);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 65% at 90% 50%, rgba(109,193,46,0.15) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 0% 90%, rgba(109,193,46,0.06) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: 'GEM';
+      position: absolute;
+      right: -1vw;
+      bottom: -3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(12rem, 22vw, 22rem);
+      font-weight: 900;
+      color: rgba(109,193,46,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gem-green);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      max-width: 14ch;
+      margin-bottom: 1.5rem;
+      color: var(--gem-white);
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--gem-green); }
+    .hero-sub {
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      max-width: 52ch;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+    .btn-primary {
+      background: var(--gem-green);
+      color: var(--gem-white);
+      padding: 0.9rem 2.4rem;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gem-green-dark); transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--gem-white);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 0.9rem 2.4rem;
+      font-weight: 400;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .btn-ghost:hover { border-color: var(--gem-green); color: var(--gem-green); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0.3;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gem-white);
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gem-green), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 7rem 10vw; }
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gem-green);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--gem-black);
+    }
+    .divider { width: 48px; height: 3px; background: var(--gem-green); margin: 1.2rem 0 2.8rem; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--gem-white); border-top: 4px solid var(--gem-green); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .about-text p { color: rgba(35,35,35,0.68); margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .about-text strong { color: var(--gem-black); font-weight: 500; }
+    .about-pillars { display: flex; flex-direction: column; gap: 1.5rem; }
+    .pillar { border-left: 3px solid var(--gem-green); padding-left: 1.4rem; }
+    .pillar h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--gem-black); margin-bottom: 0.3rem; }
+    .pillar p { font-size: 0.92rem; color: rgba(35,35,35,0.58); }
+
+    /* ── FOCUS ── */
+    #focus { background: var(--gem-off-white); }
+    .focus-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+    .focus-card {
+      border: 1px solid var(--gem-border-light);
+      padding: 2rem;
+      background: var(--gem-white);
+      transition: border-color 0.25s, transform 0.2s, box-shadow 0.2s;
+    }
+    .focus-card:hover { border-color: var(--gem-green); transform: translateY(-4px); box-shadow: 0 8px 28px rgba(109,193,46,0.09); }
+    .focus-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+    .focus-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--gem-black); }
+    .focus-card p { font-size: 0.88rem; color: rgba(35,35,35,0.58); line-height: 1.6; }
+
+    /* ── TEAM ── */
+    #team { background: var(--gem-white); }
+    .team-intro { max-width: 60ch; color: rgba(35,35,35,0.62); margin-bottom: 3.5rem; font-size: 1.05rem; }
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 2rem; }
+    .member-card { padding: 2rem 1.8rem; border: 1px solid var(--gem-border-light); transition: border-color 0.25s, box-shadow 0.25s; }
+    .member-card:hover { border-color: var(--gem-green); box-shadow: 0 4px 20px rgba(109,193,46,0.07); }
+    .member-initial {
+      width: 50px; height: 50px;
+      background: var(--gem-green-dim);
+      border: 2px solid var(--gem-green);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--gem-green-dark);
+      margin-bottom: 1.1rem;
+    }
+    .member-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--gem-black); }
+    .member-card .role { font-size: 0.72rem; color: var(--gem-green-dark); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.7rem; }
+    .member-card p { font-size: 0.87rem; color: rgba(35,35,35,0.58); line-height: 1.55; }
+    .member-li { display: inline-block; margin-top: 0.9rem; font-size: 0.73rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; color: var(--gem-green); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+    .member-li:hover { border-color: var(--gem-green); }
+
+    /* ── HOW ── */
+    #how { background: var(--gem-black); }
+    #how .section-title { color: var(--gem-white); }
+    .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .how-list { display: flex; flex-direction: column; gap: 2rem; }
+    .how-item { display: flex; gap: 1.5rem; align-items: flex-start; }
+    .how-num { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: rgba(109,193,46,0.18); line-height: 1; flex-shrink: 0; width: 2.5rem; }
+    .how-item h4 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.35rem; color: var(--gem-white); }
+    .how-item p { font-size: 0.9rem; color: rgba(255,255,255,0.45); }
+    .how-callout { background: rgba(109,193,46,0.07); border: 1px solid rgba(109,193,46,0.28); padding: 3rem; }
+    .how-callout h3 { font-family: 'Playfair Display', serif; font-size: 1.55rem; margin-bottom: 1.2rem; line-height: 1.3; color: var(--gem-white); }
+    .how-callout p { font-size: 0.95rem; color: rgba(255,255,255,0.55); margin-bottom: 1.1rem; }
+
+    /* ── APPLY ── */
+    #apply { text-align: center; padding: 9rem 10vw; background: var(--gem-green); position: relative; overflow: hidden; }
+    #apply::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%); pointer-events: none; }
+    #apply .section-label { display: block; color: rgba(255,255,255,0.65); margin-bottom: 1rem; }
+    #apply .section-title { max-width: 18ch; margin: 0 auto 1rem; color: var(--gem-white); }
+    #apply p { max-width: 50ch; margin: 0 auto 3rem; color: rgba(255,255,255,0.78); font-size: 1.05rem; }
+    .btn-white { background: var(--gem-white); color: var(--gem-green-dark); padding: 1rem 2.8rem; font-weight: 500; font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
+    .btn-white:hover { background: var(--gem-off-white); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--gem-border-light); padding: 2.5rem 10vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; background: var(--gem-white); }
+    footer img { height: 22px; }
+    footer p { font-size: 0.77rem; color: var(--gem-mid-gray); }
+    footer a { color: var(--gem-mid-gray); text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: var(--gem-green); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes scrollPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 5vw; }
+      .nav-links { display: none; }
+      section { padding: 5rem 6vw; }
+      .hero { padding: 8rem 6vw 5rem; }
+      .about-grid, .how-grid { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="GEMVentures_Logo.png" alt="GEM Ventures" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#focus">Focus</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#how">How It Works</a></li>
+  </ul>
+  <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSeSETGM3bcPOCm4Iyq5YyKEvi1ev2ZFrw2B3pkuhOw8vYBGPQ/viewform" target="_blank">Apply Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <p class="hero-eyebrow">Proptech Operative-Investor Collective</p>
+  <h1 class="hero-title">Builders<br>Investing in <em>Builders</em></h1>
+  <p class="hero-sub">GEM Ventures is a highly curated angel group built around shared conviction — strategic capital from seasoned proptech operators who bring connections, mentorship, and hard-won insight to every investment.</p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeSETGM3bcPOCm4Iyq5YyKEvi1ev2ZFrw2B3pkuhOw8vYBGPQ/viewform" target="_blank">Apply for Funding</a>
+    <a class="btn-ghost" href="#about">Learn More</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">Who We Are</p>
+  <h2 class="section-title">Not just another check.</h2>
+  <div class="divider"></div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Born from the GEM community — active since 2017 — GEM Ventures is a proptech operative-investor collective. We're not a traditional fund. We're a tightly curated group of operators who have built and scaled companies, and who believe in <strong>strong, long-term partnership</strong> over passive capital.</p>
+      <p>If you're a founder who wants a silent check, we're not for you. But if you value collaborative investors who will roll up their sleeves, make connections, and share accountability for your success — that's exactly who we are.</p>
+      <p>GEM remains first and foremost a community. GEM Ventures is one more arrow in the quiver to help founders and members thrive, without changing that foundation.</p>
+      <p><strong>Community alignment, not pay-to-pitch.</strong> There are no fees, no priority placement, and no paid exposure. Founders earn access through the same trusted relationships and merit-driven community GEM has always been built on.</p>
+    </div>
+    <div class="about-pillars">
+      <div class="pillar">
+        <h4>Strategic Capital</h4>
+        <p>We make early, high-conviction bets — and commit to supporting companies well beyond the initial investment.</p>
+      </div>
+      <div class="pillar">
+        <h4>Collective Intelligence</h4>
+        <p>Deals are sourced and vetted as a group. Shared diligence, diversified perspectives, and experienced operators weighing in on every startup.</p>
+      </div>
+      <div class="pillar">
+        <h4>Founder-First Structure</h4>
+        <p>We're comfortable being the first check in, and open to leading a round. We operate as a syndicate — one clean entry on your cap table.</p>
+      </div>
+      <div class="pillar">
+        <h4>Long-Term Partnership</h4>
+        <p>Advisory input, strategic connections, and shared accountability for success. If we join a board, we step back by Series A — or whenever it makes sense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section id="focus">
+  <p class="section-label">Investment Thesis</p>
+  <h2 class="section-title">We're long on real estate<br>and the Built World.</h2>
+  <div class="divider"></div>
+  <div class="focus-grid">
+    <div class="focus-card"><div class="focus-icon">💼</div><h3>Wealth Management</h3><p>Tools facilitating and accelerating the agent-to-wealth-manager migration, reimagining the real estate advisor of the future.</p></div>
+    <div class="focus-card"><div class="focus-icon">🔍</div><h3>Consumer Search</h3><p>A search experience for what could be rather than what is — transforming how people discover and evaluate property.</p></div>
+    <div class="focus-card"><div class="focus-icon">🏗️</div><h3>Build More Homes</h3><p>Technology innovations that accelerate the construction of new housing units in a market with millions of homes in deficit.</p></div>
+    <div class="focus-card"><div class="focus-icon">🛡️</div><h3>Resilient Housing</h3><p>Technologies helping homes adapt to catastrophic weather events, improve insurability, and lower environmental footprints.</p></div>
+    <div class="focus-card"><div class="focus-icon">🏠</div><h3>Innovating Homeownership</h3><p>Creating more accessible and affordable homeownership options to adapt to new demographics and shifting priorities.</p></div>
+    <div class="focus-card"><div class="focus-icon">⚡</div><h3>Electrifying Mobile Life</h3><p>As self-driving becomes reality, the open road offers limitless possibilities for proptech founders to reimagine living on the move.</p></div>
+    <div class="focus-card"><div class="focus-icon">🚁</div><h3>Aerial Economy</h3><p>On-the-ground solutions providing critical technology and infrastructure needed for a smooth transition to busier skies.</p></div>
+    <div class="focus-card"><div class="focus-icon">🤖</div><h3>Robotics</h3><p>From humanoid robots doing home chores to construction and renovation automation — huge opportunities await those with deep expertise.</p></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <p class="section-label">Investor Partners</p>
+  <h2 class="section-title">Experienced operators.<br>Aligned investors.</h2>
+  <div class="divider"></div>
+  <p class="team-intro">The group will remain intentionally small — every partner has built and exited companies in proptech, and brings genuine operational experience to every investment.</p>
+  <div class="team-grid">
+    <div class="member-card">
+      <div class="member-initial">GA</div>
+      <h3>Grier Allen</h3><p class="role">Partner</p>
+      <p>Chief Strategy Officer at Inside Real Estate; founder of BoomTown (exit to Inside Real Estate).</p>
+      <a class="member-li" href="https://www.linkedin.com/in/grierallen/" target="_blank">LinkedIn ↗</a>
+    </div>
+    <div class="member-card">
+      <div class="member-initial">HH</div>
+      <h3>Heather Harmon</h3><p class="role">Partner</p>
+      <p>Four-time founder and public company executive; co-founder of RedDoor (exit to Opendoor).</p>
+      <a class="member-li" href="https://www.linkedin.com/in/heatheraharmon/" target="_blank">LinkedIn ↗</a>
+    </div>
+    <div class="member-card">
+      <div class="member-initial">GR</div>
+      <h3>Greg Robertson</h3><p class="role">Partner</p>
+      <p>30-year real estate tech builder and advisor; co-founded Cloud CMA at W+R Studios (exit to Lone Wolf).</p>
+      <a class="member-li" href="https://www.linkedin.com/in/grobertson/" target="_blank">LinkedIn ↗</a>
+    </div>
+    <div class="member-card">
+      <div class="member-initial">RC</div>
+      <h3>Ryan Coon</h3><p class="role">Partner</p>
+      <p>Co-founder and Managing Partner at Green Street Growth; co-founder of Avail (exit to Realtor.com).</p>
+      <a class="member-li" href="https://www.linkedin.com/in/ryancoon/" target="_blank">LinkedIn ↗</a>
+    </div>
+    <div class="member-card">
+      <div class="member-initial">DM</div>
+      <h3>Drew Meyers</h3><p class="role">Founder & Partner</p>
+      <p>Geek Estate founder; co-founder of Horizon; early Zillow team member.</p>
+      <a class="member-li" href="https://www.linkedin.com/in/drewmeyers/" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <p class="section-label">Our Approach</p>
+  <h2 class="section-title">How GEM Ventures works.</h2>
+  <div class="divider"></div>
+  <div class="how-grid">
+    <div class="how-list">
+      <div class="how-item"><span class="how-num">01</span><div><h4>Community-Sourced Deal Flow</h4><p>Deals originate from the trusted GEM network — a community of thousands of proptech operators, founders, and investors built over nearly a decade.</p></div></div>
+      <div class="how-item"><span class="how-num">02</span><div><h4>Collective Due Diligence</h4><p>Every deal is vetted as a group. Shared diligence leverages the collective experience of seasoned operators across all aspects of proptech.</p></div></div>
+      <div class="how-item"><span class="how-num">03</span><div><h4>Single Cap Table Entry</h4><p>We operate as a syndicate — one clean entry on your cap table, starting at $100k. We're comfortable being the first check in or leading a round.</p></div></div>
+      <div class="how-item"><span class="how-num">04</span><div><h4>Active Post-Investment Support</h4><p>Advisory input, strategic connections, and shared accountability for success. We'll feature portfolio companies regularly in the Geek Estate ecosystem.</p></div></div>
+      <div class="how-item"><span class="how-num">05</span><div><h4>Founder-Aligned Governance</h4><p>If we take a board seat, we step back by Series A — or whenever it makes sense. Our goal is to support, not control.</p></div></div>
+    </div>
+    <div class="how-callout">
+      <p class="section-label">Initial Goal</p>
+      <h3>Back a pre-seed or seed stage company with a check of at least $100k in Q1 or Q2.</h3>
+      <p>Once we've made one investment, we'll evaluate when and how to make the next. We're building for the long game — not rushing capital deployment.</p>
+      <p>Transparency is core to how we operate. When we invest, we'll publish our investment thesis as a GEM Transmission essay and cover the company several times a year on Geek Estate Blog.</p>
+      <a class="btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeSETGM3bcPOCm4Iyq5YyKEvi1ev2ZFrw2B3pkuhOw8vYBGPQ/viewform" target="_blank" style="margin-top:0.4rem;">Apply Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY CTA -->
+<section id="apply">
+  <span class="section-label">Ready to Build Together?</span>
+  <h2 class="section-title">The most strategic early-stage capital in proptech.</h2>
+  <p>Interested in founder-aligned capital for your housing or construction startup? We'd love to hear from you. The bar is simple: is this the most founder-friendly capital available for the right company?</p>
+  <a class="btn-white" href="https://docs.google.com/forms/d/e/1FAIpQLSeSETGM3bcPOCm4Iyq5YyKEvi1ev2ZFrw2B3pkuhOw8vYBGPQ/viewform" target="_blank">Apply for Funding →</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="GEMVentures_Logo.png" alt="GEM Ventures" />
+  <p>A proptech operative-investor collective. Part of the <a href="https://www.geekestate.com" target="_blank">Geek Estate</a> ecosystem.</p>
+  <p>© 2026 GEM Ventures</p>
+</footer>
+
+</body>
+</html>
