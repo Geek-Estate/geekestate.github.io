@@ -546,6 +546,13 @@
             font-size: 48px;
             font-weight: 600;
         }
+        .gem-team-group-photo {
+            display: block;
+            width: 100%;
+            max-width: 640px;
+            margin: 20px auto 0;
+            border-radius: 12px;
+        }
         .gem-team-card-content { display: flex; flex-direction: column; gap: 20px; }
         .gem-team-card-title { font-weight: 700; font-size: 32px; color: rgba(116, 188, 31, 1); }
         .gem-team-card-location { font-weight: 600; font-size: 20px; }
@@ -576,19 +583,18 @@
             <div class="wrapper">
                 <div class="gem-team-wrapper">
                     <h3 class="text-green">Core Team</h3>
+                    <img class="gem-team-group-photo" src="/assets/v5/Team_Jesse_Drew.jpg" alt="Jesse Wright and Drew Meyers" />
                     <div class="gem-team-grid">
                         <div class="gem-team-card">
-                            <img src="/assets/v5/Team_Drew.jpg" alt="Drew Meyers" />
-                            <div class="gem-team-card-content">
-                                <span class="gem-team-card-title">Drew Meyers</span>
-                                <p class="gem-team-card-desc">Founder. Bio coming soon.</p>
-                            </div>
-                        </div>
-                        <div class="gem-team-card">
-                            <img src="/assets/v5/Team_Jesse.jpg" alt="Jesse Wright" />
                             <div class="gem-team-card-content">
                                 <span class="gem-team-card-title">Jesse Wright</span>
                                 <p class="gem-team-card-desc">COO. Bio coming soon.</p>
+                            </div>
+                        </div>
+                        <div class="gem-team-card">
+                            <div class="gem-team-card-content">
+                                <span class="gem-team-card-title">Drew Meyers</span>
+                                <p class="gem-team-card-desc">Founder. Bio coming soon.</p>
                             </div>
                         </div>
                     </div>
