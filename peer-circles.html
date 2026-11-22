@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Before publishing, swap these placeholders:
+    - APPLY_HREF (every "Apply" button) -> your real application URL
+    - Confirm the community@geekestate.com contact address
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peer Circles | GEM</title>
+  <meta name="description" content="Peer Circles from GEM: a small group of proptech founders, matched with care and guided by paid facilitators who have built proptech companies themselves.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gem-green: #74BC1F;
+      --gem-dark: #262626;
+      --gem-black: #000000;
+      --paper: #FFFFFF;
+      --mist: #F5F7F2;
+      --line: #E3E8DC;
+      --muted: #5A5A5A;
+      --radius: 14px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--gem-dark);
+      background: var(--paper);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .logo span { color: var(--gem-green); }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--gem-green);
+      color: var(--gem-black);
+    }
+
+    .btn-primary:hover { background: #65A81A; }
+
+    .btn-ghost {
+      border: 2px solid var(--gem-dark);
+      color: var(--gem-dark);
+    }
+
+    .btn-ghost:hover { background: var(--gem-dark); color: var(--paper); }
+
+    .btn-small {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 96px 0 88px;
+      background: var(--gem-dark);
+      color: var(--paper);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gem-green);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5.2vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      max-width: 14ch;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gem-green);
+    }
+
+    .hero p.lede {
+      font-size: 1.15rem;
+      max-width: 56ch;
+      color: #D9D9D9;
+      margin-bottom: 36px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero .btn-ghost {
+      border-color: var(--paper);
+      color: var(--paper);
+    }
+
+    .hero .btn-ghost:hover {
+      background: var(--paper);
+      color: var(--gem-dark);
+    }
+
+    .hero-note {
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #A8A8A8;
+    }
+
+    /* Sections */
+    section.block {
+      padding: 88px 0;
+    }
+
+    section.block.alt {
+      background: var(--mist);
+    }
+
+    .section-head {
+      max-width: 60ch;
+      margin-bottom: 52px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* Differentiators */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 34px 30px;
+    }
+
+    .card .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gem-green);
+      color: var(--gem-black);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    /* Pull quote band */
+    .band {
+      background: var(--gem-green);
+      color: var(--gem-black);
+      padding: 64px 0;
+    }
+
+    .band blockquote {
+      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-weight: 600;
+      line-height: 1.3;
+      max-width: 30ch;
+    }
+
+    .band cite {
+      display: block;
+      margin-top: 18px;
+      font-style: normal;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Steps */
+    .steps {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      counter-reset: step;
+      border-top: 2px solid var(--gem-dark);
+    }
+
+    .steps li {
+      padding: 28px 24px 0 0;
+    }
+
+    .steps li::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gem-green);
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .steps h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .steps p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Fit */
+    .fit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .fit h2 {
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .fit p.lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .fit ul {
+      list-style: none;
+    }
+
+    .fit li {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      gap: 14px;
+    }
+
+    .fit li:first-child { border-top: 1px solid var(--line); }
+
+    .fit li .mark {
+      flex: 0 0 auto;
+      font-weight: 700;
+      color: var(--gem-green);
+    }
+
+    .fit li.no .mark { color: var(--muted); }
+
+    .fit li.no { color: var(--muted); }
+
+    /* Final CTA */
+    .closing {
+      text-align: center;
+      padding: 104px 0;
+      background: var(--paper);
+    }
+
+    .closing h2 {
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .closing p {
+      color: var(--muted);
+      max-width: 52ch;
+      margin: 0 auto 36px;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+      .fit { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 560px) {
+      .hero { padding: 72px 0 68px; }
+      section.block { padding: 68px 0; }
+      .steps { grid-template-columns: 1fr; }
+      .nav .btn-small { padding: 9px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="/" class="logo">GEM<span>.</span></a>
+      <a href="#apply" class="btn btn-primary btn-small">Apply</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Peer Circles</span>
+        <h1>Your personal brain trust of <em>equals.</em></h1>
+        <p class="lede">
+          The right group of peers is the best thing a founder can do for themselves.
+          The wrong group is a waste of everyone's time. Our job is putting you in the right room.
+        </p>
+        <div class="cta-row">
+          <a href="#apply" class="btn btn-primary">Apply for a circle</a>
+          <a href="#how" class="btn btn-ghost">How it works</a>
+        </div>
+        <p class="hero-note">For founders building in proptech.</p>
+      </div>
+    </section>
+
+    <!-- Differentiators -->
+    <section class="block" id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Most peer groups are a coffee and a hope.</h2>
+          <p>A Peer Circle is built on three things that most groups skip.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="num">1</div>
+            <h3>Proptech peers, only</h3>
+            <p>
+              Your circle is made of founders who sell into the same buyers, fight the same
+              cycles, and read the same market data. Generic startup advice has its place. This isn't it.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">2</div>
+            <h3>Paid facilitators who've been in your shoes</h3>
+            <p>
+              Every circle is run by a facilitator who has built a proptech company and sat where you sit.
+              They're paid to run the room well, so you get someone who has done the work, not someone
+              who has read about it.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="num">3</div>
+            <h3>Matched, not random</h3>
+            <p>
+              We place you by stage, sector, and the problems you're actually working on. The right fit
+              makes a circle useful. The wrong one makes it expensive in time, which is the scarcer resource.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pull quote band -->
+    <section class="band">
+      <div class="wrap">
+        <blockquote>
+          Our magic is putting people in the right room.
+          <cite>Geek Estate Members (GEM)</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="block alt" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Four steps from application to your first session.</p>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>Apply and profile</h3>
+            <p>Tell us what you're building, where you are, and what you need from peers.</p>
+          </li>
+          <li>
+            <h3>Short pre-work</h3>
+            <p>A brief prep exercise so your first session starts with substance, not small talk.</p>
+          </li>
+          <li>
+            <h3>Get matched</h3>
+            <p>We assemble your circle around sector, stage, and the problems you're working on.</p>
+          </li>
+          <li>
+            <h3>Meet your circle</h3>
+            <p>Sessions run on a recurring schedule with a paid facilitator who has built in proptech.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Fit -->
+    <section class="block">
+      <div class="wrap fit">
+        <div>
+          <h2>Is this for you?</h2>
+          <p class="lead">
+            Peer Circles work best for founders who want honest feedback from people who understand
+            proptech, and who are willing to bring real problems to the table.
+          </p>
+        </div>
+        <ul>
+          <li><span class="mark">+</span> You're a founder building in proptech.</li>
+          <li><span class="mark">+</span> You want peers who know the buyers, the cycles, and the data.</li>
+          <li><span class="mark">+</span> You'll show up prepared and share what's actually going on.</li>
+          <li class="no"><span class="mark">–</span> You're looking for a group to validate decisions you've already made.</li>
+          <li class="no"><span class="mark">–</span> You want a networking event with a name badge and a raffle.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="closing" id="apply">
+      <div class="wrap">
+        <h2>Get in the right room.</h2>
+        <p>
+          Applications are reviewed by hand, because matching is the whole product.
+          Tell us about your company and we'll tell you whether a circle makes sense.
+        </p>
+        <a href="mailto:community@geekestate.com?subject=Peer%20Circles%20Application" class="btn btn-primary">Apply for a circle</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© Geek Estate Labs, LLC. GEM is a curated PropTech membership community.</span>
+      <span>Denver, Colorado</span>
+    </div>
+  </footer>
+
+</body>
+</html>
