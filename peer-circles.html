@@ -1,533 +1,470 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-  <!--
-    Before publishing, swap these placeholders:
-    - APPLY_HREF (every "Apply" button) -> your real application URL
-    - Confirm the community@geekestate.com contact address
-  -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peer Circles | GEM</title>
-  <meta name="description" content="Peer Circles from GEM: a small group of proptech founders, matched with care and guided by paid facilitators who have built proptech companies themselves.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Peer Circles 2027 | Geek Estate</title>
+  <meta name="description"
+    content="GEM Peer Circles: a small, confidential group of PropTech founders and CEOs, with a built-in retreat and a facilitator. Applications open November 1 and close December 15." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WXWZN36");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest.json" />
+  <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="css/v3/style.css">
+  <link rel="stylesheet" href="css/v5/header.css" />
+  <link rel="stylesheet" href="css/v5/page.css" />
+  <link rel="stylesheet" href="css/brands.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
   <style>
-    :root {
-      --gem-green: #74BC1F;
-      --gem-dark: #262626;
-      --gem-black: #000000;
-      --paper: #FFFFFF;
-      --mist: #F5F7F2;
-      --line: #E3E8DC;
-      --muted: #5A5A5A;
-      --radius: 14px;
-      --max: 1100px;
+    .text-green { color: #74bc1f !important; }
+
+    .description-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    .peer-section a { color: #74bc1f; }
 
-    html { scroll-behavior: smooth; }
+    .intro-wrapper { text-align: center; }
 
-    body {
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
-      color: var(--gem-dark);
-      background: var(--paper);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+    .intro-wrapper p.lead, .intro-wrapper p { text-align: center; }
+
+    .peer-section ul.checks li { text-align: left; }
+
+    .intro-wrapper .cta-line a { color: #74bc1f !important; }
+
+    .intro-wrapper .wrapper { margin: 0 auto; }
+
+    .intro-wrapper .lead { color: #74bc1f; }
+
+    .peer-section .description-title { margin-bottom: 1.2rem; }
+
+    .faq-item a { color: #74bc1f; }
+
+    .intro-wrapper {
+      background-image: url(../../img/Description_BG.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      color: #ffffff;
+      border-top: 2px solid #74bc1f;
     }
 
-    a { color: inherit; }
-
-    .wrap {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 24px;
+    .intro-wrapper .wrapper {
+      max-width: 900px;
     }
 
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
+    .intro-wrapper p {
+      font-size: 26px;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
+    .intro-wrapper p.lead {
+      font-size: 40px;
+      font-weight: bold;
+      color: #74bc1f;
+      margin-bottom: 1.5rem;
     }
 
-    .logo {
-      font-weight: 700;
-      font-size: 1.25rem;
-      text-decoration: none;
-      letter-spacing: 0.02em;
+    .intro-wrapper .cta-line {
+      margin-top: 2.5rem;
+      font-size: 24px;
     }
 
-    .logo span { color: var(--gem-green); }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 14px 26px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: transform 0.15s ease, background 0.15s ease;
+    .intro-wrapper .cta-line a {
+      color: #74bc1f !important;
+      font-weight: bold;
+      text-decoration: underline;
     }
 
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn-primary {
-      background: var(--gem-green);
-      color: var(--gem-black);
+    .peer-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
 
-    .btn-primary:hover { background: #65A81A; }
-
-    .btn-ghost {
-      border: 2px solid var(--gem-dark);
-      color: var(--gem-dark);
+    .peer-section.alt {
+      background-color: #f6f6f6;
     }
 
-    .btn-ghost:hover { background: var(--gem-dark); color: var(--paper); }
-
-    .btn-small {
-      padding: 10px 20px;
-      font-size: 0.9rem;
+    .peer-section .wrapper {
+      max-width: 1000px;
     }
 
-    /* Hero */
-    .hero {
-      padding: 96px 0 88px;
-      background: var(--gem-dark);
-      color: var(--paper);
+    .peer-section .section-lead {
+      font-size: 24px;
+      font-weight: 300;
+      color: #262626;
+      margin-bottom: 1.5rem;
     }
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gem-green);
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.3rem, 5.2vw, 3.8rem);
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.01em;
-      max-width: 14ch;
-      margin-bottom: 24px;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      color: var(--gem-green);
-    }
-
-    .hero p.lede {
-      font-size: 1.15rem;
-      max-width: 56ch;
-      color: #D9D9D9;
-      margin-bottom: 36px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
-    .hero .btn-ghost {
-      border-color: var(--paper);
-      color: var(--paper);
-    }
-
-    .hero .btn-ghost:hover {
-      background: var(--paper);
-      color: var(--gem-dark);
-    }
-
-    .hero-note {
-      margin-top: 28px;
-      font-size: 0.9rem;
-      color: #A8A8A8;
-    }
-
-    /* Sections */
-    section.block {
-      padding: 88px 0;
-    }
-
-    section.block.alt {
-      background: var(--mist);
-    }
-
-    .section-head {
-      max-width: 60ch;
-      margin-bottom: 52px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    /* Differentiators */
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 34px 30px;
-    }
-
-    .card .num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--gem-green);
-      color: var(--gem-black);
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-      line-height: 1.3;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-
-    /* Pull quote band */
-    .band {
-      background: var(--gem-green);
-      color: var(--gem-black);
-      padding: 64px 0;
-    }
-
-    .band blockquote {
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
-      font-weight: 600;
-      line-height: 1.3;
-      max-width: 30ch;
-    }
-
-    .band cite {
-      display: block;
-      margin-top: 18px;
-      font-style: normal;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    /* Steps */
-    .steps {
+    .peer-section ul.checks {
       list-style: none;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      counter-reset: step;
-      border-top: 2px solid var(--gem-dark);
+      padding: 0;
+      margin: 0 0 1.5rem 0;
     }
 
-    .steps li {
-      padding: 28px 24px 0 0;
+    .peer-section ul.checks li {
+      font-size: 22px;
+      font-weight: 300;
+      color: #262626;
+      padding: 0.6rem 0 0.6rem 2.2rem;
+      position: relative;
     }
 
-    .steps li::before {
-      counter-increment: step;
-      content: "0" counter(step);
-      display: block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--gem-green);
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
+    .peer-section ul.checks li::before {
+      content: "\2192";
+      color: #74bc1f;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
     }
 
-    .steps h3 {
-      font-size: 1.1rem;
+    .peer-section ul.checks li strong {
       font-weight: 600;
-      margin-bottom: 8px;
     }
 
-    .steps p {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .peer-section .note {
+      font-size: 20px;
+      font-weight: 300;
+      color: #5a5a5a;
+      margin-top: 1rem;
     }
 
-    /* Fit */
-    .fit {
+    .details-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
+      column-gap: 40px;
+      row-gap: 36px;
+      margin-top: 1rem;
     }
 
-    .fit h2 {
-      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 18px;
+    .details-grid .item h3 {
+      font-size: 24px;
+      font-weight: bold;
+      color: #74bc1f;
+      margin-bottom: 0.6rem;
     }
 
-    .fit p.lead {
-      color: var(--muted);
-      font-size: 1.05rem;
+    .details-grid .item p {
+      font-size: 20px;
+      font-weight: 300;
+      color: #262626;
+      margin: 0;
     }
 
-    .fit ul {
-      list-style: none;
-    }
-
-    .fit li {
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      gap: 14px;
-    }
-
-    .fit li:first-child { border-top: 1px solid var(--line); }
-
-    .fit li .mark {
-      flex: 0 0 auto;
-      font-weight: 700;
-      color: var(--gem-green);
-    }
-
-    .fit li.no .mark { color: var(--muted); }
-
-    .fit li.no { color: var(--muted); }
-
-    /* Final CTA */
-    .closing {
+    .price-band {
+      background-color: #262626;
+      color: #ffffff;
       text-align: center;
-      padding: 104px 0;
-      background: var(--paper);
+      padding: 50px 20px;
+      margin-top: 2.5rem;
     }
 
-    .closing h2 {
-      font-size: clamp(2rem, 4.4vw, 3rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 18px;
+    .price-band .amount {
+      font-size: 56px;
+      font-weight: bold;
+      color: #74bc1f;
+      line-height: 1.1;
     }
 
-    .closing p {
-      color: var(--muted);
-      max-width: 52ch;
-      margin: 0 auto 36px;
-      font-size: 1.05rem;
+    .price-band p {
+      font-size: 22px;
+      font-weight: 300;
+      margin: 0.8rem auto 0;
+      max-width: 60ch;
     }
 
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 32px 0;
-      font-size: 0.85rem;
-      color: var(--muted);
+    .faq-item {
+      margin-bottom: 1.8rem;
     }
 
-    footer .wrap {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
+    .faq-item h3 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #262626;
+      margin-bottom: 0.4rem;
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .grid-3 { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
-      .fit { grid-template-columns: 1fr; gap: 36px; }
+    .faq-item p {
+      font-size: 20px;
+      font-weight: 300;
+      color: #262626;
+      margin: 0;
     }
 
-    @media (max-width: 560px) {
-      .hero { padding: 72px 0 68px; }
-      section.block { padding: 68px 0; }
-      .steps { grid-template-columns: 1fr; }
-      .nav .btn-small { padding: 9px 16px; }
+    .apply-cta-btn {
+      display: inline-block;
+      background-color: #74bc1f;
+      color: #ffffff !important;
+      font-size: 20px;
+      padding: 12px 50px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .apply-cta-btn:hover {
+      background-color: #65a81a;
+    }
+
+    .peer-cta {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      text-align: center;
+    }
+
+    .peer-cta p {
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      max-width: 40ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .peer-cta .dates {
+      font-weight: bold;
+    }
+
+    @media (max-width: 767.98px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-wrapper p {
+        font-size: 22px;
+      }
+
+      .intro-wrapper p.lead {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
+
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXWZN36" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-  <header>
-    <div class="wrap nav">
-      <a href="/" class="logo">GEM<span>.</span></a>
-      <a href="#apply" class="btn btn-primary btn-small">Apply</a>
+  <div w3-include-html="header-tag.html"></div>
+
+  <div class="section-hero page-hero">
+    <div class="wrapper">
+      <h2 class="hero-title">GEM Peer Circles</h2>
     </div>
-  </header>
+  </div>
 
-  <main>
+  <div class="intro-wrapper">
+    <div class="wrapper">
+      <p>
+        Running a company is lonely. It's not that there's no one to grab lunch with. It's that there's
+        no one who truly understands the decisions in front of you: not employees, life partners, or best friends.
+      </p>
+      <p class="lead">A Peer Circle fixes that.</p>
+      <p>
+        It's a small, confidential group of fellow PropTech and Built World operators: human beings and
+        professional peers you can trust, who will help you dig deep and level up.
+      </p>
+      <p class="cta-line">
+        Applications open November 1 and close December 15. Seats are limited.
+        <a href="https://airtable.com/appFmnMtGPBs6uvWv/paglzDubctCL1RVmi/form">Apply now</a>.
+      </p>
+    </div>
+  </div>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap">
-        <span class="eyebrow">Peer Circles</span>
-        <h1>Your personal brain trust of <em>equals.</em></h1>
-        <p class="lede">
-          The right group of peers is the best thing a founder can do for themselves.
-          The wrong group is a waste of everyone's time. Our job is putting you in the right room.
-        </p>
-        <div class="cta-row">
-          <a href="#apply" class="btn btn-primary">Apply for a circle</a>
-          <a href="#how" class="btn btn-ghost">How it works</a>
+  <section class="peer-section">
+    <div class="wrapper">
+      <h3 class="description-title text-green">Why you need this</h3>
+      <ul class="checks">
+        <li>Your team can't be your sounding board on everything, and your board and investors have their own agenda.</li>
+        <li>Conferences and panels are broad and polished. Nobody gets into the real numbers.</li>
+        <li>Big networks give you contacts, not people who know your business well enough to tell you the truth.</li>
+        <li>Founders who get honest input month after month make better calls, faster. Most don't have a place to get it.</li>
+      </ul>
+      <p class="section-lead">
+        No fluff, no panels, no performing. Just your actual pain points, tackled head on with others who are
+        doing the work. Just enough structure to hold yourself accountable and track toward your goals.
+        It's where you stop working in the business and start working on the business, and on yourself.
+      </p>
+      <p class="section-lead"><strong>Invest in yourself for 2027.</strong></p>
+    </div>
+  </section>
+
+  <section class="peer-section alt">
+    <div class="wrapper">
+      <h3 class="description-title text-green">The experience</h3>
+      <ul class="checks">
+        <li><strong>Experience sharing, not advice.</strong> Members share what actually happened to them, not what you should do.</li>
+        <li><strong>Confidentiality.</strong> We operate the <a href="https://productive-time-7df.notion.site/Your-Circle-of-Trust-12d17e64ac0080858117e4405bda122a">Circle of Trust</a>. What's shared in the circle stays in the circle unless someone gives explicit permission.</li>
+        <li><strong>Vulnerability.</strong> A place where you don't have to perform.</li>
+        <li><strong>Accountability.</strong> You'll say what you're going to do, and your circle will ask you about it next month.</li>
+        <li><strong>Personal and professional growth.</strong> Your business and you, together.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="peer-section">
+    <div class="wrapper">
+      <h3 class="description-title text-green">How it works</h3>
+      <div class="details-grid">
+        <div class="item">
+          <h3>Your circle</h3>
+          <p>5 to 8 GEM members, matched based on company stage, ARR, number of employees, and personal situation.</p>
         </div>
-        <p class="hero-note">For founders building in proptech.</p>
+        <div class="item">
+          <h3>Monthly sessions</h3>
+          <p>One 60-minute Zoom call a month. Calls are never recorded.</p>
+        </div>
+        <div class="item">
+          <h3>In person</h3>
+          <p>Every circle gets a two-night retreat at a time that works for everyone in the group. Your circle picks the location from a shortlist we've already vetted. Included in your Peer Circle fee; you cover your own flights.</p>
+        </div>
+        <div class="item">
+          <h3>Facilitation</h3>
+          <p>Every circle is led by an experienced facilitator who keeps sessions focused, asks the right questions, and holds members to their commitments. Without that structure, peer groups drift into friendly chat instead of the candid, accountable problem-solving that moves businesses forward.</p>
+        </div>
+        <div class="item">
+          <h3>Commitment</h3>
+          <p>One year. Show up every month; missing three sessions means giving up your seat to someone on the waitlist.</p>
+        </div>
+        <div class="item">
+          <h3>Start</h3>
+          <p>January 2027 or June 2027.</p>
+        </div>
       </div>
-    </section>
 
-    <!-- Differentiators -->
-    <section class="block" id="why">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Most peer groups are a coffee and a hope.</h2>
-          <p>A Peer Circle is built on three things that most groups skip.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <div class="num">1</div>
-            <h3>Proptech peers, only</h3>
-            <p>
-              Your circle is made of founders who sell into the same buyers, fight the same
-              cycles, and read the same market data. Generic startup advice has its place. This isn't it.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="num">2</div>
-            <h3>Paid facilitators who've been in your shoes</h3>
-            <p>
-              Every circle is run by a facilitator who has built a proptech company and sat where you sit.
-              They're paid to run the room well, so you get someone who has done the work, not someone
-              who has read about it.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="num">3</div>
-            <h3>Matched, not random</h3>
-            <p>
-              We place you by stage, sector, and the problems you're actually working on. The right fit
-              makes a circle useful. The wrong one makes it expensive in time, which is the scarcer resource.
-            </p>
-          </article>
-        </div>
+      <div class="price-band">
+        <div class="amount">$7,500 / year</div>
+        <p>Includes retreat lodging and meals, facilitation, and all program costs. You only book your own travel. Nothing is billed unless you're accepted.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Pull quote band -->
-    <section class="band">
-      <div class="wrap">
-        <blockquote>
-          Our magic is putting people in the right room.
-          <cite>Geek Estate Members (GEM)</cite>
-        </blockquote>
+  <section class="peer-section alt">
+    <div class="wrapper">
+      <h3 class="description-title text-green">Who it's for</h3>
+      <p class="section-lead">
+        <strong>Ideal participant:</strong> a founder or CEO with product market fit. You're making real decisions
+        about hiring, fundraising, pricing, sales, and product, and you don't have a trusted group of peers outside
+        your company to think those critical decisions through with. You have at least $500k in ARR (and likely more)
+        or $1 million or more in funding. You won't be placed in a circle with someone at a different stage.
+      </p>
+      <p class="section-lead">Peer circles are matched by stage, revenue, customer, and sector.</p>
+
+      <h3 class="description-title text-green" style="font-size: 28px; margin-top: 2.5rem;">You'll get the most out of it if you</h3>
+      <ul class="checks">
+        <li>Want honest feedback, not applause</li>
+        <li>Will show up every month and do the light pre-work</li>
+        <li>Are willing to share real numbers and real problems in confidence</li>
+        <li>Want to help other founders as much as they want help</li>
+      </ul>
+
+      <p class="section-lead"><strong>Not for:</strong> anyone looking for deal flow or a sales channel, anyone unable to commit to monthly sessions, or anyone not comfortable with strict confidentiality.</p>
+
+      <h3 class="description-title text-green" style="font-size: 28px; margin-top: 2.5rem;">Is this for you?</h3>
+      <p class="section-lead">Do you answer yes to any of these?</p>
+      <ul class="checks">
+        <li>You are a founder or CEO with product market fit.</li>
+        <li>You're a high-performing, ambitious operator, actively building or scaling, and you want a tribe that operates beyond ordinary standards.</li>
+        <li>You want a trusted place to pressure-test the real decisions in front of you: hiring, capital, pricing, product, go-to-market, and team.</li>
+        <li>You want guidance, accountability, and collaboration on the wealth-building journey, not just the company-building one.</li>
+        <li>You want deeper connections and friendships through a dynamic, high-achieving community.</li>
+        <li>You know you'd move faster, and live fuller, with seven other PropTech operators in your corner.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="peer-section">
+    <div class="wrapper">
+      <h3 class="description-title text-green">Questions</h3>
+
+      <div class="faq-item">
+        <h3>Who will be in my group?</h3>
+        <p>You will be matched with other founders or CEOs operating a company the same size and stage as yours, some likely with the same ICP. Your competitors will never be placed in your circle.</p>
       </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="block alt" id="how">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>Four steps from application to your first session.</p>
-        </div>
-
-        <ol class="steps">
-          <li>
-            <h3>Apply and profile</h3>
-            <p>Tell us what you're building, where you are, and what you need from peers.</p>
-          </li>
-          <li>
-            <h3>Short pre-work</h3>
-            <p>A brief prep exercise so your first session starts with substance, not small talk.</p>
-          </li>
-          <li>
-            <h3>Get matched</h3>
-            <p>We assemble your circle around sector, stage, and the problems you're working on.</p>
-          </li>
-          <li>
-            <h3>Meet your circle</h3>
-            <p>Sessions run on a recurring schedule with a paid facilitator who has built in proptech.</p>
-          </li>
-        </ol>
+      <div class="faq-item">
+        <h3>When will my peer circle start?</h3>
+        <p>January 2027 or June 2027.</p>
       </div>
-    </section>
-
-    <!-- Fit -->
-    <section class="block">
-      <div class="wrap fit">
-        <div>
-          <h2>Is this for you?</h2>
-          <p class="lead">
-            Peer Circles work best for founders who want honest feedback from people who understand
-            proptech, and who are willing to bring real problems to the table.
-          </p>
-        </div>
-        <ul>
-          <li><span class="mark">+</span> You're a founder building in proptech.</li>
-          <li><span class="mark">+</span> You want peers who know the buyers, the cycles, and the data.</li>
-          <li><span class="mark">+</span> You'll show up prepared and share what's actually going on.</li>
-          <li class="no"><span class="mark">–</span> You're looking for a group to validate decisions you've already made.</li>
-          <li class="no"><span class="mark">–</span> You want a networking event with a name badge and a raffle.</li>
+      <div class="faq-item">
+        <h3>A retreat is included. When will I know the exact date and location, and what if I can't make the scheduled date?</h3>
+        <p>We will determine these details within the first month of launching the Peer Circle.</p>
+      </div>
+      <div class="faq-item">
+        <h3>I want all sessions in person. Is there an option for that?</h3>
+        <p>At this time, we feel the richest matches are based on company and founder demographics. Given the focus of GEM and the PropTech community, we don't want to limit ourselves geographically.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do Peer Circles compare to Hamptons, EO, YPO, Vistage, and others?</h3>
+        <p>GEM Peer Circles are distinctively different for the following reasons:</p>
+        <ul class="checks">
+          <li><strong>Exclusively PropTech.</strong> The perspectives, advice, contacts, and other insights gained in your confidential discussions are hyper-relevant to you and your business. We often hear that founder circles offer more generic perspectives. In GEM, you address your business challenges with implementable solutions from members of the industry who can help open the right doors.</li>
+          <li><strong>Lower floor to enter, lower price point overall.</strong></li>
+          <li><strong>A realistic commitment.</strong> About two hours a month: one hour on the call with your peers, plus about 30 minutes before and after to prepare and digest what was discussed. Drop in, then get back to the hustle, which makes it feasible to invest in yourself.</li>
+          <li><strong>GEM retreats are everything.</strong> Retreats with GEM help you detach, unmask, and get centered on your personal and professional goals. Add your curated Peer Circle to the mix and you'll experience a level-up you didn't realize was coming.</li>
         </ul>
       </div>
-    </section>
-
-    <!-- Closing CTA -->
-    <section class="closing" id="apply">
-      <div class="wrap">
-        <h2>Get in the right room.</h2>
-        <p>
-          Applications are reviewed by hand, because matching is the whole product.
-          Tell us about your company and we'll tell you whether a circle makes sense.
-        </p>
-        <a href="mailto:community@geekestate.com?subject=Peer%20Circles%20Application" class="btn btn-primary">Apply for a circle</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <span>© Geek Estate Labs, LLC. GEM is a curated PropTech membership community.</span>
-      <span>Denver, Colorado</span>
     </div>
-  </footer>
+  </section>
 
+  <section class="peer-cta peer-section alt">
+    <div class="wrapper">
+      <p>
+        Applications open <span class="dates">November 1</span> and close <span class="dates">December 15</span>.
+        Seats are limited.
+      </p>
+      <a class="apply-cta-btn" href="https://airtable.com/appFmnMtGPBs6uvWv/paglzDubctCL1RVmi/form">Apply Now</a>
+    </div>
+  </section>
+
+  <div class="section-contact" style="
+        height: 250px;
+        background: #f6f6f6;
+        padding-top: 85px;
+        padding-bottom: 85px;
+      ">
+    <div class="wrapper">
+      <h2 class="section__small-title">
+        <strong>Other questions?</strong> Shoot us an email
+      </h2>
+      <div class="wrapper-link-example">
+        <a href="mailto:community@geekestate.com">community@geekestate.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div w3-include-html="footer.html"></div>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/includes.js"></script>
 </body>
+
 </html>
